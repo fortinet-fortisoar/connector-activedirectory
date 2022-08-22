@@ -1,9 +1,10 @@
 """ Copyright start
-  Copyright (C) 2008 - 2021 Fortinet Inc.
+  Copyright (C) 2008 - 2022 Fortinet Inc.
   All rights reserved.
   FORTINET CONFIDENTIAL & FORTINET PROPRIETARY SOURCE CODE
   Copyright end """
 
+MACRO_LIST = ["User_Enrichment_Playbooks_IRIs"]
 userADAccountControlFlag = 2
 PORT = 389
 SSL_PORT = 636
