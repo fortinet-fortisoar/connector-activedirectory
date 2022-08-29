@@ -9,7 +9,11 @@
   "publisher": "Fortinet",
   "icon_small_name": "small-activedirectory.png",
   "icon_large_name": "large-activedirectory.png",
-  "help_online": "",
+  "tags": [
+    "Enrichment",
+    "User_Enrichment"
+  ],
+  "help_online": "https://docs.fortinet.com/document/fortisoar/2.2.1/active-directory/383/active-directory-v2-2-1",
   "configuration": {
     "fields": [
       {
@@ -1440,7 +1444,7 @@
             "Distinguished Name",
             "SamAccount Name"
           ],
-          "value":"Distinguished Name"
+          "value": "Distinguished Name"
         },
         {
           "title": "Value",
@@ -1484,7 +1488,7 @@
             "Distinguished Name",
             "SamAccount Name"
           ],
-          "value":"Distinguished Name"
+          "value": "Distinguished Name"
         },
         {
           "title": "Value",
@@ -1557,5 +1561,3 @@
     }
   ]
 }
-
-
