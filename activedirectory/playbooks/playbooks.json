@@ -982,7 +982,7 @@
                   {
                     "option": "Yes",
                     "step_iri": "/api/3/workflow_steps/75a54f81-a263-425b-9c75-10145ebe5060",
-                    "condition": "{{ vars.steps.Get_User_Details.status == \"Success\" or vars.useMockOutput or vars.foundADDetails }}",
+                    "condition": "{{(vars.steps.Get_User_Details.status == \"Success\" and vars.steps.Get_User_Details.data.entries | length > 0) or vars.useMockOutput or vars.foundADDetails}}",
                     "step_name": "Convert Summary to HTML"
                   },
                   {
