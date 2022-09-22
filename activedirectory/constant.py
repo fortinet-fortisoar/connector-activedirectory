@@ -5,6 +5,7 @@
   Copyright end """
 
 MACRO_LIST = ["User_Enrichment_Playbooks_IRIs"]
+CONNECTOR_NAME = "activedirectory"
 userADAccountControlFlag = 2
 PORT = 389
 SSL_PORT = 636
