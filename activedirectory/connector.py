@@ -28,19 +28,12 @@ class ActiveDirectory(Connector):
         except Exception as err:
             raise ConnectorError('{}'.format(str(err)))
 
-    def del_micro(self, config, enable=True):
+    def del_micro(self, config):
         if not settings.LW_AGENT:
             for macro in MACRO_LIST:
                 try:
                     resp = make_request(f'/api/wf/api/dynamic-variable/?name={macro}', 'GET')
                     if resp['hydra:member']:
-                        # macro exists
-                        # on config add and activate, we need to add to the list, so no changes required if it is already there
-                        if enable and CONNECTOR_NAME in resp['hydra:member'][0].get('name'):
-                            continue
-                        # on config remove and deactivate, we need to remove from the list, so no changes required if it is not already there
-                        if not enable and CONNECTOR_NAME not in resp['hydra:member'][0].get('name'):
-                            continue
                         logger.info("resetting global variable '%s'" % macro)
                         macro_id = resp['hydra:member'][0]['id']
                         resp = make_request(f'/api/wf/api/dynamic-variable/{macro_id}/?format=json', 'DELETE')
@@ -48,13 +41,13 @@ class ActiveDirectory(Connector):
                     logger.error(e)
 
     def on_deactivate(self, config):
-        self.del_micro(config, False)
+        self.del_micro(config)
 
     def on_activate(self, config):
-        self.del_micro(config, True)
+        self.del_micro(config)
 
     def on_add_config(self, config, active):
-        self.del_micro(config, True)
+        self.del_micro(config)
 
     def on_delete_config(self, config):
-        self.del_micro(config, False)
+        self.del_micro(config)
