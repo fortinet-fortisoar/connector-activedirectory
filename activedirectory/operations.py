@@ -643,7 +643,6 @@ def build_response(conn, object_class, object_dn, action=None, group_dn=None):
 def force_password_reset_next_logon(config, params):
     try:
         baseDN = config.get('baseDN')
-        new_password = params.get('new_password')
         conn = server_connection(config)
         search_attr_name = SEARCH_ATTRIBUTES_DICT[params.get('search_attr_name')]
         search_attr_value = params.get('search_attr_value')
