@@ -1,7 +1,7 @@
 {
   "name": "activedirectory",
   "label": "Active Directory",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "category": "Directory Service",
   "description": "Active Directory (AD) is a directory service that Microsoft developed for Windows domain networks. You can directly query AD to retrieve information about users, groups, and computers, in an organization, by using the Lightweight Directory Access Protocol (LDAP) to directly query the AD.",
   "cs_approved": true,
