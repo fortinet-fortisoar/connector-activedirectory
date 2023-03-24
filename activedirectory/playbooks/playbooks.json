@@ -3,7 +3,7 @@
   "data": [
     {
       "@type": "WorkflowCollection",
-      "name": "Sample - Active Directory - 2.2.1",
+      "name": "Sample - Active Directory - 2.3.0",
       "description": "Sample playbooks for \"Active Directory\" connector. If you are planning to use any of the sample playbooks in your environment, ensure that you clone those playbooks and move them to a different collection, since the sample playbook collection gets deleted during connector upgrade and delete.",
       "visible": true,
       "image": null,
@@ -74,7 +74,7 @@
                   "page_size": "",
                   "size_limit": ""
                 },
-                "version": "2.2.1",
+                "version": "2.3.0",
                 "connector": "activedirectory",
                 "operation": "advanced_search",
                 "operationTitle": "Advanced Search",
@@ -144,7 +144,7 @@
                   "search_attr_name": "SamAccount Name",
                   "search_attr_value": ""
                 },
-                "version": "2.2.1",
+                "version": "2.3.0",
                 "connector": "activedirectory",
                 "operation": "reset_password",
                 "operationTitle": "Reset Password",
@@ -240,7 +240,7 @@
                   "search_attr_name": "Distinguished Name",
                   "search_attr_value": ""
                 },
-                "version": "2.2.1",
+                "version": "2.3.0",
                 "connector": "activedirectory",
                 "operation": "disable_computer",
                 "operationTitle": "Disable Computer",
@@ -337,7 +337,7 @@
                   "page_size": "",
                   "size_limit": ""
                 },
-                "version": "2.2.1",
+                "version": "2.3.0",
                 "connector": "activedirectory",
                 "operation": "get_all_object_details",
                 "operationTitle": "Get All Objects Details",
@@ -461,7 +461,7 @@
                   "sn": "",
                   "search_attr_value": ""
                 },
-                "version": "2.2.1",
+                "version": "2.3.0",
                 "connector": "activedirectory",
                 "operation": "get_specific_object_details",
                 "operationTitle": "Get Specific Object Details",
@@ -529,7 +529,7 @@
                 "params": {
                   "object_class": "User"
                 },
-                "version": "2.2.1",
+                "version": "2.3.0",
                 "connector": "activedirectory",
                 "operation": "remove_group_members",
                 "operationTitle": "Remove Group Members",
@@ -651,7 +651,7 @@
                 "params": {
                   "object_class": "User"
                 },
-                "version": "2.2.1",
+                "version": "2.3.0",
                 "connector": "activedirectory",
                 "operation": "add_group_members",
                 "operationTitle": "Add Group Members",
@@ -746,7 +746,7 @@
                 "params": {
                   "object_class": "User"
                 },
-                "version": "2.2.1",
+                "version": "2.3.0",
                 "connector": "activedirectory",
                 "operation": "add_object",
                 "operationTitle": "Add Object",
@@ -841,7 +841,7 @@
                 "params": {
                   "object_class": "User"
                 },
-                "version": "2.2.1",
+                "version": "2.3.0",
                 "connector": "activedirectory",
                 "operation": "delete_object",
                 "operationTitle": "Delete Object",
@@ -1148,7 +1148,7 @@
                 "params": {
                   "object_class": "User"
                 },
-                "version": "2.2.1",
+                "version": "2.3.0",
                 "connector": "activedirectory",
                 "operation": "update_object",
                 "operationTitle": "Update Object",
@@ -1243,7 +1243,7 @@
                 "params": {
                   "search_attr_value": ""
                 },
-                "version": "2.2.1",
+                "version": "2.3.0",
                 "connector": "activedirectory",
                 "operation": "disable_user_account",
                 "operationTitle": "Disable User Account",
@@ -1341,7 +1341,7 @@
                   "size_limit": "",
                   "search_attr_value": ""
                 },
-                "version": "2.2.1",
+                "version": "2.3.0",
                 "connector": "activedirectory",
                 "operation": "global_search",
                 "operationTitle": "Global Search",
@@ -1463,7 +1463,7 @@
                 "params": {
                   "search_attr_value": ""
                 },
-                "version": "2.2.1",
+                "version": "2.3.0",
                 "connector": "activedirectory",
                 "operation": "enable_user_account",
                 "operationTitle": "Enable User Account",
@@ -1532,7 +1532,7 @@
                   "search_attr_name": "Distinguished Name",
                   "search_attr_value": ""
                 },
-                "version": "2.2.1",
+                "version": "2.3.0",
                 "connector": "activedirectory",
                 "operation": "enable_computer",
                 "operationTitle": "Enable Computer",
