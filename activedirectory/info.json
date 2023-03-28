@@ -13,7 +13,7 @@
     "Enrichment",
     "User_Enrichment"
   ],
-  "help_online": "https://docs.fortinet.com/document/fortisoar/2.2.1/active-directory/383/active-directory-v2-2-1",
+  "help_online": "",
   "configuration": {
     "fields": [
       {
@@ -1559,49 +1559,49 @@
       ],
       "enabled": true
     },
+    {
+      "title": "Force password reset on next logon",
+      "operation": "force_password_reset_next_logon",
+      "description": "Force password reset on next logon for a specific AD user based on the SamAccount Name or the Email, or the Distinguished Name (DN) of the user.",
+      "category": "containment",
+      "annotation": "force_password_reset_next_logon",
+      "output_schema": {
+        "message": "",
+        "description": "",
+        "result": "",
+        "referrals": "",
+        "type": "",
+        "dn": ""
+      },
+      "parameters": [
         {
-            "title": "Force password reset on next logon",
-            "operation": "force_password_reset_next_logon",
-            "description": "Force password reset on next logon for a specific AD user based on the SamAccount Name or the Email, or the Distinguished Name (DN) of the user.",
-            "category": "containment",
-            "annotation": "force_password_reset_next_logon",
-            "output_schema": {
-                "message": "",
-                "description": "",
-                "result": "",
-                "referrals": "",
-                "type": "",
-                "dn": ""
-            },
-            "parameters": [
-                {
-                    "name": "search_attr_name",
-                    "title": "Attributes Type",
-                    "type": "select",
-                    "tooltip": "The attribute, either the SamAccount Name, Distinguished Name, or the Email of the user, whose password you want to reset in AD.",
-                    "description": "The attribute, either the SamAccount Name, Distinguished Name, or the Email of the user, whose password you want to reset in AD.",
-                    "visible": true,
-                    "required": true,
-                    "editable": true,
-                    "options": [
-                        "SamAccount Name",
-                        "Email",
-                        "Distinguished Name"
-                    ],
-                    "value": "SamAccount Name"
-                },
-                {
-                    "title": "Attributes Value",
-                    "name": "search_attr_value",
-                    "type": "text",
-                    "description": "The value of the SamAccount Name, the Distinguished Name, or the Email of the user, whose password you want to reset in AD.",
-                    "visible": true,
-                    "required": true,
-                    "editable": true,
-                    "value": ""
-                }
-            ],
-            "enabled": true
+          "name": "search_attr_name",
+          "title": "Attributes Type",
+          "type": "select",
+          "tooltip": "The attribute, either the SamAccount Name, Distinguished Name, or the Email of the user, whose password you want to reset in AD.",
+          "description": "The attribute, either the SamAccount Name, Distinguished Name, or the Email of the user, whose password you want to reset in AD.",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "options": [
+            "SamAccount Name",
+            "Email",
+            "Distinguished Name"
+          ],
+          "value": "SamAccount Name"
+        },
+        {
+          "title": "Attributes Value",
+          "name": "search_attr_value",
+          "type": "text",
+          "description": "The value of the SamAccount Name, the Distinguished Name, or the Email of the user, whose password you want to reset in AD.",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "value": ""
         }
+      ],
+      "enabled": true
+    }
   ]
 }

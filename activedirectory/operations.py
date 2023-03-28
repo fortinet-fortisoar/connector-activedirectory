@@ -1,5 +1,5 @@
 """ Copyright start
-  Copyright (C) 2008 - 2022 Fortinet Inc.
+  Copyright (C) 2008 - 2023 Fortinet Inc.
   All rights reserved.
   FORTINET CONFIDENTIAL & FORTINET PROPRIETARY SOURCE CODE
   Copyright end """
@@ -184,17 +184,21 @@ def enable_user_account(config, params):
     result = perform_action(config, params, 'enable')
     return check_response(result)
 
+
 def disable_user_account(config, params):
     result = perform_action(config, params, 'disable')
     return check_response(result)
+
 
 def enable_computer(config, params):
     result = perform_action(config, params, 'enable', object_type='computer')
     return check_response(result)
 
+
 def disable_computer(config, params):
     result = perform_action(config, params, 'disable', object_type='computer')
     return check_response(result)
+
 
 def perform_action(config, params, action, object_type=None):
     try:
@@ -231,6 +235,7 @@ def modify(conn, dn, mod_dict):
             raise ConnectorError('mod dict empty {0}'.format(mod_dict))
     except Exception as err:
         raise ConnectorError('{0}'.format(str(err)))
+
 
 def decimal_to_ip_address(decimal_val):
     if decimal_val <= 0:
@@ -302,6 +307,7 @@ def check_escape(search_attr_name, raw_string):
         return escaped
     else:
         return raw_string
+
 
 def global_search(config, params):
     try:
@@ -671,7 +677,7 @@ def force_password_reset_next_logon(config, params):
     except Exception as err:
         logger.exception('Failure: {0}'.format(str(err)))
         raise ConnectorError('{0}'.format(str(err)))
-        
+
 
 def _check_health(config):
     try:
@@ -707,4 +713,3 @@ operations = {
     'force_password_reset_next_logon': force_password_reset_next_logon
 
 }
-
