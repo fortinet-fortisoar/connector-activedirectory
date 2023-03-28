@@ -74,7 +74,7 @@
               "description": null,
               "arguments": {
                 "name": "Active Directory",
-                "config": "bee4fd2880d2404d9ee8a478f59aaf2f",
+                "config": "''" ,
                 "params": {
                   "mail": "user1@cspune.com",
                   "title": "Manager",
@@ -198,7 +198,7 @@
               "description": null,
               "arguments": {
                 "name": "Active Directory",
-                "config": "ef017488-22bc-4d4e-8641-844277062739",
+                "config": "''",
                 "params": {
                   "search_attr_name": "SamAccount Name",
                   "search_attr_value": "shravan"
@@ -309,7 +309,7 @@
               "description": null,
               "arguments": {
                 "name": "Active Directory",
-                "config": "92845b4ecf1048e29301235a90e58efd",
+                "config": "''" ,
                 "params": {
                   "search_object": "Computer",
                   "search_attr_value": "Devops"
@@ -483,7 +483,7 @@
               "description": null,
               "arguments": {
                 "name": "Active Directory",
-                "config": "ef017488-22bc-4d4e-8641-844277062739",
+                "config": "''",
                 "params": {
                   "cookie": "",
                   "page_size": "",
@@ -630,7 +630,7 @@
               "description": null,
               "arguments": {
                 "name": "Active Directory",
-                "config": "ef017488-22bc-4d4e-8641-844277062739",
+                "config": "''",
                 "params": {
                   "query": "(&(objectClass=user)(objectCategory=user)(sAMAccountName=*))",
                   "base_dn": "DC=cspune,DC=com"
@@ -771,7 +771,7 @@
               "description": null,
               "arguments": {
                 "name": "Active Directory",
-                "config": "4bdc755f-e422-41d6-85ab-e56a303ae5a4",
+                "config": "''",
                 "params": {
                   "cookie": "",
                   "page_size": "",
@@ -887,7 +887,7 @@
               "description": null,
               "arguments": {
                 "name": "Active Directory",
-                "config": "ef017488-22bc-4d4e-8641-844277062739",
+                "config": "''",
                 "params": {
                   "search_object": "User",
                   "search_attr_value": "user1"
@@ -1059,7 +1059,7 @@
               "description": null,
               "arguments": {
                 "name": "Active Directory",
-                "config": "ef017488-22bc-4d4e-8641-844277062739",
+                "config": "''",
                 "params": {
                   "new_password": "password@10",
                   "search_attr_name": "SamAccount Name",
@@ -1171,7 +1171,7 @@
               "description": null,
               "arguments": {
                 "name": "Active Directory",
-                "config": "bee4fd2880d2404d9ee8a478f59aaf2f",
+                "config": "''" ,
                 "params": {
                   "mail": "",
                   "title": "",
@@ -1428,7 +1428,7 @@
               "description": null,
               "arguments": {
                 "name": "Active Directory",
-                "config": "ef017488-22bc-4d4e-8641-844277062739",
+                "config": "''",
                 "params": {
                   "search_object": "User"
                 },
@@ -1619,7 +1619,7 @@
               "description": null,
               "arguments": {
                 "name": "Active Directory",
-                "config": "ef017488-22bc-4d4e-8641-844277062739",
+                "config": "''",
                 "params": {
                   "cn": "user1",
                   "sn": "",
@@ -1721,7 +1721,7 @@
               "description": null,
               "arguments": {
                 "name": "Active Directory",
-                "config": "ef017488-22bc-4d4e-8641-844277062739",
+                "config": "''",
                 "params": {
                   "cookie": "",
                   "page_size": "",
@@ -1897,7 +1897,7 @@
               "description": null,
               "arguments": {
                 "name": "Active Directory",
-                "config": "ef017488-22bc-4d4e-8641-844277062739",
+                "config": "''",
                 "params": {
                   "search_object": "Computer"
                 },
@@ -2102,7 +2102,7 @@
               "description": null,
               "arguments": {
                 "name": "Active Directory",
-                "config": "92845b4ecf1048e29301235a90e58efd",
+                "config": "''" ,
                 "params": {
                   "object_class": "Organization Unit",
                   "search_attr_name": "Distinguished Name",
@@ -2193,7 +2193,7 @@
               "description": null,
               "arguments": {
                 "name": "Active Directory",
-                "config": "ef017488-22bc-4d4e-8641-844277062739",
+                "config": "''",
                 "params": {
                   "search_object": "Group",
                   "search_attr_value": "G123"
@@ -2378,7 +2378,7 @@
               "description": null,
               "arguments": {
                 "name": "Active Directory",
-                "config": "e3e0277f-c756-4db5-916f-d0622d2aa1c0",
+                "config": "''",
                 "params": {
                   "group_dn": "[\"CN=Administrators,CN=Builtin,DC=cspune,DC=com\",\"CN=Remote Desktop Users,CN=Builtin,DC=cspune,DC=com\"]",
                   "object_dn": "[\"CN=csdemouser,OU=cybersponse,DC=cspune,DC=com\"]",
@@ -2446,7 +2446,7 @@
               "description": null,
               "arguments": {
                 "name": "Active Directory",
-                "config": "0974fc64-acd5-4cb6-831e-f8b0041af004",
+                "config": "''",
                 "params": {
                   "group_dn": "[\"CN=Remote Desktop Users,CN=Builtin,DC=cspune,DC=com\"]",
                   "object_dn": "[\"CN=csdemouser,OU=cybersponse,DC=cspune,DC=com\"]",
@@ -2600,7 +2600,7 @@
               "description": null,
               "arguments": {
                 "name": "Active Directory",
-                "config": "ef017488-22bc-4d4e-8641-844277062739",
+                "config": "''",
                 "params": {
                   "cookie": "",
                   "page_size": "",
@@ -2738,7 +2738,7 @@
               "description": null,
               "arguments": {
                 "name": "Active Directory",
-                "config": "1966de38-c5f5-445e-acfd-add08ede13c9",
+                "config": "''",
                 "params": {
                   "search_attr_name": "Distinguished Name",
                   "search_attr_value": "CN=QA Prod,OU=cybersponse,DC=cspune,DC=com"
@@ -2821,7 +2821,7 @@
               "description": null,
               "arguments": {
                 "name": "Active Directory",
-                "config": "ef017488-22bc-4d4e-8641-844277062739",
+                "config": "''",
                 "params": {
                   "cookie": "",
                   "page_size": "",
@@ -2992,7 +2992,7 @@
               "description": null,
               "arguments": {
                 "name": "Active Directory",
-                "config": "1966de38-c5f5-445e-acfd-add08ede13c9",
+                "config": "''",
                 "params": {
                   "search_attr_name": "Distinguished Name",
                   "search_attr_value": "CN=QA Prod,OU=cybersponse,DC=cspune,DC=com"
@@ -3082,7 +3082,7 @@
               "description": null,
               "arguments": {
                 "name": "Active Directory",
-                "config": "0c39fb35-7f94-4f1f-ad01-4ff706514453",
+                "config": "''",
                 "params": {
                   "search_object": "User",
                   "search_attr_value": "{{vars.input.params['indicator_value']}}"
@@ -3327,7 +3327,7 @@
               "description": null,
               "arguments": {
                 "name": "Active Directory",
-                "config": "4d0a1d8f-7fda-4023-b5ce-e6e7ff05af82",
+                "config": "''",
                 "params": {
                   "search_attr_name": "SamAccount Name",
                   "search_attr_value": "jdoe"
