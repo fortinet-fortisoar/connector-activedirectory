@@ -1,7 +1,7 @@
 {
   "name": "activedirectory",
   "label": "Active Directory",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "category": "Directory Service",
   "description": "Active Directory (AD) is a directory service that Microsoft developed for Windows domain networks. You can directly query AD to retrieve information about users, groups, and computers, in an organization, by using the Lightweight Directory Access Protocol (LDAP) to directly query the AD.",
   "cs_approved": true,
@@ -1558,6 +1558,50 @@
         }
       ],
       "enabled": true
-    }
+    },
+        {
+            "title": "Force password reset on next logon",
+            "operation": "force_password_reset_next_logon",
+            "description": "Force password reset on next logon for a specific AD user based on the SamAccount Name or the Email, or the Distinguished Name (DN) of the user.",
+            "category": "containment",
+            "annotation": "force_password_reset_next_logon",
+            "output_schema": {
+                "message": "",
+                "description": "",
+                "result": "",
+                "referrals": "",
+                "type": "",
+                "dn": ""
+            },
+            "parameters": [
+                {
+                    "name": "search_attr_name",
+                    "title": "Attributes Type",
+                    "type": "select",
+                    "tooltip": "The attribute, either the SamAccount Name, Distinguished Name, or the Email of the user, whose password you want to reset in AD.",
+                    "description": "The attribute, either the SamAccount Name, Distinguished Name, or the Email of the user, whose password you want to reset in AD.",
+                    "visible": true,
+                    "required": true,
+                    "editable": true,
+                    "options": [
+                        "SamAccount Name",
+                        "Email",
+                        "Distinguished Name"
+                    ],
+                    "value": "SamAccount Name"
+                },
+                {
+                    "title": "Attributes Value",
+                    "name": "search_attr_value",
+                    "type": "text",
+                    "description": "The value of the SamAccount Name, the Distinguished Name, or the Email of the user, whose password you want to reset in AD.",
+                    "visible": true,
+                    "required": true,
+                    "editable": true,
+                    "value": ""
+                }
+            ],
+            "enabled": true
+        }
   ]
 }

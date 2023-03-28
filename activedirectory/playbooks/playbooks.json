@@ -3,12 +3,12 @@
   "data": [
     {
       "@type": "WorkflowCollection",
-      "name": "Sample - Active Directory - 2.2.1",
+      "name": "Sample - Active Directory - 2.3.0",
       "description": "Sample playbooks for \"Active Directory\" connector. If you are planning to use any of the sample playbooks in your environment, ensure that you clone those playbooks and move them to a different collection, since the sample playbook collection gets deleted during connector upgrade and delete.",
       "visible": true,
-      "image": null,
+      "image": "data:png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAIAAAABc2X6AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQwIDc5LjE2MDQ1MSwgMjAxNy8wNS8wNi0wMTowODoyMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1MDNhYTZiMy0zYzEzLTQ5YzEtODNiZi00MThjZWIxM2VhNTIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RTM1NERFMDQ0RjZBMTFFODk5NzRGRTJBQ0Y2QUU0MDAiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RTM1NERFMDM0RjZBMTFFODk5NzRGRTJBQ0Y2QUU0MDAiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTggKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2YmRiZDgyNy0yMWE4LTQwYTgtODc3MS1hNjAwOGY3YjhjZWQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTAzYWE2YjMtM2MxMy00OWMxLTgzYmYtNDE4Y2ViMTNlYTUy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",
       "uuid": "e3f43330-e495-40a1-b1f8-1c0d03334d3d",
-      "id": 61,
+      "id": 102,
       "deletedAt": null,
       "importedBy": [],
       "recordTags": [
@@ -74,7 +74,7 @@
                   "page_size": "",
                   "size_limit": ""
                 },
-                "version": "2.2.1",
+                "version": "2.3.0",
                 "connector": "activedirectory",
                 "operation": "advanced_search",
                 "operationTitle": "Advanced Search",
@@ -104,7 +104,7 @@
           "groups": [],
           "priority": null,
           "uuid": "0fc08c8f-931a-4c62-b82d-ac4e7a458abc",
-          "id": 875,
+          "id": 1247,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -144,7 +144,7 @@
                   "search_attr_name": "SamAccount Name",
                   "search_attr_value": ""
                 },
-                "version": "2.2.1",
+                "version": "2.3.0",
                 "connector": "activedirectory",
                 "operation": "reset_password",
                 "operationTitle": "Reset Password",
@@ -201,7 +201,7 @@
           "groups": [],
           "priority": null,
           "uuid": "14e053e5-2080-404d-b32d-0856c6aef08b",
-          "id": 881,
+          "id": 1248,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -240,7 +240,7 @@
                   "search_attr_name": "Distinguished Name",
                   "search_attr_value": ""
                 },
-                "version": "2.2.1",
+                "version": "2.3.0",
                 "connector": "activedirectory",
                 "operation": "disable_computer",
                 "operationTitle": "Disable Computer",
@@ -297,7 +297,7 @@
           "groups": [],
           "priority": null,
           "uuid": "1d501388-f6ee-4877-b685-61c7cec080a8",
-          "id": 880,
+          "id": 1249,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -337,7 +337,7 @@
                   "page_size": "",
                   "size_limit": ""
                 },
-                "version": "2.2.1",
+                "version": "2.3.0",
                 "connector": "activedirectory",
                 "operation": "get_all_object_details",
                 "operationTitle": "Get All Objects Details",
@@ -394,7 +394,7 @@
           "groups": [],
           "priority": null,
           "uuid": "280b5a83-08d1-48c2-bea9-b83d41b40e01",
-          "id": 869,
+          "id": 1250,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -461,7 +461,7 @@
                   "sn": "",
                   "search_attr_value": ""
                 },
-                "version": "2.2.1",
+                "version": "2.3.0",
                 "connector": "activedirectory",
                 "operation": "get_specific_object_details",
                 "operationTitle": "Get Specific Object Details",
@@ -491,7 +491,7 @@
           "groups": [],
           "priority": null,
           "uuid": "363272ff-61f0-491e-831a-433d35bc99f1",
-          "id": 870,
+          "id": 1251,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -529,7 +529,7 @@
                 "params": {
                   "object_class": "User"
                 },
-                "version": "2.2.1",
+                "version": "2.3.0",
                 "connector": "activedirectory",
                 "operation": "remove_group_members",
                 "operationTitle": "Remove Group Members",
@@ -586,7 +586,7 @@
           "groups": [],
           "priority": null,
           "uuid": "3aa396be-b068-4238-8963-13c93c91eaa6",
-          "id": 874,
+          "id": 1252,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -651,7 +651,7 @@
                 "params": {
                   "object_class": "User"
                 },
-                "version": "2.2.1",
+                "version": "2.3.0",
                 "connector": "activedirectory",
                 "operation": "add_group_members",
                 "operationTitle": "Add Group Members",
@@ -681,7 +681,7 @@
           "groups": [],
           "priority": null,
           "uuid": "3d564651-c482-4937-997c-71363db16452",
-          "id": 873,
+          "id": 1253,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -746,7 +746,7 @@
                 "params": {
                   "object_class": "User"
                 },
-                "version": "2.2.1",
+                "version": "2.3.0",
                 "connector": "activedirectory",
                 "operation": "add_object",
                 "operationTitle": "Add Object",
@@ -776,7 +776,7 @@
           "groups": [],
           "priority": null,
           "uuid": "4330f4e9-876e-4efe-91d1-727c5259a789",
-          "id": 868,
+          "id": 1254,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -841,7 +841,7 @@
                 "params": {
                   "object_class": "User"
                 },
-                "version": "2.2.1",
+                "version": "2.3.0",
                 "connector": "activedirectory",
                 "operation": "delete_object",
                 "operationTitle": "Delete Object",
@@ -871,7 +871,7 @@
           "groups": [],
           "priority": null,
           "uuid": "438d4b69-6b7e-410b-bec5-7fdcbda7afe6",
-          "id": 872,
+          "id": 1255,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -1110,7 +1110,7 @@
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
           "uuid": "96cdd34f-0124-475d-a818-92af431cd437",
-          "id": 845,
+          "id": 1256,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -1148,7 +1148,7 @@
                 "params": {
                   "object_class": "User"
                 },
-                "version": "2.2.1",
+                "version": "2.3.0",
                 "connector": "activedirectory",
                 "operation": "update_object",
                 "operationTitle": "Update Object",
@@ -1205,7 +1205,7 @@
           "groups": [],
           "priority": null,
           "uuid": "9723d639-c21f-4cc8-aed2-6eb6e4b37b48",
-          "id": 871,
+          "id": 1257,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -1243,7 +1243,7 @@
                 "params": {
                   "search_attr_value": ""
                 },
-                "version": "2.2.1",
+                "version": "2.3.0",
                 "connector": "activedirectory",
                 "operation": "disable_user_account",
                 "operationTitle": "Disable User Account",
@@ -1300,7 +1300,7 @@
           "groups": [],
           "priority": null,
           "uuid": "a8404211-0324-4dab-8921-f5ee9bace6d2",
-          "id": 878,
+          "id": 1258,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -1341,7 +1341,7 @@
                   "size_limit": "",
                   "search_attr_value": ""
                 },
-                "version": "2.2.1",
+                "version": "2.3.0",
                 "connector": "activedirectory",
                 "operation": "global_search",
                 "operationTitle": "Global Search",
@@ -1398,7 +1398,102 @@
           "groups": [],
           "priority": null,
           "uuid": "d2138f29-738d-4ac3-821d-67a50d87df1d",
-          "id": 876,
+          "id": 1259,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
+          "recordTags": [
+            "activedirectory",
+            "Activedirectory"
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "triggerLimit": null,
+          "name": "Force Password Reset For Next Login",
+          "aliasName": null,
+          "tag": "#Active Directory",
+          "description": "Resets the password for a specific AD user based on the SamAccount Name or the Email, or the Distinguished Name (DN) of the user.",
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "remoteExecutableFlag": false,
+          "parameters": [],
+          "synchronous": false,
+          "lastModifyDate": 1679664650,
+          "collection": "/api/3/workflow_collections/e3f43330-e495-40a1-b1f8-1c0d03334d3d",
+          "versions": [],
+          "triggerStep": "/api/3/workflow_steps/c3c3a452-1ea6-4928-96c9-81b442fbf69c",
+          "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "arguments": {
+                "route": "afa24017-795a-45d7-a919-dd5a899114d1",
+                "title": "Active Directory: Reset Password",
+                "resources": [
+                  "alerts"
+                ],
+                "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "records": "{{vars.input.records[0]}}"
+                  }
+                },
+                "executeButtonText": "Execute",
+                "noRecordExecution": true,
+                "singleRecordExecution": false
+              },
+              "status": null,
+              "top": "30",
+              "left": "125",
+              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
+              "group": null,
+              "uuid": "c3c3a452-1ea6-4928-96c9-81b442fbf69c"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Force Password Reset on Next Login",
+              "description": null,
+              "arguments": {
+                "name": "Active Directory",
+                "config": "4d0a1d8f-7fda-4023-b5ce-e6e7ff05af82",
+                "params": {
+                  "search_attr_name": "SamAccount Name",
+                  "search_attr_value": "jdoe"
+                },
+                "version": "2.3.0",
+                "connector": "activedirectory",
+                "operation": "force_password_reset_next_logon",
+                "operationTitle": "Force password reset on next logon",
+                "pickFromTenant": false,
+                "step_variables": []
+              },
+              "status": null,
+              "top": "165",
+              "left": "125",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "58bca98a-e0ac-4b46-bcf5-b3ffd5697948"
+            }
+          ],
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+              "name": "Start -> Force Password Reset on Next Login",
+              "targetStep": "/api/3/workflow_steps/58bca98a-e0ac-4b46-bcf5-b3ffd5697948",
+              "sourceStep": "/api/3/workflow_steps/c3c3a452-1ea6-4928-96c9-81b442fbf69c",
+              "label": null,
+              "isExecuted": false,
+              "uuid": "3ab9b598-41ee-4bf3-b18f-71bc9b397f2c"
+            }
+          ],
+          "groups": [],
+          "priority": null,
+          "uuid": "df384c34-21a1-4e25-b2a4-19649e8e758b",
+          "id": 1276,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -1463,7 +1558,7 @@
                 "params": {
                   "search_attr_value": ""
                 },
-                "version": "2.2.1",
+                "version": "2.3.0",
                 "connector": "activedirectory",
                 "operation": "enable_user_account",
                 "operationTitle": "Enable User Account",
@@ -1493,7 +1588,7 @@
           "groups": [],
           "priority": null,
           "uuid": "e5c5d4be-38f0-455c-ab15-00b4ca3f8ac7",
-          "id": 877,
+          "id": 1260,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -1532,7 +1627,7 @@
                   "search_attr_name": "Distinguished Name",
                   "search_attr_value": ""
                 },
-                "version": "2.2.1",
+                "version": "2.3.0",
                 "connector": "activedirectory",
                 "operation": "enable_computer",
                 "operationTitle": "Enable Computer",
@@ -1589,7 +1684,7 @@
           "groups": [],
           "priority": null,
           "uuid": "f937e123-3558-4aed-989e-a3721b2a8b5e",
-          "id": 879,
+          "id": 1261,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -1605,8 +1700,8 @@
   "macros": [
     {
       "name": "Demo_mode",
-      "value": "true",
-      "default_value": "true"
+      "value": "false",
+      "default_value": "false"
     }
   ],
   "exported_tags": [

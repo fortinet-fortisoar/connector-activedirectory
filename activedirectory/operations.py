@@ -640,6 +640,38 @@ def build_response(conn, object_class, object_dn, action=None, group_dn=None):
         raise ConnectorError('Failure: {0}'.format(str(result['description'])))
 
 
+def force_password_reset_next_logon(config, params):
+    try:
+        baseDN = config.get('baseDN')
+        conn = server_connection(config)
+        search_attr_name = SEARCH_ATTRIBUTES_DICT[params.get('search_attr_name')]
+        search_attr_value = params.get('search_attr_value')
+        json_data = get_attribute(conn, baseDN, search_attr_name, search_attr_value)
+        entries = json_data.get('entries')
+        if entries:
+            user_base_dn = entries[0]['dn']
+            if user_base_dn:
+                user_acc_ctrl = int(entries[0]['attributes']['userAccountControl'])
+                if user_acc_ctrl & ACC_DONT_EXPIRE_PASSWORD > 0:
+                    logger.info("Account has don't expire password property set, changed property to normal account")
+                    mod_dict = {'userAccountControl': [(ldap3.MODIFY_REPLACE, NORMAL_ACCOUNT)]}
+                    modify(conn, user_base_dn, mod_dict)
+                mod_dict = {'pwdLastSet': [(ldap3.MODIFY_REPLACE, 0)]}
+                result = modify(conn, user_base_dn, mod_dict)
+                status = result['description']
+                if status.lower() == 'success':
+                    logger.info('Previous password clear successfully {}'.format(user_base_dn))
+                else:
+                    result['message'] = 'Something went wrong!'
+                    logger.error('{0}'.format(status))
+                conn.unbind()
+                return result
+        else:
+            return {'message': 'Record not found in Active Directory'}
+    except Exception as err:
+        logger.exception('Failure: {0}'.format(str(err)))
+        raise ConnectorError('{0}'.format(str(err)))
+        
 
 def _check_health(config):
     try:
@@ -671,7 +703,8 @@ operations = {
     'delete_object': delete_object,
     'update_object': update_object,
     'add_group_members': add_group_members,
-    'remove_group_members': remove_group_members
+    'remove_group_members': remove_group_members,
+    'force_password_reset_next_logon': force_password_reset_next_logon
 
 }
 
