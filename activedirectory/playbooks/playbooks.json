@@ -3282,7 +3282,7 @@
           "name": "Force Password Reset For Next Login",
           "aliasName": null,
           "tag": "#Active Directory",
-          "description": "Resets the password for a specific AD user based on the SamAccount Name or the Email, or the Distinguished Name (DN) of the user.",
+          "description": "Forces specific Active Directory users to reset their password when they next log on to Active Directory. You can specify the user who requires to reset their password based on the SamAccount Name, Email, or Distinguished Name (DN) of the user.",
           "isActive": false,
           "debug": false,
           "singleRecordExecution": false,
@@ -3329,8 +3329,8 @@
                 "name": "Active Directory",
                 "config": "''",
                 "params": {
-                  "search_attr_name": "SamAccount Name",
-                  "search_attr_value": "jdoe"
+                  "search_attr_name": "",
+                  "search_attr_value": ""
                 },
                 "version": "2.3.0",
                 "connector": "activedirectory",
