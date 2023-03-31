@@ -257,7 +257,6 @@ def formatting_data(json_data):
 
         for each_dict in entries:
             attributes = each_dict['attributes']
-            each_dict['dn'] = (each_dict['dn']).replace('\\', '')
             for key, val in attributes.items():
                 if key == 'userAccountControl':
                     attributes[key] = get_user_account_control_detail(val)
@@ -268,8 +267,6 @@ def formatting_data(json_data):
                     attributes[key] = convert_ad_timestamp(val)
                 if key in ip_details:
                     attributes[key] = str(decimal_to_ip_address(int(val)))
-                if key in 'distinguishedName':
-                    attributes[key] = val.replace('\\', '')
                 if key == 'groupType':
                     try:
                         attributes[key] = list(GROUP_TYPE.keys())[list(GROUP_TYPE.values()).index(val)]
