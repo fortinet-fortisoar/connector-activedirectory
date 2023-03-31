@@ -3329,8 +3329,8 @@
                 "name": "Active Directory",
                 "config": "''",
                 "params": {
-                  "search_attr_name": "SamAccount Name",
-                  "search_attr_value": "jdoe"
+                  "search_attr_name": "",
+                  "search_attr_value": ""
                 },
                 "version": "2.3.0",
                 "connector": "activedirectory",
