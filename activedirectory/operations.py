@@ -7,6 +7,8 @@
 import base64, ipaddress, json, ldap3, time
 from connectors.core.connector import get_logger, ConnectorError
 from .constant import *
+from ldap3.utils.dn import safe_rdn
+from ldap3 import Server, Connection, MODIFY_REPLACE, SUBTREE, BASE, ALL
 
 logger = get_logger('activedirectory')
 
@@ -154,7 +156,8 @@ def get_attribute(conn, baseDN, search_attr_name, search_attr_value, object_type
             if object_type and object_type.lower() == 'computer':
                 if search_attr_value and not search_attr_value.endswith('$') and not '*' in search_attr_value:
                     search_attr_value = search_attr_value.upper() + '$'
-                filter = '(&(objectCategory=computer)(objectClass=computer)(sAMAccountName={1}))'.format(filter, search_attr_value)
+                filter = '(&(objectCategory=computer)(objectClass=computer)(sAMAccountName={1}))'.format(filter,
+                                                                                                         search_attr_value)
             else:
                 filter = '(&{0}(sAMAccountName={1}))'.format(filter, search_attr_value)
 
@@ -278,7 +281,7 @@ def formatting_data(json_data):
 def check_escape(search_attr_name, raw_string):
     if search_attr_name == 'distinguishedName':
         if isinstance(raw_string, bytes) or (', ' not in raw_string and ' ,' not in raw_string) or (
-                        ' ,' not in raw_string and ', ' not in raw_string):
+                ' ,' not in raw_string and ', ' not in raw_string):
             return raw_string
         escaped = ''
         i = 0
@@ -676,6 +679,25 @@ def force_password_reset_next_logon(config, params):
         raise ConnectorError('{0}'.format(str(err)))
 
 
+def modify_computer_ou(config, params):
+    try:
+        conn = server_connection(config)
+        computer_dn = params.get('computer_dn')
+        target_dn = params.get('target_dn')
+        computer_name = params.get('computer_name')
+        # Search for the computer to move
+        conn.search(computer_dn, '(objectClass=computer)', search_scope=BASE)
+        if len(conn.entries) != 1:
+            raise ValueError("Computer not found or not unique.")
+        # Move the computer to the target OU
+        modification = {"distinguishedName": [(MODIFY_REPLACE, [target_dn])]}
+        conn.modify(computer_dn, modification)
+        conn.modify_dn(computer_dn, "CN={}".format(computer_name), new_superior=target_dn)
+        return (f"Successfully moved computer '{computer_dn}' to '{target_dn}'.")
+    except Exception as e:
+        return(f"Error: {e}")
+
+
 def _check_health(config):
     try:
         conn = server_connection(config)
@@ -693,6 +715,7 @@ def _check_health(config):
 
 
 operations = {
+    'modify_computer_ou': modify_computer_ou,
     'global_search': global_search,
     'get_all_object_details': get_all_object_details,
     'get_specific_object_details': get_specific_object_details,
@@ -708,5 +731,4 @@ operations = {
     'add_group_members': add_group_members,
     'remove_group_members': remove_group_members,
     'force_password_reset_next_logon': force_password_reset_next_logon
-
 }
