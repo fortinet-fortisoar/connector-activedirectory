@@ -635,7 +635,8 @@ def build_response(conn, object_class, object_dn, action=None, group_dn=None):
                     result.update({'group_dn': group_dn})
                 return result
             else:
-                raise ConnectorError("Provided User or Computer DN not exist in Active Directory")
+                result.update({'message': 'Failed to {0} object into {1}'.format(action, object_class)})
+                return result
         else:
             raise ConnectorError(
                 'Failure: {0}'.format(str(result['description'] if result['description'] else None)))
