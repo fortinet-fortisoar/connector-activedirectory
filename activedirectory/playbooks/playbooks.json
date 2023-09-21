@@ -3,12 +3,12 @@
   "data": [
     {
       "@type": "WorkflowCollection",
-      "name": "Sample - Active Directory - 2.3.0",
+      "name": "Sample - Active Directory - 2.4.0",
       "description": "Sample playbooks for \"Active Directory\" connector. If you are planning to use any of the sample playbooks in your environment, ensure that you clone those playbooks and move them to a different collection, since the sample playbook collection gets deleted during connector upgrade and delete.",
       "visible": true,
       "image": null,
       "uuid": "e3f43330-e495-40a1-b1f8-1c0d03334d3d",
-      "id": 102,
+      "id": 45,
       "deletedAt": null,
       "importedBy": [],
       "recordTags": [
@@ -24,15 +24,48 @@
           "tag": "#Active Directory",
           "description": "Add an object entry of User, Group, Computer or Organization Unit (OU) type in Active Directory based on the type of object and other input parameters you have specified.",
           "isActive": false,
+          "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
           "lastModifyDate": 1633517102,
-          "collection": "/api/3/workflow_collections/31bb7f48-3512-43a3-9d68-9ba471c140be",
+          "collection": "/api/3/workflow_collections/e3f43330-e495-40a1-b1f8-1c0d03334d3d",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/a03881c8-3221-4ac5-bd22-9133e6341b85",
           "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Add Object",
+              "description": null,
+              "arguments": {
+                "name": "Active Directory",
+                "config": "''",
+                "params": {
+                  "mail": "user1@cspune.com",
+                  "title": "Manager",
+                  "object_dn": "CN=ad-user,OU=cybersponse,DC=cspune,DC=com",
+                  "description": "Add User using CyOPs connector",
+                  "displayName": "AD User1",
+                  "object_class": "User",
+                  "enable_account": true,
+                  "sAMAccountName": "ad-user",
+                  "custom_attributes": "",
+                  "userPrincipalName": "ad-user1@cspune.com"
+                },
+                "version": "2.4.0",
+                "connector": "activedirectory",
+                "operation": "add_object",
+                "operationTitle": "Add Object",
+                "step_variables": []
+              },
+              "status": null,
+              "top": "153",
+              "left": "300",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "3f5b1685-85fa-4279-a03d-b90cc3fffe94"
+            },
             {
               "@type": "WorkflowStep",
               "name": "Start",
@@ -65,40 +98,8 @@
               "top": "14",
               "left": "94",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
-              "uuid": "a03881c8-3221-4ac5-bd22-9133e6341b85",
-              "id": 12511
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Add Object",
-              "description": null,
-              "arguments": {
-                "name": "Active Directory",
-                "config": "''" ,
-                "params": {
-                  "mail": "user1@cspune.com",
-                  "title": "Manager",
-                  "object_dn": "CN=ad-user,OU=cybersponse,DC=cspune,DC=com",
-                  "description": "Add User using CyOPs connector",
-                  "displayName": "AD User1",
-                  "object_class": "User",
-                  "enable_account": true,
-                  "sAMAccountName": "ad-user",
-                  "custom_attributes": "",
-                  "userPrincipalName": "ad-user1@cspune.com"
-                },
-                "version": "2.3.0",
-                "connector": "activedirectory",
-                "operation": "add_object",
-                "operationTitle": "Add Object",
-                "step_variables": []
-              },
-              "status": null,
-              "top": "153",
-              "left": "300",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "uuid": "3f5b1685-85fa-4279-a03d-b90cc3fffe94",
-              "id": 12510
+              "group": null,
+              "uuid": "a03881c8-3221-4ac5-bd22-9133e6341b85"
             }
           ],
           "routes": [
@@ -109,22 +110,22 @@
               "sourceStep": "/api/3/workflow_steps/a03881c8-3221-4ac5-bd22-9133e6341b85",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "02826257-e37f-4c02-a313-b7e78850dea1"
             }
           ],
+          "groups": [],
           "priority": null,
           "uuid": "145737da-de31-4886-9b72-8a114d876e31",
+          "id": 515,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
           "recordTags": [
             "Microsoft",
             "activedirectory"
-          ],
-          "id": 4253,
-          "createUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "createDate": 1633459997,
-          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "modifyDate": 1633517102,
-          "owners": [],
-          "isPrivate": false
+          ]
         },
         {
           "@type": "Workflow",
@@ -134,15 +135,54 @@
           "tag": "#Active Directory",
           "description": "Enables the account of a specific AD user based on the SamAccount Name or the Email of the user.",
           "isActive": false,
+          "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
           "lastModifyDate": 1633517354,
-          "collection": "/api/3/workflow_collections/31bb7f48-3512-43a3-9d68-9ba471c140be",
+          "collection": "/api/3/workflow_collections/e3f43330-e495-40a1-b1f8-1c0d03334d3d",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/1b5952fe-2704-4bfc-b81e-4d7eb6fd4359",
           "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Enable User Account",
+              "description": null,
+              "arguments": {
+                "name": "Active Directory",
+                "config": "''",
+                "params": {
+                  "search_attr_name": "SamAccount Name",
+                  "search_attr_value": "shravan"
+                },
+                "version": "2.4.0",
+                "connector": "activedirectory",
+                "operation": "enable_user_account",
+                "operationTitle": "Enable User Account",
+                "step_variables": []
+              },
+              "status": null,
+              "top": "110",
+              "left": "374",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "57633c7a-3b9d-4977-a46c-195fa19777f9"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Save Result",
+              "description": null,
+              "arguments": {
+                "status": "{{vars.result}}"
+              },
+              "status": null,
+              "top": "230",
+              "left": "374",
+              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+              "group": null,
+              "uuid": "56dcff6d-0716-48c8-86b3-f6667085cf16"
+            },
             {
               "@type": "WorkflowStep",
               "name": "Start",
@@ -175,46 +215,8 @@
               "top": "11",
               "left": "374",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
-              "uuid": "1b5952fe-2704-4bfc-b81e-4d7eb6fd4359",
-              "id": 12513
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Save Result",
-              "description": null,
-              "arguments": {
-                "status": "{{vars.result}}"
-              },
-              "status": null,
-              "top": "230",
-              "left": "374",
-              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
-              "uuid": "56dcff6d-0716-48c8-86b3-f6667085cf16",
-              "id": 12512
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Enable User Account",
-              "description": null,
-              "arguments": {
-                "name": "Active Directory",
-                "config": "''",
-                "params": {
-                  "search_attr_name": "SamAccount Name",
-                  "search_attr_value": "shravan"
-                },
-                "version": "2.3.0",
-                "connector": "activedirectory",
-                "operation": "enable_user_account",
-                "operationTitle": "Enable User Account",
-                "step_variables": []
-              },
-              "status": null,
-              "top": "110",
-              "left": "374",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "uuid": "57633c7a-3b9d-4977-a46c-195fa19777f9",
-              "id": 12514
+              "group": null,
+              "uuid": "1b5952fe-2704-4bfc-b81e-4d7eb6fd4359"
             }
           ],
           "routes": [
@@ -225,6 +227,7 @@
               "sourceStep": "/api/3/workflow_steps/57633c7a-3b9d-4977-a46c-195fa19777f9",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "42546c97-8783-4537-bb3f-7f3d58750ca6"
             },
             {
@@ -234,22 +237,22 @@
               "sourceStep": "/api/3/workflow_steps/1b5952fe-2704-4bfc-b81e-4d7eb6fd4359",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "4c28b215-0aca-4979-b203-a3d59d0b6363"
             }
           ],
+          "groups": [],
           "priority": null,
           "uuid": "23080761-654d-4bd5-b25f-b04d955887d3",
+          "id": 516,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
           "recordTags": [
             "Microsoft",
             "activedirectory"
-          ],
-          "id": 4254,
-          "createUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "createDate": 1633459997,
-          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "modifyDate": 1633517354,
-          "owners": [],
-          "isPrivate": false
+          ]
         },
         {
           "@type": "Workflow",
@@ -259,15 +262,78 @@
           "tag": "#Active Directory",
           "description": "Get specific Computers details  from Active Directory based on SamAccount Name.",
           "isActive": false,
+          "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
-          "lastModifyDate": 1633459997,
-          "collection": "/api/3/workflow_collections/31bb7f48-3512-43a3-9d68-9ba471c140be",
+          "lastModifyDate": 1695293722,
+          "collection": "/api/3/workflow_collections/e3f43330-e495-40a1-b1f8-1c0d03334d3d",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/be251502-793b-4334-a46e-51046ab56485",
           "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Get Specific Computer Details",
+              "description": null,
+              "arguments": {
+                "name": "Active Directory",
+                "config": "53376f67-4370-4342-9b01-e0c8ce87086d",
+                "params": {
+                  "search_object": "Computer",
+                  "search_attr_value": "Devops"
+                },
+                "version": "2.4.0",
+                "connector": "activedirectory",
+                "operation": "get_specific_object_details",
+                "operationTitle": "Get Specific Object Details",
+                "step_variables": []
+              },
+              "status": null,
+              "top": "100",
+              "left": "434",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "d83941ea-36a5-4e32-9e25-a257dee1cc8a"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Save Resource Details",
+              "description": null,
+              "arguments": {
+                "dn": "{{vars.result.data.entries[0].dn if vars.result.data.entries | length else '' }}",
+                "attributes": "{{ vars.result.data.entries[0].attributes if vars.result.data.entries | length else '' }}",
+                "resource_info": "{{vars.result}}"
+              },
+              "status": null,
+              "top": "180",
+              "left": "800",
+              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+              "group": null,
+              "uuid": "ea835c4b-874f-4944-9458-d34583ea0d43"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Save Tabular Format",
+              "description": null,
+              "arguments": {
+                "params": {
+                  "iri": "{{vars.request.data.records[0][\"@id\"]}}",
+                  "body": "{   \"description\": \"<h3>Active Directory Resource</h3><table class='table margin-bottom-sm' border='1'> <tr><td width ='30%'>dn</td><td width ='30%'>{{vars.dn}}</td> {% if vars.attributes|length > 1 %}{% for key,value in vars.attributes.items() %} \t<tr><td width = '30%'>{{ key }}</td><td width = '70%'>{{ value}}</td></tr>{% endfor %}{% endif %}</table>\"  }"
+                },
+                "version": "2.7.0",
+                "connector": "cyops_utilities",
+                "operation": "update_cyops_resource",
+                "operationTitle": "CyOPs: Update Record",
+                "step_variables": []
+              },
+              "status": null,
+              "top": "249",
+              "left": "1180",
+              "stepType": "/api/3/workflow_step_types/0109f35d-090b-4a2b-bd8a-94cbc3508562",
+              "group": null,
+              "uuid": "f7417667-e257-4c30-8904-8c721ba970cc"
+            },
             {
               "@type": "WorkflowStep",
               "name": "Start",
@@ -300,33 +366,73 @@
               "top": "48",
               "left": "31",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
-              "uuid": "be251502-793b-4334-a46e-51046ab56485",
-              "id": 12518
+              "group": null,
+              "uuid": "be251502-793b-4334-a46e-51046ab56485"
+            }
+          ],
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+              "name": "Get Specific Computer Details -> Save Resource Details",
+              "targetStep": "/api/3/workflow_steps/ea835c4b-874f-4944-9458-d34583ea0d43",
+              "sourceStep": "/api/3/workflow_steps/d83941ea-36a5-4e32-9e25-a257dee1cc8a",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "8e4ce088-a923-42f1-812d-7db8b1cded90"
             },
             {
-              "@type": "WorkflowStep",
-              "name": "Get Specific Computer Details",
-              "description": null,
-              "arguments": {
-                "name": "Active Directory",
-                "config": "''" ,
-                "params": {
-                  "search_object": "Computer",
-                  "search_attr_value": "Devops"
-                },
-                "version": "2.3.0",
-                "connector": "activedirectory",
-                "operation": "get_specific_object_details",
-                "operationTitle": "Get Specific Object Details",
-                "step_variables": []
-              },
-              "status": null,
-              "top": "100",
-              "left": "434",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "uuid": "d83941ea-36a5-4e32-9e25-a257dee1cc8a",
-              "id": 12517
+              "@type": "WorkflowRoute",
+              "name": "Save Resource Details -> Save Tabular Format",
+              "targetStep": "/api/3/workflow_steps/f7417667-e257-4c30-8904-8c721ba970cc",
+              "sourceStep": "/api/3/workflow_steps/ea835c4b-874f-4944-9458-d34583ea0d43",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "848cabb7-8f57-4b04-bef1-944c77688474"
             },
+            {
+              "@type": "WorkflowRoute",
+              "name": "Start -> Get Specific Computer Details",
+              "targetStep": "/api/3/workflow_steps/d83941ea-36a5-4e32-9e25-a257dee1cc8a",
+              "sourceStep": "/api/3/workflow_steps/be251502-793b-4334-a46e-51046ab56485",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "9b03e2e6-c8a1-4492-aba3-5381ce767874"
+            }
+          ],
+          "groups": [],
+          "priority": null,
+          "uuid": "2749eeca-fec5-4863-adc7-b33f5e9db0f3",
+          "id": 517,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
+          "recordTags": [
+            "Microsoft",
+            "activedirectory"
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "triggerLimit": null,
+          "name": "Search by Distinguished Name",
+          "aliasName": null,
+          "tag": "#Active Directory",
+          "description": "Search records or entities form active directory based on Distinguished Name.",
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "remoteExecutableFlag": false,
+          "parameters": [],
+          "synchronous": false,
+          "lastModifyDate": 1633459997,
+          "collection": "/api/3/workflow_collections/e3f43330-e495-40a1-b1f8-1c0d03334d3d",
+          "versions": [],
+          "triggerStep": "/api/3/workflow_steps/5669a225-3b6f-42a6-9c11-c94d9e7033a4",
+          "steps": [
             {
               "@type": "WorkflowStep",
               "name": "Save Resource Details",
@@ -337,17 +443,18 @@
                 "resource_info": "{{vars.result}}"
               },
               "status": null,
-              "top": "180",
-              "left": "800",
+              "top": "200",
+              "left": "768",
               "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
-              "uuid": "ea835c4b-874f-4944-9458-d34583ea0d43",
-              "id": 12516
+              "group": null,
+              "uuid": "22b5d9a9-5b68-45f3-b3f3-f0e0d8601e7f"
             },
             {
               "@type": "WorkflowStep",
               "name": "Save Tabular Format",
               "description": null,
               "arguments": {
+                "name": "Utilities",
                 "params": {
                   "iri": "{{vars.request.data.records[0][\"@id\"]}}",
                   "body": "{   \"description\": \"<h3>Active Directory Resource</h3><table class='table margin-bottom-sm' border='1'> <tr><td width ='30%'>dn</td><td width ='30%'>{{vars.dn}}</td> {% if vars.attributes|length > 1 %}{% for key,value in vars.attributes.items() %} \t<tr><td width = '30%'>{{ key }}</td><td width = '70%'>{{ value}}</td></tr>{% endfor %}{% endif %}</table>\"  }"
@@ -359,73 +466,40 @@
                 "step_variables": []
               },
               "status": null,
-              "top": "249",
-              "left": "1180",
-              "stepType": "/api/3/workflow_step_types/0109f35d-090b-4a2b-bd8a-94cbc3508562",
-              "uuid": "f7417667-e257-4c30-8904-8c721ba970cc",
-              "id": 12515
-            }
-          ],
-          "routes": [
-            {
-              "@type": "WorkflowRoute",
-              "name": "Save Resource Details -> Save Tabular Format",
-              "targetStep": "/api/3/workflow_steps/f7417667-e257-4c30-8904-8c721ba970cc",
-              "sourceStep": "/api/3/workflow_steps/ea835c4b-874f-4944-9458-d34583ea0d43",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "848cabb7-8f57-4b04-bef1-944c77688474"
+              "top": "317",
+              "left": "1131",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "902937ca-fae3-4d5b-a8cc-0fa5fdc39b00"
             },
             {
-              "@type": "WorkflowRoute",
-              "name": "Get Specific Computer Details -> Save Resource Details",
-              "targetStep": "/api/3/workflow_steps/ea835c4b-874f-4944-9458-d34583ea0d43",
-              "sourceStep": "/api/3/workflow_steps/d83941ea-36a5-4e32-9e25-a257dee1cc8a",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "8e4ce088-a923-42f1-812d-7db8b1cded90"
+              "@type": "WorkflowStep",
+              "name": "Search by Distinguished Name",
+              "description": null,
+              "arguments": {
+                "name": "Active Directory",
+                "config": "''",
+                "params": {
+                  "cookie": "",
+                  "page_size": "",
+                  "size_limit": "",
+                  "search_object": "Computer",
+                  "search_attr_name": "Distinguished Name",
+                  "search_attr_value": "CN=Devops,OU=cybersponse,DC=cspune,DC=com"
+                },
+                "version": "2.4.0",
+                "connector": "activedirectory",
+                "operation": "global_search",
+                "operationTitle": "Global Search",
+                "step_variables": []
+              },
+              "status": null,
+              "top": "132",
+              "left": "407",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "7c705fa1-bee4-4881-a781-52931e4ad41d"
             },
-            {
-              "@type": "WorkflowRoute",
-              "name": "Start -> Get Specific Computer Details",
-              "targetStep": "/api/3/workflow_steps/d83941ea-36a5-4e32-9e25-a257dee1cc8a",
-              "sourceStep": "/api/3/workflow_steps/be251502-793b-4334-a46e-51046ab56485",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "9b03e2e6-c8a1-4492-aba3-5381ce767874"
-            }
-          ],
-          "priority": null,
-          "uuid": "2749eeca-fec5-4863-adc7-b33f5e9db0f3",
-          "recordTags": [
-            "Microsoft",
-            "activedirectory"
-          ],
-          "id": 4255,
-          "createUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "createDate": 1633459997,
-          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "modifyDate": 1633459997,
-          "owners": [],
-          "isPrivate": false
-        },
-        {
-          "@type": "Workflow",
-          "triggerLimit": null,
-          "name": "Search by Distinguished Name",
-          "aliasName": null,
-          "tag": "#Active Directory",
-          "description": "Search records or entities form active directory based on Distinguished Name.",
-          "isActive": false,
-          "singleRecordExecution": false,
-          "remoteExecutableFlag": false,
-          "parameters": [],
-          "synchronous": false,
-          "lastModifyDate": 1633459997,
-          "collection": "/api/3/workflow_collections/31bb7f48-3512-43a3-9d68-9ba471c140be",
-          "versions": [],
-          "triggerStep": "/api/3/workflow_steps/5669a225-3b6f-42a6-9c11-c94d9e7033a4",
-          "steps": [
             {
               "@type": "WorkflowStep",
               "name": "Start",
@@ -458,87 +532,11 @@
               "top": "60",
               "left": "60",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
-              "uuid": "5669a225-3b6f-42a6-9c11-c94d9e7033a4",
-              "id": 12521
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Save Resource Details",
-              "description": null,
-              "arguments": {
-                "dn": "{{vars.result.data.entries[0].dn if vars.result.data.entries | length else '' }}",
-                "attributes": "{{ vars.result.data.entries[0].attributes if vars.result.data.entries | length else '' }}",
-                "resource_info": "{{vars.result}}"
-              },
-              "status": null,
-              "top": "200",
-              "left": "768",
-              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
-              "uuid": "22b5d9a9-5b68-45f3-b3f3-f0e0d8601e7f",
-              "id": 12519
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Search by Distinguished Name",
-              "description": null,
-              "arguments": {
-                "name": "Active Directory",
-                "config": "''",
-                "params": {
-                  "cookie": "",
-                  "page_size": "",
-                  "size_limit": "",
-                  "search_object": "Computer",
-                  "search_attr_name": "Distinguished Name",
-                  "search_attr_value": "CN=Devops,OU=cybersponse,DC=cspune,DC=com"
-                },
-                "version": "2.3.0",
-                "connector": "activedirectory",
-                "operation": "global_search",
-                "operationTitle": "Global Search",
-                "step_variables": []
-              },
-              "status": null,
-              "top": "132",
-              "left": "407",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "uuid": "7c705fa1-bee4-4881-a781-52931e4ad41d",
-              "id": 12520
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Save Tabular Format",
-              "description": null,
-              "arguments": {
-                "name": "Utilities",
-                "params": {
-                  "iri": "{{vars.request.data.records[0][\"@id\"]}}",
-                  "body": "{   \"description\": \"<h3>Active Directory Resource</h3><table class='table margin-bottom-sm' border='1'> <tr><td width ='30%'>dn</td><td width ='30%'>{{vars.dn}}</td> {% if vars.attributes|length > 1 %}{% for key,value in vars.attributes.items() %} \t<tr><td width = '30%'>{{ key }}</td><td width = '70%'>{{ value}}</td></tr>{% endfor %}{% endif %}</table>\"  }"
-                },
-                "version": "2.7.0",
-                "connector": "cyops_utilities",
-                "operation": "update_cyops_resource",
-                "operationTitle": "CyOPs: Update Record",
-                "step_variables": []
-              },
-              "status": null,
-              "top": "317",
-              "left": "1131",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "uuid": "902937ca-fae3-4d5b-a8cc-0fa5fdc39b00",
-              "id": 12522
+              "group": null,
+              "uuid": "5669a225-3b6f-42a6-9c11-c94d9e7033a4"
             }
           ],
           "routes": [
-            {
-              "@type": "WorkflowRoute",
-              "name": "Search by Distinguished Name -> Save Resource Details",
-              "targetStep": "/api/3/workflow_steps/22b5d9a9-5b68-45f3-b3f3-f0e0d8601e7f",
-              "sourceStep": "/api/3/workflow_steps/7c705fa1-bee4-4881-a781-52931e4ad41d",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "37ee15a5-bea8-4e7f-a31d-df6b8a408b51"
-            },
             {
               "@type": "WorkflowRoute",
               "name": "Save Resource Details -> Save Tabular Format",
@@ -546,7 +544,18 @@
               "sourceStep": "/api/3/workflow_steps/22b5d9a9-5b68-45f3-b3f3-f0e0d8601e7f",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "3b6f2d38-93d8-4f71-93f1-79c3972dc579"
+            },
+            {
+              "@type": "WorkflowRoute",
+              "name": "Search by Distinguished Name -> Save Resource Details",
+              "targetStep": "/api/3/workflow_steps/22b5d9a9-5b68-45f3-b3f3-f0e0d8601e7f",
+              "sourceStep": "/api/3/workflow_steps/7c705fa1-bee4-4881-a781-52931e4ad41d",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "37ee15a5-bea8-4e7f-a31d-df6b8a408b51"
             },
             {
               "@type": "WorkflowRoute",
@@ -555,22 +564,22 @@
               "sourceStep": "/api/3/workflow_steps/5669a225-3b6f-42a6-9c11-c94d9e7033a4",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "c4d41d58-e5a5-41fa-8be1-2d279a6e1690"
             }
           ],
+          "groups": [],
           "priority": null,
           "uuid": "2fc277e7-bb04-4dec-b9ca-b657e1f3314b",
+          "id": 518,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
           "recordTags": [
             "Microsoft",
             "activedirectory"
-          ],
-          "id": 4256,
-          "createUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "createDate": 1633459997,
-          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "modifyDate": 1633459997,
-          "owners": [],
-          "isPrivate": false
+          ]
         },
         {
           "@type": "Workflow",
@@ -580,15 +589,54 @@
           "tag": "#Active Directory",
           "description": "Executes an advanced LDAP query that searches and retrieves AD records based on your custom query.",
           "isActive": false,
+          "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
           "lastModifyDate": 1633517128,
-          "collection": "/api/3/workflow_collections/31bb7f48-3512-43a3-9d68-9ba471c140be",
+          "collection": "/api/3/workflow_collections/e3f43330-e495-40a1-b1f8-1c0d03334d3d",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/3e4cbf85-b21d-41a9-a632-093f3065960e",
           "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Advanced Search",
+              "description": null,
+              "arguments": {
+                "name": "Active Directory",
+                "config": "''",
+                "params": {
+                  "query": "(&(objectClass=user)(objectCategory=user)(sAMAccountName=*))",
+                  "base_dn": "DC=cspune,DC=com"
+                },
+                "version": "2.4.0",
+                "connector": "activedirectory",
+                "operation": "advanced_search",
+                "operationTitle": "Advanced Search",
+                "step_variables": []
+              },
+              "status": null,
+              "top": "133",
+              "left": "371",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "1826a3df-e00e-4820-a16d-180f2cf47639"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Save Result",
+              "description": null,
+              "arguments": {
+                "ad_search": "{{vars.result}}"
+              },
+              "status": null,
+              "top": "254",
+              "left": "371",
+              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+              "group": null,
+              "uuid": "7396248d-31f7-4d85-8dde-e86f3e42f4f5"
+            },
             {
               "@type": "WorkflowStep",
               "name": "Start",
@@ -621,58 +669,11 @@
               "top": "20",
               "left": "371",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
-              "uuid": "3e4cbf85-b21d-41a9-a632-093f3065960e",
-              "id": 12524
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Advanced Search",
-              "description": null,
-              "arguments": {
-                "name": "Active Directory",
-                "config": "''",
-                "params": {
-                  "query": "(&(objectClass=user)(objectCategory=user)(sAMAccountName=*))",
-                  "base_dn": "DC=cspune,DC=com"
-                },
-                "version": "2.3.0",
-                "connector": "activedirectory",
-                "operation": "advanced_search",
-                "operationTitle": "Advanced Search",
-                "step_variables": []
-              },
-              "status": null,
-              "top": "133",
-              "left": "371",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "uuid": "1826a3df-e00e-4820-a16d-180f2cf47639",
-              "id": 12525
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Save Result",
-              "description": null,
-              "arguments": {
-                "ad_search": "{{vars.result}}"
-              },
-              "status": null,
-              "top": "254",
-              "left": "371",
-              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
-              "uuid": "7396248d-31f7-4d85-8dde-e86f3e42f4f5",
-              "id": 12523
+              "group": null,
+              "uuid": "3e4cbf85-b21d-41a9-a632-093f3065960e"
             }
           ],
           "routes": [
-            {
-              "@type": "WorkflowRoute",
-              "name": "Start -> Advanced Search",
-              "targetStep": "/api/3/workflow_steps/1826a3df-e00e-4820-a16d-180f2cf47639",
-              "sourceStep": "/api/3/workflow_steps/3e4cbf85-b21d-41a9-a632-093f3065960e",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "3e9bada9-72d8-42a9-a03c-4950a8a9672d"
-            },
             {
               "@type": "WorkflowRoute",
               "name": "Advanced Search -> Save Result",
@@ -680,22 +681,32 @@
               "sourceStep": "/api/3/workflow_steps/1826a3df-e00e-4820-a16d-180f2cf47639",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "9d75f0b3-9526-47d5-8c66-48401bf67298"
+            },
+            {
+              "@type": "WorkflowRoute",
+              "name": "Start -> Advanced Search",
+              "targetStep": "/api/3/workflow_steps/1826a3df-e00e-4820-a16d-180f2cf47639",
+              "sourceStep": "/api/3/workflow_steps/3e4cbf85-b21d-41a9-a632-093f3065960e",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "3e9bada9-72d8-42a9-a03c-4950a8a9672d"
             }
           ],
+          "groups": [],
           "priority": null,
           "uuid": "32f57b66-a9d5-428e-b36b-767183f28cbd",
+          "id": 519,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
           "recordTags": [
             "Microsoft",
             "activedirectory"
-          ],
-          "id": 4257,
-          "createUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "createDate": 1633459997,
-          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "modifyDate": 1633517128,
-          "owners": [],
-          "isPrivate": false
+          ]
         },
         {
           "@type": "Workflow",
@@ -705,15 +716,96 @@
           "tag": "#Active Directory",
           "description": "Search record on entities from Active Directory based on SamAccount Name",
           "isActive": false,
+          "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
           "lastModifyDate": 1633459997,
-          "collection": "/api/3/workflow_collections/31bb7f48-3512-43a3-9d68-9ba471c140be",
+          "collection": "/api/3/workflow_collections/e3f43330-e495-40a1-b1f8-1c0d03334d3d",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/c943d13c-7cef-481a-9c7e-1448b00d6f8a",
           "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Save Resource Details",
+              "description": null,
+              "arguments": {
+                "dn": "{{vars.result.data.entries[0].dn if vars.result.data.entries | length else '' }}",
+                "attributes": "{{ vars.result.data.entries[0].attributes if vars.result.data.entries | length else '' }}",
+                "resource_info": "{{vars.result}}"
+              },
+              "status": null,
+              "top": "180",
+              "left": "800",
+              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+              "group": null,
+              "uuid": "17e03b64-3f5b-46e1-bc0d-927b276e018e"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Save Tabular Format",
+              "description": null,
+              "arguments": {
+                "params": {
+                  "iri": "{{vars.request.data.records[0][\"@id\"]}}",
+                  "body": "{   \"description\": \"<h3>Active Directory Resource</h3><table class='table margin-bottom-sm' border='1'> <tr><td width ='30%'>dn</td><td width ='30%'>{{vars.dn}}</td> {% if vars.attributes|length > 1 %}{% for key,value in vars.attributes.items() %} \t<tr><td width = '30%'>{{ key }}</td><td width = '70%'>{{ value}}</td></tr>{% endfor %}{% endif %}</table>\"  }"
+                },
+                "version": "3.1.0",
+                "connector": "cyops_utilities",
+                "operation": "update_cyops_resource",
+                "operationTitle": "CyOPs: Update Record",
+                "step_variables": []
+              },
+              "status": null,
+              "top": "260",
+              "left": "1240",
+              "stepType": "/api/3/workflow_step_types/0109f35d-090b-4a2b-bd8a-94cbc3508562",
+              "group": null,
+              "uuid": "edec4dfc-7081-41bf-ac24-e035c3bb8e6b"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Search by SamAccount Name",
+              "description": null,
+              "arguments": {
+                "name": "Active Directory",
+                "config": "''",
+                "params": {
+                  "cookie": "",
+                  "page_size": "",
+                  "size_limit": "",
+                  "search_object": "Computer",
+                  "search_attr_name": "SamAccount Name",
+                  "search_attr_value": "QA Prod"
+                },
+                "version": "2.4.0",
+                "connector": "activedirectory",
+                "operation": "global_search",
+                "operationTitle": "Global Search",
+                "step_variables": [],
+                "operationOutput": {
+                  "entries": [
+                    {
+                      "dn": "",
+                      "attributes": {
+                        "cn": "",
+                        "sn": "",
+                        "sAMAccountName": "",
+                        "distinguishedName": "",
+                        "userPrincipalName": ""
+                      }
+                    }
+                  ]
+                }
+              },
+              "status": null,
+              "top": "111",
+              "left": "400",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "2c941248-351f-4eb9-8855-ea75acfb141a"
+            },
             {
               "@type": "WorkflowStep",
               "name": "Start",
@@ -746,88 +838,8 @@
               "top": "40",
               "left": "47",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
-              "uuid": "c943d13c-7cef-481a-9c7e-1448b00d6f8a",
-              "id": 12526
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Save Resource Details",
-              "description": null,
-              "arguments": {
-                "dn": "{{vars.result.data.entries[0].dn if vars.result.data.entries | length else '' }}",
-                "attributes": "{{ vars.result.data.entries[0].attributes if vars.result.data.entries | length else '' }}",
-                "resource_info": "{{vars.result}}"
-              },
-              "status": null,
-              "top": "180",
-              "left": "800",
-              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
-              "uuid": "17e03b64-3f5b-46e1-bc0d-927b276e018e",
-              "id": 12529
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Search by SamAccount Name",
-              "description": null,
-              "arguments": {
-                "name": "Active Directory",
-                "config": "''",
-                "params": {
-                  "cookie": "",
-                  "page_size": "",
-                  "size_limit": "",
-                  "search_object": "Computer",
-                  "search_attr_name": "SamAccount Name",
-                  "search_attr_value": "QA Prod"
-                },
-                "version": "2.3.0",
-                "connector": "activedirectory",
-                "operation": "global_search",
-                "operationTitle": "Global Search",
-                "step_variables": [],
-                "operationOutput": {
-                  "entries": [
-                    {
-                      "dn": "",
-                      "attributes": {
-                        "cn": "",
-                        "sn": "",
-                        "sAMAccountName": "",
-                        "distinguishedName": "",
-                        "userPrincipalName": ""
-                      }
-                    }
-                  ]
-                }
-              },
-              "status": null,
-              "top": "111",
-              "left": "400",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "uuid": "2c941248-351f-4eb9-8855-ea75acfb141a",
-              "id": 12528
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Save Tabular Format",
-              "description": null,
-              "arguments": {
-                "params": {
-                  "iri": "{{vars.request.data.records[0][\"@id\"]}}",
-                  "body": "{   \"description\": \"<h3>Active Directory Resource</h3><table class='table margin-bottom-sm' border='1'> <tr><td width ='30%'>dn</td><td width ='30%'>{{vars.dn}}</td> {% if vars.attributes|length > 1 %}{% for key,value in vars.attributes.items() %} \t<tr><td width = '30%'>{{ key }}</td><td width = '70%'>{{ value}}</td></tr>{% endfor %}{% endif %}</table>\"  }"
-                },
-                "version": "3.1.0",
-                "connector": "cyops_utilities",
-                "operation": "update_cyops_resource",
-                "operationTitle": "CyOPs: Update Record",
-                "step_variables": []
-              },
-              "status": null,
-              "top": "260",
-              "left": "1240",
-              "stepType": "/api/3/workflow_step_types/0109f35d-090b-4a2b-bd8a-94cbc3508562",
-              "uuid": "edec4dfc-7081-41bf-ac24-e035c3bb8e6b",
-              "id": 12527
+              "group": null,
+              "uuid": "c943d13c-7cef-481a-9c7e-1448b00d6f8a"
             }
           ],
           "routes": [
@@ -838,6 +850,7 @@
               "sourceStep": "/api/3/workflow_steps/17e03b64-3f5b-46e1-bc0d-927b276e018e",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "a7baafa1-953d-4de5-9540-072e1d9241c4"
             },
             {
@@ -847,22 +860,22 @@
               "sourceStep": "/api/3/workflow_steps/c943d13c-7cef-481a-9c7e-1448b00d6f8a",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "ac8ce3bc-80c1-45b8-b5ad-9c9fc9f23243"
             }
           ],
+          "groups": [],
           "priority": null,
           "uuid": "3938b6f0-84e0-4ba5-8e53-69d22e162260",
+          "id": 520,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
           "recordTags": [
             "Microsoft",
             "activedirectory"
-          ],
-          "id": 4258,
-          "createUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "createDate": 1633459997,
-          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "modifyDate": 1633459997,
-          "owners": [],
-          "isPrivate": false
+          ]
         },
         {
           "@type": "Workflow",
@@ -872,12 +885,13 @@
           "tag": "#Active Directory",
           "description": "Get specific User details from Active Directory based on SamAccount Name.",
           "isActive": false,
+          "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
           "lastModifyDate": 1633459997,
-          "collection": "/api/3/workflow_collections/31bb7f48-3512-43a3-9d68-9ba471c140be",
+          "collection": "/api/3/workflow_collections/e3f43330-e495-40a1-b1f8-1c0d03334d3d",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/a7d17613-a4ea-41a0-9560-f0f8918f3b91",
           "steps": [
@@ -892,7 +906,7 @@
                   "search_object": "User",
                   "search_attr_value": "user1"
                 },
-                "version": "2.3.0",
+                "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "get_specific_object_details",
                 "operationTitle": "Get Specific Object Details",
@@ -902,8 +916,24 @@
               "top": "93",
               "left": "413",
               "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "uuid": "2d6e96cb-a9a6-42dd-9718-0a5adc23eb69",
-              "id": 12530
+              "group": null,
+              "uuid": "2d6e96cb-a9a6-42dd-9718-0a5adc23eb69"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Save Resource Details",
+              "description": null,
+              "arguments": {
+                "dn": "{{vars.result.data.entries[0].dn if vars.result.data.entries | length else '' }}",
+                "attributes": "{{ vars.result.data.entries[0].attributes if vars.result.data.entries | length else '' }}",
+                "resource_info": "{{vars.result}}"
+              },
+              "status": null,
+              "top": "180",
+              "left": "760",
+              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+              "group": null,
+              "uuid": "f20ef9ee-be18-4486-9374-91218ba41be1"
             },
             {
               "@type": "WorkflowStep",
@@ -924,8 +954,8 @@
               "top": "270",
               "left": "1152",
               "stepType": "/api/3/workflow_step_types/0109f35d-090b-4a2b-bd8a-94cbc3508562",
-              "uuid": "602e7944-f222-4e6b-af58-b7778ecdf2db",
-              "id": 12533
+              "group": null,
+              "uuid": "602e7944-f222-4e6b-af58-b7778ecdf2db"
             },
             {
               "@type": "WorkflowStep",
@@ -959,36 +989,11 @@
               "top": "40",
               "left": "31",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
-              "uuid": "a7d17613-a4ea-41a0-9560-f0f8918f3b91",
-              "id": 12532
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Save Resource Details",
-              "description": null,
-              "arguments": {
-                "dn": "{{vars.result.data.entries[0].dn if vars.result.data.entries | length else '' }}",
-                "attributes": "{{ vars.result.data.entries[0].attributes if vars.result.data.entries | length else '' }}",
-                "resource_info": "{{vars.result}}"
-              },
-              "status": null,
-              "top": "180",
-              "left": "760",
-              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
-              "uuid": "f20ef9ee-be18-4486-9374-91218ba41be1",
-              "id": 12531
+              "group": null,
+              "uuid": "a7d17613-a4ea-41a0-9560-f0f8918f3b91"
             }
           ],
           "routes": [
-            {
-              "@type": "WorkflowRoute",
-              "name": "Save Resource Details -> Save Tabular Format",
-              "targetStep": "/api/3/workflow_steps/602e7944-f222-4e6b-af58-b7778ecdf2db",
-              "sourceStep": "/api/3/workflow_steps/f20ef9ee-be18-4486-9374-91218ba41be1",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "562acb87-7845-47e0-a825-f99383921a32"
-            },
             {
               "@type": "WorkflowRoute",
               "name": "Get Specific User Details -> Save Resource Details",
@@ -996,7 +1001,18 @@
               "sourceStep": "/api/3/workflow_steps/2d6e96cb-a9a6-42dd-9718-0a5adc23eb69",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "a1a2a1f0-db7b-402f-89b2-87ba40a88bb5"
+            },
+            {
+              "@type": "WorkflowRoute",
+              "name": "Save Resource Details -> Save Tabular Format",
+              "targetStep": "/api/3/workflow_steps/602e7944-f222-4e6b-af58-b7778ecdf2db",
+              "sourceStep": "/api/3/workflow_steps/f20ef9ee-be18-4486-9374-91218ba41be1",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "562acb87-7845-47e0-a825-f99383921a32"
             },
             {
               "@type": "WorkflowRoute",
@@ -1005,22 +1021,22 @@
               "sourceStep": "/api/3/workflow_steps/a7d17613-a4ea-41a0-9560-f0f8918f3b91",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "b2cf86d6-9966-442f-9c1f-cb778e6fa19f"
             }
           ],
+          "groups": [],
           "priority": null,
           "uuid": "3fd2c254-4538-4127-8568-6f317c43cfa8",
+          "id": 521,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
           "recordTags": [
             "Microsoft",
             "activedirectory"
-          ],
-          "id": 4259,
-          "createUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "createDate": 1633459997,
-          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "modifyDate": 1633459997,
-          "owners": [],
-          "isPrivate": false
+          ]
         },
         {
           "@type": "Workflow",
@@ -1030,29 +1046,16 @@
           "tag": "#Active Directory",
           "description": "Reset password for an existing Active Directory user",
           "isActive": false,
+          "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
           "lastModifyDate": 1633459997,
-          "collection": "/api/3/workflow_collections/31bb7f48-3512-43a3-9d68-9ba471c140be",
+          "collection": "/api/3/workflow_collections/e3f43330-e495-40a1-b1f8-1c0d03334d3d",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/fb50b80c-6d6f-4f30-a85a-c34805b2397a",
           "steps": [
-            {
-              "@type": "WorkflowStep",
-              "name": "Save Status",
-              "description": null,
-              "arguments": {
-                "status": "{{vars.result}}"
-              },
-              "status": null,
-              "top": "240",
-              "left": "320",
-              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
-              "uuid": "1d98f7ba-d793-488b-ac71-cd8701f2980c",
-              "id": 12536
-            },
             {
               "@type": "WorkflowStep",
               "name": "Reset Password",
@@ -1065,7 +1068,7 @@
                   "search_attr_name": "SamAccount Name",
                   "search_attr_value": "test"
                 },
-                "version": "2.3.0",
+                "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "reset_password",
                 "operationTitle": "Reset Password",
@@ -1075,8 +1078,22 @@
               "top": "133",
               "left": "320",
               "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "uuid": "d4791702-fb10-41e3-b436-38fb24ef6b8a",
-              "id": 12534
+              "group": null,
+              "uuid": "d4791702-fb10-41e3-b436-38fb24ef6b8a"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Save Status",
+              "description": null,
+              "arguments": {
+                "status": "{{vars.result}}"
+              },
+              "status": null,
+              "top": "240",
+              "left": "320",
+              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+              "group": null,
+              "uuid": "1d98f7ba-d793-488b-ac71-cd8701f2980c"
             },
             {
               "@type": "WorkflowStep",
@@ -1110,20 +1127,11 @@
               "top": "20",
               "left": "320",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
-              "uuid": "fb50b80c-6d6f-4f30-a85a-c34805b2397a",
-              "id": 12535
+              "group": null,
+              "uuid": "fb50b80c-6d6f-4f30-a85a-c34805b2397a"
             }
           ],
           "routes": [
-            {
-              "@type": "WorkflowRoute",
-              "name": "Start -> Reset Password",
-              "targetStep": "/api/3/workflow_steps/d4791702-fb10-41e3-b436-38fb24ef6b8a",
-              "sourceStep": "/api/3/workflow_steps/fb50b80c-6d6f-4f30-a85a-c34805b2397a",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "0238f51f-5a02-4422-8f00-583a4754a13b"
-            },
             {
               "@type": "WorkflowRoute",
               "name": "Reset Password -> Save Status",
@@ -1131,22 +1139,32 @@
               "sourceStep": "/api/3/workflow_steps/d4791702-fb10-41e3-b436-38fb24ef6b8a",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "421d0d2a-4912-4d02-8c8e-270e3994e310"
+            },
+            {
+              "@type": "WorkflowRoute",
+              "name": "Start -> Reset Password",
+              "targetStep": "/api/3/workflow_steps/d4791702-fb10-41e3-b436-38fb24ef6b8a",
+              "sourceStep": "/api/3/workflow_steps/fb50b80c-6d6f-4f30-a85a-c34805b2397a",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "0238f51f-5a02-4422-8f00-583a4754a13b"
             }
           ],
+          "groups": [],
           "priority": null,
           "uuid": "4a26c09d-ba81-40d6-94e7-7de1d5ea5b5c",
+          "id": 522,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
           "recordTags": [
             "Microsoft",
             "activedirectory"
-          ],
-          "id": 4260,
-          "createUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "createDate": 1633459997,
-          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "modifyDate": 1633459997,
-          "owners": [],
-          "isPrivate": false
+          ]
         },
         {
           "@type": "Workflow",
@@ -1156,48 +1174,16 @@
           "tag": "#Active Directory",
           "description": "Update existing object entry like User, Computer, OU, Group in Active Directory.",
           "isActive": false,
+          "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
           "lastModifyDate": 1633459997,
-          "collection": "/api/3/workflow_collections/31bb7f48-3512-43a3-9d68-9ba471c140be",
+          "collection": "/api/3/workflow_collections/e3f43330-e495-40a1-b1f8-1c0d03334d3d",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/72253a16-cf5b-41fa-942a-1086df04900c",
           "steps": [
-            {
-              "@type": "WorkflowStep",
-              "name": "Update Object",
-              "description": null,
-              "arguments": {
-                "name": "Active Directory",
-                "config": "''" ,
-                "params": {
-                  "mail": "",
-                  "title": "",
-                  "GroupType": "",
-                  "object_dn": "OU=cybersponse,DC=cspune,DC=com",
-                  "description": "Update description from connector",
-                  "displayName": "",
-                  "object_class": "Organization Unit",
-                  "enable_account": false,
-                  "sAMAccountName": "",
-                  "custom_attributes": "",
-                  "userPrincipalName": ""
-                },
-                "version": "2.3.0",
-                "connector": "activedirectory",
-                "operation": "update_object",
-                "operationTitle": "Update Object",
-                "step_variables": []
-              },
-              "status": null,
-              "top": "153",
-              "left": "301",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "uuid": "1d6e700f-0e01-48b3-ae3c-7aab3700c204",
-              "id": 12537
-            },
             {
               "@type": "WorkflowStep",
               "name": "Start",
@@ -1230,8 +1216,41 @@
               "top": "14",
               "left": "94",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
-              "uuid": "72253a16-cf5b-41fa-942a-1086df04900c",
-              "id": 12538
+              "group": null,
+              "uuid": "72253a16-cf5b-41fa-942a-1086df04900c"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Update Object",
+              "description": null,
+              "arguments": {
+                "name": "Active Directory",
+                "config": "''",
+                "params": {
+                  "mail": "",
+                  "title": "",
+                  "GroupType": "",
+                  "object_dn": "OU=cybersponse,DC=cspune,DC=com",
+                  "description": "Update description from connector",
+                  "displayName": "",
+                  "object_class": "Organization Unit",
+                  "enable_account": false,
+                  "sAMAccountName": "",
+                  "custom_attributes": "",
+                  "userPrincipalName": ""
+                },
+                "version": "2.4.0",
+                "connector": "activedirectory",
+                "operation": "update_object",
+                "operationTitle": "Update Object",
+                "step_variables": []
+              },
+              "status": null,
+              "top": "153",
+              "left": "301",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "1d6e700f-0e01-48b3-ae3c-7aab3700c204"
             }
           ],
           "routes": [
@@ -1242,22 +1261,22 @@
               "sourceStep": "/api/3/workflow_steps/72253a16-cf5b-41fa-942a-1086df04900c",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "e3033fbd-867f-4d77-a6ed-8a196e7e3e59"
             }
           ],
+          "groups": [],
           "priority": null,
           "uuid": "6a91a0be-0efd-48d8-95ca-2c0c4991a870",
+          "id": 523,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
           "recordTags": [
             "Microsoft",
             "activedirectory"
-          ],
-          "id": 4261,
-          "createUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "createDate": 1633459997,
-          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "modifyDate": 1633459997,
-          "owners": [],
-          "isPrivate": false
+          ]
         },
         {
           "@type": "Workflow",
@@ -1267,12 +1286,13 @@
           "tag": "#Active Directory",
           "description": "Disable a user’s account in Active Directory",
           "isActive": false,
+          "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
           "lastModifyDate": 1633459997,
-          "collection": "/api/3/workflow_collections/31bb7f48-3512-43a3-9d68-9ba471c140be",
+          "collection": "/api/3/workflow_collections/e3f43330-e495-40a1-b1f8-1c0d03334d3d",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/ca697e5a-d5cd-4f90-9c1f-6f24ab8826e2",
           "steps": [
@@ -1286,7 +1306,7 @@
                   "search_attr_name": "Email",
                   "search_attr_value": "test@cspune.com"
                 },
-                "version": "2.3.0",
+                "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "disable_user_account",
                 "operationTitle": "Disable User Account",
@@ -1296,8 +1316,8 @@
               "top": "127",
               "left": "380",
               "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "uuid": "8072ea00-2275-46c8-ad88-9c9feea8bb20",
-              "id": 12539
+              "group": null,
+              "uuid": "8072ea00-2275-46c8-ad88-9c9feea8bb20"
             },
             {
               "@type": "WorkflowStep",
@@ -1310,8 +1330,8 @@
               "top": "250",
               "left": "388",
               "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
-              "uuid": "c261147f-758d-4bbf-99f1-b16c8fece09b",
-              "id": 12541
+              "group": null,
+              "uuid": "c261147f-758d-4bbf-99f1-b16c8fece09b"
             },
             {
               "@type": "WorkflowStep",
@@ -1345,20 +1365,11 @@
               "top": "8",
               "left": "380",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
-              "uuid": "ca697e5a-d5cd-4f90-9c1f-6f24ab8826e2",
-              "id": 12540
+              "group": null,
+              "uuid": "ca697e5a-d5cd-4f90-9c1f-6f24ab8826e2"
             }
           ],
           "routes": [
-            {
-              "@type": "WorkflowRoute",
-              "name": "Start -> Disable User Account1",
-              "targetStep": "/api/3/workflow_steps/8072ea00-2275-46c8-ad88-9c9feea8bb20",
-              "sourceStep": "/api/3/workflow_steps/ca697e5a-d5cd-4f90-9c1f-6f24ab8826e2",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "1a17fedf-3e5e-49df-98a0-730c26c9f340"
-            },
             {
               "@type": "WorkflowRoute",
               "name": "Disable User Account1 -> Save Result",
@@ -1366,22 +1377,32 @@
               "sourceStep": "/api/3/workflow_steps/8072ea00-2275-46c8-ad88-9c9feea8bb20",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "87ae4bb3-778a-4b14-9513-2c4d8cd0a11f"
+            },
+            {
+              "@type": "WorkflowRoute",
+              "name": "Start -> Disable User Account1",
+              "targetStep": "/api/3/workflow_steps/8072ea00-2275-46c8-ad88-9c9feea8bb20",
+              "sourceStep": "/api/3/workflow_steps/ca697e5a-d5cd-4f90-9c1f-6f24ab8826e2",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "1a17fedf-3e5e-49df-98a0-730c26c9f340"
             }
           ],
+          "groups": [],
           "priority": null,
           "uuid": "6bafd50e-69c3-4ba5-ba04-99d6a46dc8a1",
+          "id": 524,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
           "recordTags": [
             "Microsoft",
             "activedirectory"
-          ],
-          "id": 4262,
-          "createUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "createDate": 1633459997,
-          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "modifyDate": 1633459997,
-          "owners": [],
-          "isPrivate": false
+          ]
         },
         {
           "@type": "Workflow",
@@ -1391,15 +1412,39 @@
           "tag": "#Active Directory",
           "description": "Get list of users from Active Directory",
           "isActive": false,
+          "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
           "lastModifyDate": 1633459997,
-          "collection": "/api/3/workflow_collections/31bb7f48-3512-43a3-9d68-9ba471c140be",
+          "collection": "/api/3/workflow_collections/e3f43330-e495-40a1-b1f8-1c0d03334d3d",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/940aed06-e6f5-48d2-96e3-a43f5061f645",
           "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Get all User Details",
+              "description": null,
+              "arguments": {
+                "name": "Active Directory",
+                "config": "''",
+                "params": {
+                  "search_object": "User"
+                },
+                "version": "2.4.0",
+                "connector": "activedirectory",
+                "operation": "get_all_object_details",
+                "operationTitle": "Get All Objects Details",
+                "step_variables": []
+              },
+              "status": null,
+              "top": "100",
+              "left": "387",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "0503dfb7-93ce-42e4-adeb-67e4ec90e876"
+            },
             {
               "@type": "WorkflowStep",
               "name": "Save Tabular Format",
@@ -1419,31 +1464,23 @@
               "top": "249",
               "left": "1120",
               "stepType": "/api/3/workflow_step_types/0109f35d-090b-4a2b-bd8a-94cbc3508562",
-              "uuid": "045af64e-0418-4a0c-92e2-a06b817a5f27",
-              "id": 12542
+              "group": null,
+              "uuid": "045af64e-0418-4a0c-92e2-a06b817a5f27"
             },
             {
               "@type": "WorkflowStep",
-              "name": "Get all User Details",
+              "name": "Save Users Details",
               "description": null,
               "arguments": {
-                "name": "Active Directory",
-                "config": "''",
-                "params": {
-                  "search_object": "User"
-                },
-                "version": "2.3.0",
-                "connector": "activedirectory",
-                "operation": "get_all_object_details",
-                "operationTitle": "Get All Objects Details",
-                "step_variables": []
+                "entries": "{{vars.result.data.entries}}",
+                "resource_info": "{{vars.result}}"
               },
               "status": null,
-              "top": "100",
-              "left": "387",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "uuid": "0503dfb7-93ce-42e4-adeb-67e4ec90e876",
-              "id": 12545
+              "top": "169",
+              "left": "740",
+              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+              "group": null,
+              "uuid": "ca518fd8-4d01-42d9-999e-f42ddabb2619"
             },
             {
               "@type": "WorkflowStep",
@@ -1477,35 +1514,11 @@
               "top": "26",
               "left": "0",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
-              "uuid": "940aed06-e6f5-48d2-96e3-a43f5061f645",
-              "id": 12543
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Save Users Details",
-              "description": null,
-              "arguments": {
-                "entries": "{{vars.result.data.entries}}",
-                "resource_info": "{{vars.result}}"
-              },
-              "status": null,
-              "top": "169",
-              "left": "740",
-              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
-              "uuid": "ca518fd8-4d01-42d9-999e-f42ddabb2619",
-              "id": 12544
+              "group": null,
+              "uuid": "940aed06-e6f5-48d2-96e3-a43f5061f645"
             }
           ],
           "routes": [
-            {
-              "@type": "WorkflowRoute",
-              "name": "Save Users Details -> Save Tabular Format",
-              "targetStep": "/api/3/workflow_steps/045af64e-0418-4a0c-92e2-a06b817a5f27",
-              "sourceStep": "/api/3/workflow_steps/ca518fd8-4d01-42d9-999e-f42ddabb2619",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "42f26403-bd73-48ee-a473-e33f35f4b4cb"
-            },
             {
               "@type": "WorkflowRoute",
               "name": "Get all User Details1 -> Save Users Details",
@@ -1513,7 +1526,18 @@
               "sourceStep": "/api/3/workflow_steps/0503dfb7-93ce-42e4-adeb-67e4ec90e876",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "692282f7-6d5c-468e-92b8-af105803f332"
+            },
+            {
+              "@type": "WorkflowRoute",
+              "name": "Save Users Details -> Save Tabular Format",
+              "targetStep": "/api/3/workflow_steps/045af64e-0418-4a0c-92e2-a06b817a5f27",
+              "sourceStep": "/api/3/workflow_steps/ca518fd8-4d01-42d9-999e-f42ddabb2619",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "42f26403-bd73-48ee-a473-e33f35f4b4cb"
             },
             {
               "@type": "WorkflowRoute",
@@ -1522,22 +1546,22 @@
               "sourceStep": "/api/3/workflow_steps/940aed06-e6f5-48d2-96e3-a43f5061f645",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "df6c93e2-a672-44c7-90ab-ea8d0abe5d4f"
             }
           ],
+          "groups": [],
           "priority": null,
           "uuid": "75355794-fe33-4b2c-91eb-a451744a5ccb",
+          "id": 525,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
           "recordTags": [
             "Microsoft",
             "activedirectory"
-          ],
-          "id": 4263,
-          "createUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "createDate": 1633459997,
-          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "modifyDate": 1633459997,
-          "owners": [],
-          "isPrivate": false
+          ]
         },
         {
           "@type": "Workflow",
@@ -1547,15 +1571,57 @@
           "tag": "#Active Directory",
           "description": "Get specific Person details from Active Directory based on CN or SN",
           "isActive": false,
+          "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
           "lastModifyDate": 1633459997,
-          "collection": "/api/3/workflow_collections/31bb7f48-3512-43a3-9d68-9ba471c140be",
+          "collection": "/api/3/workflow_collections/e3f43330-e495-40a1-b1f8-1c0d03334d3d",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/4109d549-21c4-4b26-8afa-396ac26303ad",
           "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Get Specific Person Details",
+              "description": null,
+              "arguments": {
+                "name": "Active Directory",
+                "config": "''",
+                "params": {
+                  "cn": "user1",
+                  "sn": "",
+                  "search_object": "Person"
+                },
+                "version": "2.4.0",
+                "connector": "activedirectory",
+                "operation": "get_specific_object_details",
+                "operationTitle": "Get Specific Object Details",
+                "step_variables": []
+              },
+              "status": null,
+              "top": "88",
+              "left": "440",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "53530b1f-cda5-44e3-994b-ea719355e55b"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Save Resource Details",
+              "description": null,
+              "arguments": {
+                "dn": "{{vars.result.data.entries[0].dn if vars.result.data.entries | length else '' }}",
+                "attributes": "{{ vars.result.data.entries[0].attributes if vars.result.data.entries | length else '' }}",
+                "resource_info": "{{vars.result}}"
+              },
+              "status": null,
+              "top": "180",
+              "left": "800",
+              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+              "group": null,
+              "uuid": "96367e61-e4e3-47c8-bf24-999641ceb57f"
+            },
             {
               "@type": "WorkflowStep",
               "name": "Save Tabular Format",
@@ -1575,8 +1641,8 @@
               "top": "288",
               "left": "1224",
               "stepType": "/api/3/workflow_step_types/0109f35d-090b-4a2b-bd8a-94cbc3508562",
-              "uuid": "22992165-7e60-4891-a736-fca00c7a9637",
-              "id": 12546
+              "group": null,
+              "uuid": "22992165-7e60-4891-a736-fca00c7a9637"
             },
             {
               "@type": "WorkflowStep",
@@ -1610,49 +1676,8 @@
               "top": "31",
               "left": "29",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
-              "uuid": "4109d549-21c4-4b26-8afa-396ac26303ad",
-              "id": 12549
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Get Specific Person Details",
-              "description": null,
-              "arguments": {
-                "name": "Active Directory",
-                "config": "''",
-                "params": {
-                  "cn": "user1",
-                  "sn": "",
-                  "search_object": "Person"
-                },
-                "version": "2.3.0",
-                "connector": "activedirectory",
-                "operation": "get_specific_object_details",
-                "operationTitle": "Get Specific Object Details",
-                "step_variables": []
-              },
-              "status": null,
-              "top": "88",
-              "left": "440",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "uuid": "53530b1f-cda5-44e3-994b-ea719355e55b",
-              "id": 12547
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Save Resource Details",
-              "description": null,
-              "arguments": {
-                "dn": "{{vars.result.data.entries[0].dn if vars.result.data.entries | length else '' }}",
-                "attributes": "{{ vars.result.data.entries[0].attributes if vars.result.data.entries | length else '' }}",
-                "resource_info": "{{vars.result}}"
-              },
-              "status": null,
-              "top": "180",
-              "left": "800",
-              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
-              "uuid": "96367e61-e4e3-47c8-bf24-999641ceb57f",
-              "id": 12548
+              "group": null,
+              "uuid": "4109d549-21c4-4b26-8afa-396ac26303ad"
             }
           ],
           "routes": [
@@ -1663,16 +1688,8 @@
               "sourceStep": "/api/3/workflow_steps/53530b1f-cda5-44e3-994b-ea719355e55b",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "8478834c-0fc5-4004-b6d1-a8f3e49a5085"
-            },
-            {
-              "@type": "WorkflowRoute",
-              "name": "Start -> Get Specific User Details",
-              "targetStep": "/api/3/workflow_steps/53530b1f-cda5-44e3-994b-ea719355e55b",
-              "sourceStep": "/api/3/workflow_steps/4109d549-21c4-4b26-8afa-396ac26303ad",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "b4c2650d-ff6f-4435-b140-546102943355"
             },
             {
               "@type": "WorkflowRoute",
@@ -1681,22 +1698,32 @@
               "sourceStep": "/api/3/workflow_steps/96367e61-e4e3-47c8-bf24-999641ceb57f",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "e82d8782-b408-4e5d-a087-7d6f14644438"
+            },
+            {
+              "@type": "WorkflowRoute",
+              "name": "Start -> Get Specific User Details",
+              "targetStep": "/api/3/workflow_steps/53530b1f-cda5-44e3-994b-ea719355e55b",
+              "sourceStep": "/api/3/workflow_steps/4109d549-21c4-4b26-8afa-396ac26303ad",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "b4c2650d-ff6f-4435-b140-546102943355"
             }
           ],
+          "groups": [],
           "priority": null,
           "uuid": "7c3d1a93-c10d-4c21-b153-7d4a86ea57d0",
+          "id": 526,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
           "recordTags": [
             "Microsoft",
             "activedirectory"
-          ],
-          "id": 4264,
-          "createUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "createDate": 1633459997,
-          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "modifyDate": 1633459997,
-          "owners": [],
-          "isPrivate": false
+          ]
         },
         {
           "@type": "Workflow",
@@ -1706,15 +1733,54 @@
           "tag": "#Active Directory",
           "description": "Search records or entity from Active Directory based on CN",
           "isActive": false,
+          "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
           "lastModifyDate": 1633459997,
-          "collection": "/api/3/workflow_collections/31bb7f48-3512-43a3-9d68-9ba471c140be",
+          "collection": "/api/3/workflow_collections/e3f43330-e495-40a1-b1f8-1c0d03334d3d",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/b35848c8-6acf-4a05-9a2d-84001e84260a",
           "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Save Resource Details",
+              "description": null,
+              "arguments": {
+                "dn": "{{vars.result.data.entries[0].dn if vars.result.data.entries | length else '' }}",
+                "attributes": "{{ vars.result.data.entries[0].attributes if vars.result.data.entries | length else '' }}",
+                "resource_info": "{{vars.result}}"
+              },
+              "status": null,
+              "top": "200",
+              "left": "760",
+              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+              "group": null,
+              "uuid": "8b6dca9e-62b2-4f02-abdc-b1ea2067a578"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Save Tabular Format",
+              "description": null,
+              "arguments": {
+                "params": {
+                  "iri": "{{vars.request.data.records[0][\"@id\"]}}",
+                  "body": "{   \"description\": \"<h3>Active Directory Resource</h3><table class='table margin-bottom-sm' border='1'> <tr><td width ='30%'>dn</td><td width ='30%'>{{vars.dn}}</td> {% if vars.attributes|length > 1 %}{% for key,value in vars.attributes.items() %} \t<tr><td width = '30%'>{{ key }}</td><td width = '70%'>{{ value}}</td></tr>{% endfor %}{% endif %}</table>\"  }"
+                },
+                "version": "2.7.0",
+                "connector": "cyops_utilities",
+                "operation": "update_cyops_resource",
+                "operationTitle": "CyOPs: Update Record",
+                "step_variables": []
+              },
+              "status": null,
+              "top": "323",
+              "left": "1167",
+              "stepType": "/api/3/workflow_step_types/0109f35d-090b-4a2b-bd8a-94cbc3508562",
+              "group": null,
+              "uuid": "81fd7632-8222-4349-b921-81a7d869c502"
+            },
             {
               "@type": "WorkflowStep",
               "name": "Search by Common Name",
@@ -1730,7 +1796,7 @@
                   "search_attr_name": "Common Name",
                   "search_attr_value": "user1"
                 },
-                "version": "2.3.0",
+                "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "global_search",
                 "operationTitle": "Global Search",
@@ -1754,46 +1820,8 @@
               "top": "111",
               "left": "440",
               "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "uuid": "2b795da2-f5ec-468d-b491-56f5a9f9d0ad",
-              "id": 12550
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Save Tabular Format",
-              "description": null,
-              "arguments": {
-                "params": {
-                  "iri": "{{vars.request.data.records[0][\"@id\"]}}",
-                  "body": "{   \"description\": \"<h3>Active Directory Resource</h3><table class='table margin-bottom-sm' border='1'> <tr><td width ='30%'>dn</td><td width ='30%'>{{vars.dn}}</td> {% if vars.attributes|length > 1 %}{% for key,value in vars.attributes.items() %} \t<tr><td width = '30%'>{{ key }}</td><td width = '70%'>{{ value}}</td></tr>{% endfor %}{% endif %}</table>\"  }"
-                },
-                "version": "2.7.0",
-                "connector": "cyops_utilities",
-                "operation": "update_cyops_resource",
-                "operationTitle": "CyOPs: Update Record",
-                "step_variables": []
-              },
-              "status": null,
-              "top": "323",
-              "left": "1167",
-              "stepType": "/api/3/workflow_step_types/0109f35d-090b-4a2b-bd8a-94cbc3508562",
-              "uuid": "81fd7632-8222-4349-b921-81a7d869c502",
-              "id": 12553
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Save Resource Details",
-              "description": null,
-              "arguments": {
-                "dn": "{{vars.result.data.entries[0].dn if vars.result.data.entries | length else '' }}",
-                "attributes": "{{ vars.result.data.entries[0].attributes if vars.result.data.entries | length else '' }}",
-                "resource_info": "{{vars.result}}"
-              },
-              "status": null,
-              "top": "200",
-              "left": "760",
-              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
-              "uuid": "8b6dca9e-62b2-4f02-abdc-b1ea2067a578",
-              "id": 12551
+              "group": null,
+              "uuid": "2b795da2-f5ec-468d-b491-56f5a9f9d0ad"
             },
             {
               "@type": "WorkflowStep",
@@ -1827,20 +1855,11 @@
               "top": "40",
               "left": "70",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
-              "uuid": "b35848c8-6acf-4a05-9a2d-84001e84260a",
-              "id": 12552
+              "group": null,
+              "uuid": "b35848c8-6acf-4a05-9a2d-84001e84260a"
             }
           ],
           "routes": [
-            {
-              "@type": "WorkflowRoute",
-              "name": "Search by Common Name -> Save Resource Details",
-              "targetStep": "/api/3/workflow_steps/8b6dca9e-62b2-4f02-abdc-b1ea2067a578",
-              "sourceStep": "/api/3/workflow_steps/2b795da2-f5ec-468d-b491-56f5a9f9d0ad",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "237c9123-b5d4-43ca-97c0-91c510e96787"
-            },
             {
               "@type": "WorkflowRoute",
               "name": "Save Resource Details -> Save Tabular Format",
@@ -1848,7 +1867,18 @@
               "sourceStep": "/api/3/workflow_steps/8b6dca9e-62b2-4f02-abdc-b1ea2067a578",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "97d9886e-021f-41ed-84b0-7a81bfb33cb3"
+            },
+            {
+              "@type": "WorkflowRoute",
+              "name": "Search by Common Name -> Save Resource Details",
+              "targetStep": "/api/3/workflow_steps/8b6dca9e-62b2-4f02-abdc-b1ea2067a578",
+              "sourceStep": "/api/3/workflow_steps/2b795da2-f5ec-468d-b491-56f5a9f9d0ad",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "237c9123-b5d4-43ca-97c0-91c510e96787"
             },
             {
               "@type": "WorkflowRoute",
@@ -1857,22 +1887,22 @@
               "sourceStep": "/api/3/workflow_steps/b35848c8-6acf-4a05-9a2d-84001e84260a",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "cb57d4a4-5b0b-4c8d-8533-6caaae94b670"
             }
           ],
+          "groups": [],
           "priority": null,
           "uuid": "7e5f42e5-3475-4a7c-b6a1-8e42a8ffdbea",
+          "id": 527,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
           "recordTags": [
             "Microsoft",
             "activedirectory"
-          ],
-          "id": 4265,
-          "createUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "createDate": 1633459997,
-          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "modifyDate": 1633459997,
-          "owners": [],
-          "isPrivate": false
+          ]
         },
         {
           "@type": "Workflow",
@@ -1882,12 +1912,13 @@
           "tag": "#Active Directory",
           "description": "Get list of computers details  from Active Directory",
           "isActive": false,
+          "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
-          "lastModifyDate": 1633459997,
-          "collection": "/api/3/workflow_collections/31bb7f48-3512-43a3-9d68-9ba471c140be",
+          "lastModifyDate": 1695292767,
+          "collection": "/api/3/workflow_collections/e3f43330-e495-40a1-b1f8-1c0d03334d3d",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/69ac73a1-3927-42e3-b4c1-41f830b0d603",
           "steps": [
@@ -1901,7 +1932,7 @@
                 "params": {
                   "search_object": "Computer"
                 },
-                "version": "2.3.0",
+                "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "get_all_object_details",
                 "operationTitle": "Get All Objects Details",
@@ -1925,8 +1956,45 @@
               "top": "66",
               "left": "367",
               "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "uuid": "17aafed6-cf8e-4ace-bad8-9b4505554109",
-              "id": 12554
+              "group": null,
+              "uuid": "17aafed6-cf8e-4ace-bad8-9b4505554109"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Save Computes Details",
+              "description": null,
+              "arguments": {
+                "entries": "{{vars.result.data.entries if vars.result.data.entries | length else '' }}",
+                "resource_info": "{{vars.result}}"
+              },
+              "status": null,
+              "top": "120",
+              "left": "700",
+              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+              "group": null,
+              "uuid": "9bb70d7e-7c5a-49f4-a732-f5feea2a4c7f"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Save Tabular Format",
+              "description": null,
+              "arguments": {
+                "params": {
+                  "iri": "{{vars.request.data.records[0][\"@id\"]}}",
+                  "body": "{ \"description\": \"<h3>Active Directory Resources </h3> {% if vars.entries|length > 1 %} {% for record in vars.entries %} <table class='table margin-bottom-sm' border='1'> <tr><td width ='30%'>dn</td><td width ='70%'>{{record.dn}}</td>  {% for key,value in record.attributes.items() %} <tr><td width = '30%'>{{ key }}</td><td width = '70%'> {{value| replace('\"', '') |  replace('\\n',' ')|replace('\\\\', '\\\\\\\\') if value is not none}}   </td></tr> {% endfor %}  {% endfor %}</table>{% endif%}\" }"
+                },
+                "version": "2.7.0",
+                "connector": "cyops_utilities",
+                "operation": "update_cyops_resource",
+                "operationTitle": "CyOPs: Update Record",
+                "step_variables": []
+              },
+              "status": null,
+              "top": "240",
+              "left": "891",
+              "stepType": "/api/3/workflow_step_types/0109f35d-090b-4a2b-bd8a-94cbc3508562",
+              "group": null,
+              "uuid": "ebb087f7-93d0-4bc2-a55f-15e60c46e622"
             },
             {
               "@type": "WorkflowStep",
@@ -1960,45 +2028,8 @@
               "top": "10",
               "left": "20",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
-              "uuid": "69ac73a1-3927-42e3-b4c1-41f830b0d603",
-              "id": 12555
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Save Computes Details",
-              "description": null,
-              "arguments": {
-                "entries": "{{vars.result.data.entries if vars.result.data.entries | length else '' }}",
-                "resource_info": "{{vars.result}}"
-              },
-              "status": null,
-              "top": "120",
-              "left": "700",
-              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
-              "uuid": "9bb70d7e-7c5a-49f4-a732-f5feea2a4c7f",
-              "id": 12556
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Save Tabular Format",
-              "description": null,
-              "arguments": {
-                "params": {
-                  "iri": "{{vars.request.data.records[0][\"@id\"]}}",
-                  "body": "{ \"description\": \"<h3>Active Directory Resources </h3> {% if vars.entries|length > 1 %} {% for record in vars.entries %} <table class='table margin-bottom-sm' border='1'> <tr><td width ='30%'>dn</td><td width ='70%'>{{record.dn}}</td>  {% for key,value in record.attributes.items() %} <tr><td width = '30%'>{{ key }}</td><td width = '70%'> {{value| replace('\"', '') |  replace('\\n',' ')|replace('\\\\', '\\\\\\\\') if value is not none}}   </td></tr> {% endfor %}  {% endfor %}</table>{% endif%}\" }"
-                },
-                "version": "2.7.0",
-                "connector": "cyops_utilities",
-                "operation": "update_cyops_resource",
-                "operationTitle": "CyOPs: Update Record",
-                "step_variables": []
-              },
-              "status": null,
-              "top": "240",
-              "left": "891",
-              "stepType": "/api/3/workflow_step_types/0109f35d-090b-4a2b-bd8a-94cbc3508562",
-              "uuid": "ebb087f7-93d0-4bc2-a55f-15e60c46e622",
-              "id": 12557
+              "group": null,
+              "uuid": "69ac73a1-3927-42e3-b4c1-41f830b0d603"
             }
           ],
           "routes": [
@@ -2009,6 +2040,7 @@
               "sourceStep": "/api/3/workflow_steps/17aafed6-cf8e-4ace-bad8-9b4505554109",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "0830326c-29ad-4243-8e62-f9687468b611"
             },
             {
@@ -2018,6 +2050,7 @@
               "sourceStep": "/api/3/workflow_steps/9bb70d7e-7c5a-49f4-a732-f5feea2a4c7f",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "cbbb1321-76dd-43b8-a024-01a93447c88b"
             },
             {
@@ -2027,22 +2060,22 @@
               "sourceStep": "/api/3/workflow_steps/69ac73a1-3927-42e3-b4c1-41f830b0d603",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "f7c6cf5e-9347-4a1c-a2af-ffd3e8dab6bb"
             }
           ],
+          "groups": [],
           "priority": null,
           "uuid": "8d0dcac2-fc1d-41ba-8caf-e49e536cb90d",
+          "id": 528,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
           "recordTags": [
             "Microsoft",
             "activedirectory"
-          ],
-          "id": 4266,
-          "createUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "createDate": 1633459997,
-          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "modifyDate": 1633459997,
-          "owners": [],
-          "isPrivate": false
+          ]
         },
         {
           "@type": "Workflow",
@@ -2052,15 +2085,41 @@
           "tag": "#Active Directory",
           "description": "Deletes an existing object entry of User, Group, Computer or Organization Unit (OU) type from Active Directory based on the type of object and other input parameters you have specified.",
           "isActive": false,
+          "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
           "lastModifyDate": 1633517152,
-          "collection": "/api/3/workflow_collections/31bb7f48-3512-43a3-9d68-9ba471c140be",
+          "collection": "/api/3/workflow_collections/e3f43330-e495-40a1-b1f8-1c0d03334d3d",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/797774c4-943f-4d1f-ae40-1bace40b6241",
           "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Delete Object",
+              "description": null,
+              "arguments": {
+                "name": "Active Directory",
+                "config": "''",
+                "params": {
+                  "object_class": "Organization Unit",
+                  "search_attr_name": "Distinguished Name",
+                  "search_attr_value": "OU=QA,OU=OA,OU=cybersponse,DC=cspune,DC=com"
+                },
+                "version": "2.4.0",
+                "connector": "activedirectory",
+                "operation": "delete_object",
+                "operationTitle": "Delete Object",
+                "step_variables": []
+              },
+              "status": null,
+              "top": "160",
+              "left": "300",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "b950d131-b8de-47e9-9d66-43b74d73d8f9"
+            },
             {
               "@type": "WorkflowStep",
               "name": "Start",
@@ -2093,33 +2152,8 @@
               "top": "30",
               "left": "132",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
-              "uuid": "797774c4-943f-4d1f-ae40-1bace40b6241",
-              "id": 12558
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Delete Object",
-              "description": null,
-              "arguments": {
-                "name": "Active Directory",
-                "config": "''" ,
-                "params": {
-                  "object_class": "Organization Unit",
-                  "search_attr_name": "Distinguished Name",
-                  "search_attr_value": "OU=QA,OU=OA,OU=cybersponse,DC=cspune,DC=com"
-                },
-                "version": "2.3.0",
-                "connector": "activedirectory",
-                "operation": "delete_object",
-                "operationTitle": "Delete Object",
-                "step_variables": []
-              },
-              "status": null,
-              "top": "160",
-              "left": "300",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "uuid": "b950d131-b8de-47e9-9d66-43b74d73d8f9",
-              "id": 12559
+              "group": null,
+              "uuid": "797774c4-943f-4d1f-ae40-1bace40b6241"
             }
           ],
           "routes": [
@@ -2130,912 +2164,22 @@
               "sourceStep": "/api/3/workflow_steps/797774c4-943f-4d1f-ae40-1bace40b6241",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "dc24c420-fb48-42a7-b43f-915dcacdf71f"
             }
           ],
+          "groups": [],
           "priority": null,
           "uuid": "96540e7a-d5d2-4a8d-9839-451bb797514a",
+          "id": 529,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
           "recordTags": [
             "Microsoft",
             "activedirectory"
-          ],
-          "id": 4267,
-          "createUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "createDate": 1633459997,
-          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "modifyDate": 1633517151,
-          "owners": [],
-          "isPrivate": false
-        },
-        {
-          "@type": "Workflow",
-          "triggerLimit": null,
-          "name": "Get Specific Group Details",
-          "aliasName": null,
-          "tag": "#Active Directory",
-          "description": "Get specific groups details from Active directory based on SamAccount Name",
-          "isActive": false,
-          "singleRecordExecution": false,
-          "remoteExecutableFlag": false,
-          "parameters": [],
-          "synchronous": false,
-          "lastModifyDate": 1633459997,
-          "collection": "/api/3/workflow_collections/31bb7f48-3512-43a3-9d68-9ba471c140be",
-          "versions": [],
-          "triggerStep": "/api/3/workflow_steps/ec379d43-2a06-4fc8-90a9-7f2326cec2f8",
-          "steps": [
-            {
-              "@type": "WorkflowStep",
-              "name": "Save Tabular Format",
-              "description": null,
-              "arguments": {
-                "name": "Utilities",
-                "params": {
-                  "iri": "{{vars.request.data.records[0][\"@id\"]}}",
-                  "body": "{   \"description\": \"<h3>Active Directory Resource</h3><table class='table margin-bottom-sm' border='1'> <tr><td width ='30%'>dn</td><td width ='30%'>{{vars.dn}}</td> {% if vars.attributes|length > 1 %}{% for key,value in vars.attributes.items() %} \t<tr><td width = '30%'>{{ key }}</td><td width = '70%'>{{ value}}</td></tr>{% endfor %}{% endif %}</table>\"  }"
-                },
-                "version": "2.7.0",
-                "connector": "cyops_utilities",
-                "operation": "update_cyops_resource",
-                "operationTitle": "CyOPs: Update Record",
-                "step_variables": []
-              },
-              "status": null,
-              "top": "245",
-              "left": "1154",
-              "stepType": "/api/3/workflow_step_types/0109f35d-090b-4a2b-bd8a-94cbc3508562",
-              "uuid": "066db754-fa47-4325-b58c-8c2b1f1d6d9e",
-              "id": 12562
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Get Specific Group Details",
-              "description": null,
-              "arguments": {
-                "name": "Active Directory",
-                "config": "''",
-                "params": {
-                  "search_object": "Group",
-                  "search_attr_value": "G123"
-                },
-                "version": "2.3.0",
-                "connector": "activedirectory",
-                "operation": "get_specific_object_details",
-                "operationTitle": "Get Specific Object Details",
-                "step_variables": [],
-                "operationOutput": {
-                  "entries": [
-                    {
-                      "dn": "",
-                      "attributes": {
-                        "cn": "",
-                        "sn": "",
-                        "sAMAccountName": "",
-                        "distinguishedName": "",
-                        "userPrincipalName": ""
-                      }
-                    }
-                  ]
-                }
-              },
-              "status": null,
-              "top": "100",
-              "left": "420",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "uuid": "c74f7356-f9f2-44da-aea1-a05b1a84798c",
-              "id": 12561
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Save Resource Details",
-              "description": null,
-              "arguments": {
-                "dn": "{{vars.result.data.entries[0].dn if vars.result.data.entries | length else '' }}",
-                "attributes": "{{ vars.result.data.entries[0].attributes if vars.result.data.entries | length else '' }}",
-                "resource_info": "{{vars.result}}"
-              },
-              "status": null,
-              "top": "160",
-              "left": "792",
-              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
-              "uuid": "cc6fdca4-c4e7-4e59-b239-da44d81971f1",
-              "id": 12560
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Start",
-              "description": null,
-              "arguments": {
-                "route": "507fe873-ace5-4a5d-86dd-42add67dbb1b",
-                "title": "Active Directory: Get Specific Group Details",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
-                "step_variables": {
-                  "input": {
-                    "records": "{{vars.input.records}}"
-                  }
-                },
-                "displayConditions": {
-                  "alerts": {
-                    "sort": [],
-                    "limit": 30,
-                    "logic": "AND",
-                    "filters": []
-                  }
-                },
-                "executeButtonText": "Execute",
-                "noRecordExecution": false,
-                "singleRecordExecution": false
-              },
-              "status": null,
-              "top": "60",
-              "left": "51",
-              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
-              "uuid": "ec379d43-2a06-4fc8-90a9-7f2326cec2f8",
-              "id": 12563
-            }
-          ],
-          "routes": [
-            {
-              "@type": "WorkflowRoute",
-              "name": "Start -> Get Specific Group Details",
-              "targetStep": "/api/3/workflow_steps/c74f7356-f9f2-44da-aea1-a05b1a84798c",
-              "sourceStep": "/api/3/workflow_steps/ec379d43-2a06-4fc8-90a9-7f2326cec2f8",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "0ca4f4f4-60c3-4ec9-87c1-fcf922c30ba1"
-            },
-            {
-              "@type": "WorkflowRoute",
-              "name": "Get Specific Group Details -> Save Resource Details",
-              "targetStep": "/api/3/workflow_steps/cc6fdca4-c4e7-4e59-b239-da44d81971f1",
-              "sourceStep": "/api/3/workflow_steps/c74f7356-f9f2-44da-aea1-a05b1a84798c",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "2f09c7c0-d114-4409-81f8-dea828b39735"
-            },
-            {
-              "@type": "WorkflowRoute",
-              "name": "Save Resource Details -> Save Tabular Format",
-              "targetStep": "/api/3/workflow_steps/066db754-fa47-4325-b58c-8c2b1f1d6d9e",
-              "sourceStep": "/api/3/workflow_steps/cc6fdca4-c4e7-4e59-b239-da44d81971f1",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "9545a84d-cb65-403d-9f84-2b7f9e43038d"
-            }
-          ],
-          "priority": null,
-          "uuid": "9bfa32b2-9736-4b89-be88-be2408facaa9",
-          "recordTags": [
-            "Microsoft",
-            "activedirectory"
-          ],
-          "id": 4268,
-          "createUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "createDate": 1633459997,
-          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "modifyDate": 1633459997,
-          "owners": [],
-          "isPrivate": false
-        },
-        {
-          "@type": "Workflow",
-          "triggerLimit": null,
-          "name": "Add Group Members",
-          "aliasName": null,
-          "tag": "#Active Directory",
-          "description": "Adds an Active Directory User or Computer as a member to an existing Group in Active Directory based on the Group DN and User or computer DN you have specified.",
-          "isActive": false,
-          "singleRecordExecution": false,
-          "remoteExecutableFlag": false,
-          "parameters": [],
-          "synchronous": false,
-          "lastModifyDate": 1633517033,
-          "collection": "/api/3/workflow_collections/31bb7f48-3512-43a3-9d68-9ba471c140be",
-          "versions": [],
-          "triggerStep": "/api/3/workflow_steps/6f4bd6f8-4ba0-473d-ac25-f47349db5dea",
-          "steps": [
-            {
-              "@type": "WorkflowStep",
-              "name": "Start",
-              "description": null,
-              "arguments": {
-                "route": "ce2e7dfe-3995-4c89-bfb9-0db725f4812c",
-                "title": "Active Directory: Add Group Members",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
-                "step_variables": {
-                  "input": {
-                    "records": "{{vars.input.records}}"
-                  }
-                },
-                "displayConditions": {
-                  "alerts": {
-                    "sort": [],
-                    "limit": 30,
-                    "logic": "AND",
-                    "filters": []
-                  }
-                },
-                "executeButtonText": "Execute",
-                "noRecordExecution": true,
-                "singleRecordExecution": false
-              },
-              "status": null,
-              "top": "14",
-              "left": "248",
-              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
-              "uuid": "6f4bd6f8-4ba0-473d-ac25-f47349db5dea",
-              "id": 12565
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Add Group Members",
-              "description": null,
-              "arguments": {
-                "name": "Active Directory",
-                "config": "''",
-                "params": {
-                  "group_dn": "[\"CN=Administrators,CN=Builtin,DC=cspune,DC=com\",\"CN=Remote Desktop Users,CN=Builtin,DC=cspune,DC=com\"]",
-                  "object_dn": "[\"CN=csdemouser,OU=cybersponse,DC=cspune,DC=com\"]",
-                  "object_class": "User"
-                },
-                "version": "2.3.0",
-                "connector": "activedirectory",
-                "operation": "add_group_members",
-                "operationTitle": "Add Group Members",
-                "step_variables": []
-              },
-              "status": null,
-              "top": "166",
-              "left": "248",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "uuid": "caadce78-d21e-4524-b7a9-d4a0c8ac72e0",
-              "id": 12564
-            }
-          ],
-          "routes": [
-            {
-              "@type": "WorkflowRoute",
-              "name": "Start -> Add Group Members",
-              "targetStep": "/api/3/workflow_steps/caadce78-d21e-4524-b7a9-d4a0c8ac72e0",
-              "sourceStep": "/api/3/workflow_steps/6f4bd6f8-4ba0-473d-ac25-f47349db5dea",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "86da0ed8-34a6-46ee-aab8-8d2346164bee"
-            }
-          ],
-          "priority": null,
-          "uuid": "bcd2af6f-2606-4f48-b630-8d14d2489064",
-          "recordTags": [
-            "Microsoft",
-            "activedirectory"
-          ],
-          "id": 4269,
-          "createUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "createDate": 1633459997,
-          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "modifyDate": 1633517033,
-          "owners": [],
-          "isPrivate": false
-        },
-        {
-          "@type": "Workflow",
-          "triggerLimit": null,
-          "name": "Remove Group Members",
-          "aliasName": null,
-          "tag": "#Active Directory",
-          "description": "Removes Active Directory Users or Computers from a Group",
-          "isActive": false,
-          "singleRecordExecution": false,
-          "remoteExecutableFlag": false,
-          "parameters": [],
-          "synchronous": false,
-          "lastModifyDate": 1633459997,
-          "collection": "/api/3/workflow_collections/31bb7f48-3512-43a3-9d68-9ba471c140be",
-          "versions": [],
-          "triggerStep": "/api/3/workflow_steps/ddc9aa9e-7756-4890-a149-2fff600a8c5f",
-          "steps": [
-            {
-              "@type": "WorkflowStep",
-              "name": "Remove Group Members",
-              "description": null,
-              "arguments": {
-                "name": "Active Directory",
-                "config": "''",
-                "params": {
-                  "group_dn": "[\"CN=Remote Desktop Users,CN=Builtin,DC=cspune,DC=com\"]",
-                  "object_dn": "[\"CN=csdemouser,OU=cybersponse,DC=cspune,DC=com\"]",
-                  "object_class": "User"
-                },
-                "version": "2.3.0",
-                "connector": "activedirectory",
-                "operation": "remove_group_members",
-                "operationTitle": "Remove Group Members",
-                "step_variables": []
-              },
-              "status": null,
-              "top": "140",
-              "left": "260",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "uuid": "50b60be5-f620-4d70-a14d-f64500c4b935",
-              "id": 12566
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Start",
-              "description": null,
-              "arguments": {
-                "route": "e59053d2-c918-47e9-879a-bc381f31465e",
-                "title": "Active Directory: Remove Group Members",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
-                "step_variables": {
-                  "input": {
-                    "records": "{{vars.input.records}}"
-                  }
-                },
-                "displayConditions": {
-                  "alerts": {
-                    "sort": [],
-                    "limit": 30,
-                    "logic": "AND",
-                    "filters": []
-                  }
-                },
-                "executeButtonText": "Execute",
-                "noRecordExecution": true,
-                "singleRecordExecution": false
-              },
-              "status": null,
-              "top": "28",
-              "left": "260",
-              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
-              "uuid": "ddc9aa9e-7756-4890-a149-2fff600a8c5f",
-              "id": 12567
-            }
-          ],
-          "routes": [
-            {
-              "@type": "WorkflowRoute",
-              "name": "Start -> Remove Group Members",
-              "targetStep": "/api/3/workflow_steps/50b60be5-f620-4d70-a14d-f64500c4b935",
-              "sourceStep": "/api/3/workflow_steps/ddc9aa9e-7756-4890-a149-2fff600a8c5f",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "5456784c-1be0-4f1c-a1b9-1ee1356c6ae6"
-            }
-          ],
-          "priority": null,
-          "uuid": "c0703e51-1977-45c4-980c-8296baa81e88",
-          "recordTags": [
-            "Microsoft",
-            "activedirectory"
-          ],
-          "id": 4270,
-          "createUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "createDate": 1633459997,
-          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "modifyDate": 1633459997,
-          "owners": [],
-          "isPrivate": false
-        },
-        {
-          "@type": "Workflow",
-          "triggerLimit": null,
-          "name": "Search by Email",
-          "aliasName": null,
-          "tag": "#Active Directory",
-          "description": "Search records or entities from Active Directory based on Email",
-          "isActive": false,
-          "singleRecordExecution": false,
-          "remoteExecutableFlag": false,
-          "parameters": [],
-          "synchronous": false,
-          "lastModifyDate": 1633459997,
-          "collection": "/api/3/workflow_collections/31bb7f48-3512-43a3-9d68-9ba471c140be",
-          "versions": [],
-          "triggerStep": "/api/3/workflow_steps/3c1fbeb2-93f3-4a22-9c63-207e570143f0",
-          "steps": [
-            {
-              "@type": "WorkflowStep",
-              "name": "Start",
-              "description": null,
-              "arguments": {
-                "route": "801f494e-a6d4-47ed-8f3d-b64bf25cf4df",
-                "title": "Active Directory: Search by Email",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
-                "step_variables": {
-                  "input": {
-                    "records": "{{vars.input.records}}"
-                  }
-                },
-                "displayConditions": {
-                  "alerts": {
-                    "sort": [],
-                    "limit": 30,
-                    "logic": "AND",
-                    "filters": []
-                  }
-                },
-                "executeButtonText": "Execute",
-                "noRecordExecution": false,
-                "singleRecordExecution": false
-              },
-              "status": null,
-              "top": "40",
-              "left": "68",
-              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
-              "uuid": "3c1fbeb2-93f3-4a22-9c63-207e570143f0",
-              "id": 12571
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Save Resource Details",
-              "description": null,
-              "arguments": {
-                "dn": "{{vars.result.data.entries[0].dn if vars.result.data.entries | length else '' }}",
-                "attributes": "{{ vars.result.data.entries[0].attributes if vars.result.data.entries | length else '' }}",
-                "resource_info": "{{vars.result}}"
-              },
-              "status": null,
-              "top": "160",
-              "left": "854",
-              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
-              "uuid": "4bc29122-3929-4759-ad35-91cd9e21df5b",
-              "id": 12568
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Search by Email",
-              "description": null,
-              "arguments": {
-                "name": "Active Directory",
-                "config": "''",
-                "params": {
-                  "cookie": "",
-                  "page_size": "",
-                  "size_limit": "",
-                  "search_object": "User",
-                  "search_attr_name": "Email",
-                  "search_attr_value": "user6@cspune.com"
-                },
-                "version": "2.3.0",
-                "connector": "activedirectory",
-                "operation": "global_search",
-                "operationTitle": "Global Search",
-                "step_variables": []
-              },
-              "status": null,
-              "top": "100",
-              "left": "440",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "uuid": "4f5f5b3e-0890-4761-b3b1-b686d79d170c",
-              "id": 12569
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Save Tabular Format",
-              "description": null,
-              "arguments": {
-                "params": {
-                  "iri": "{{vars.request.data.records[0][\"@id\"]}}",
-                  "body": "{   \"description\": \"<h3>Active Directory Resource</h3><table class='table margin-bottom-sm' border='1'> <tr><td width ='30%'>dn</td><td width ='30%'>{{vars.dn}}</td> {% if vars.attributes|length > 1 %}{% for key,value in vars.attributes.items() %} \t<tr><td width = '30%'>{{ key }}</td><td width = '70%'>{{ value}}</td></tr>{% endfor %}{% endif %}</table>\"  }"
-                },
-                "version": "2.7.0",
-                "connector": "cyops_utilities",
-                "operation": "update_cyops_resource",
-                "operationTitle": "CyOPs: Update Record",
-                "step_variables": []
-              },
-              "status": null,
-              "top": "281",
-              "left": "1279",
-              "stepType": "/api/3/workflow_step_types/0109f35d-090b-4a2b-bd8a-94cbc3508562",
-              "uuid": "8fc9404d-e43a-4233-96f2-02753e787359",
-              "id": 12570
-            }
-          ],
-          "routes": [
-            {
-              "@type": "WorkflowRoute",
-              "name": "Save Resource Details -> Save Tabular Format",
-              "targetStep": "/api/3/workflow_steps/8fc9404d-e43a-4233-96f2-02753e787359",
-              "sourceStep": "/api/3/workflow_steps/4bc29122-3929-4759-ad35-91cd9e21df5b",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "3a96eb44-439e-47fe-ae02-58adc5b47831"
-            },
-            {
-              "@type": "WorkflowRoute",
-              "name": "Start -> Search by Email",
-              "targetStep": "/api/3/workflow_steps/4f5f5b3e-0890-4761-b3b1-b686d79d170c",
-              "sourceStep": "/api/3/workflow_steps/3c1fbeb2-93f3-4a22-9c63-207e570143f0",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "9b853852-2157-4ff2-a62e-def334d90f9b"
-            },
-            {
-              "@type": "WorkflowRoute",
-              "name": "Search by Email -> Save Resource Details",
-              "targetStep": "/api/3/workflow_steps/4bc29122-3929-4759-ad35-91cd9e21df5b",
-              "sourceStep": "/api/3/workflow_steps/4f5f5b3e-0890-4761-b3b1-b686d79d170c",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "b3033eb1-7c43-4e94-939e-922fe0eca1cb"
-            }
-          ],
-          "priority": null,
-          "uuid": "c81bf59e-877a-44d1-b3bc-d855715b6a3c",
-          "recordTags": [
-            "Microsoft",
-            "activedirectory"
-          ],
-          "id": 4271,
-          "createUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "createDate": 1633459997,
-          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "modifyDate": 1633459997,
-          "owners": [],
-          "isPrivate": false
-        },
-        {
-          "@type": "Workflow",
-          "triggerLimit": null,
-          "name": "Disable Computer",
-          "aliasName": null,
-          "tag": "#Active Directory",
-          "description": "Disables the computer account based on the Distinguished Names or SamAccount Name of the computer.",
-          "isActive": false,
-          "singleRecordExecution": false,
-          "remoteExecutableFlag": false,
-          "parameters": [],
-          "synchronous": false,
-          "lastModifyDate": 1633517192,
-          "collection": "/api/3/workflow_collections/31bb7f48-3512-43a3-9d68-9ba471c140be",
-          "versions": [],
-          "triggerStep": "/api/3/workflow_steps/73e8d175-1459-42fb-baa4-6ef34b905b2d",
-          "steps": [
-            {
-              "@type": "WorkflowStep",
-              "name": "Start",
-              "description": null,
-              "arguments": {
-                "route": "f7fae6a5-e4cb-497a-861f-6b5cf0b301de",
-                "title": "Enable Computer",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
-                "step_variables": {
-                  "input": {
-                    "records": "{{vars.input.records}}"
-                  }
-                },
-                "executeButtonText": "Execute",
-                "noRecordExecution": true,
-                "singleRecordExecution": false
-              },
-              "status": null,
-              "top": "40",
-              "left": "40",
-              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
-              "uuid": "73e8d175-1459-42fb-baa4-6ef34b905b2d",
-              "id": 12573
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Disable Computer",
-              "description": null,
-              "arguments": {
-                "name": "Active Directory",
-                "config": "''",
-                "params": {
-                  "search_attr_name": "Distinguished Name",
-                  "search_attr_value": "CN=QA Prod,OU=cybersponse,DC=cspune,DC=com"
-                },
-                "version": "2.3.0",
-                "connector": "activedirectory",
-                "operation": "disable_computer",
-                "operationTitle": "Disable Computer",
-                "pickFromTenant": false,
-                "step_variables": []
-              },
-              "status": null,
-              "top": "147",
-              "left": "397",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "uuid": "fd2ac09a-4ccf-40f7-8b0a-884877478a04",
-              "id": 12572
-            }
-          ],
-          "routes": [
-            {
-              "@type": "WorkflowRoute",
-              "name": "Start -> Disable Computer",
-              "targetStep": "/api/3/workflow_steps/fd2ac09a-4ccf-40f7-8b0a-884877478a04",
-              "sourceStep": "/api/3/workflow_steps/73e8d175-1459-42fb-baa4-6ef34b905b2d",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "0d93ef04-d297-4633-9130-bc5f8ba0dd29"
-            }
-          ],
-          "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
-          "uuid": "f05ce617-6c40-45f8-84f1-8b7ef6e7a3d1",
-          "recordTags": [
-            "Microsoft",
-            "activedirectory"
-          ],
-          "id": 4272,
-          "createUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "createDate": 1633459997,
-          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "modifyDate": 1633517192,
-          "owners": [],
-          "isPrivate": false
-        },
-        {
-          "@type": "Workflow",
-          "triggerLimit": null,
-          "name": "Get all Groups Details",
-          "aliasName": null,
-          "tag": "#Active Directory",
-          "description": "Get list of groups details from Active Directory",
-          "isActive": false,
-          "singleRecordExecution": false,
-          "remoteExecutableFlag": false,
-          "parameters": [],
-          "synchronous": false,
-          "lastModifyDate": 1633459997,
-          "collection": "/api/3/workflow_collections/31bb7f48-3512-43a3-9d68-9ba471c140be",
-          "versions": [],
-          "triggerStep": "/api/3/workflow_steps/e21ab1d3-0507-4305-b1b8-5d8e91da13c2",
-          "steps": [
-            {
-              "@type": "WorkflowStep",
-              "name": "Save Groups Details",
-              "description": null,
-              "arguments": {
-                "entries": "{{vars.result.data.entries}}",
-                "resource_info": "{{vars.result}}"
-              },
-              "status": null,
-              "top": "160",
-              "left": "747",
-              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
-              "uuid": "65d971a6-f416-4e08-be5f-9731201546a9",
-              "id": 12577
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Get all Groups Details",
-              "description": null,
-              "arguments": {
-                "name": "Active Directory",
-                "config": "''",
-                "params": {
-                  "cookie": "",
-                  "page_size": "",
-                  "size_limit": "",
-                  "search_object": "Group"
-                },
-                "version": "2.3.0",
-                "connector": "activedirectory",
-                "operation": "get_all_object_details",
-                "operationTitle": "Get All Objects Details",
-                "step_variables": []
-              },
-              "status": null,
-              "top": "100",
-              "left": "391",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "uuid": "6da467c4-98d7-4b74-8c56-7bf6ad0b1b54",
-              "id": 12575
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Save Tabular Format",
-              "description": null,
-              "arguments": {
-                "params": {
-                  "iri": "{{vars.request.data.records[0][\"@id\"]}}",
-                  "body": "{ \"description\": \"<h3>Active Directory Resources </h3> {% if vars.entries|length > 1 %} {% for record in vars.entries %} <table class='table margin-bottom-sm' border='1'> <tr><td width ='30%'>dn</td><td width ='70%'>{{record.dn}}</td>  {% for key,value in record.attributes.items() %} <tr><td width = '30%'>{{ key }}</td><td width = '70%'> {{value| replace('\"', '') |  replace('\\n',' ')|replace('\\\\', '\\\\\\\\') if value is not none}}   </td></tr> {% endfor %}  {% endfor %}</table>{% endif%}\" }"
-                },
-                "version": "2.7.0",
-                "connector": "cyops_utilities",
-                "operation": "update_cyops_resource",
-                "operationTitle": "CyOPs: Update Record",
-                "step_variables": []
-              },
-              "status": null,
-              "top": "253",
-              "left": "1108",
-              "stepType": "/api/3/workflow_step_types/0109f35d-090b-4a2b-bd8a-94cbc3508562",
-              "uuid": "731964cc-a54f-4b36-aa98-718f8b6d0c7c",
-              "id": 12574
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Start",
-              "description": null,
-              "arguments": {
-                "route": "fb9cb431-ebb9-4206-ad85-4cc1261633d4",
-                "title": "Active Directory: Get All Groups Details",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
-                "step_variables": {
-                  "input": {
-                    "records": "{{vars.input.records}}"
-                  }
-                },
-                "displayConditions": {
-                  "alerts": {
-                    "sort": [],
-                    "limit": 30,
-                    "logic": "AND",
-                    "filters": []
-                  }
-                },
-                "executeButtonText": "Execute",
-                "noRecordExecution": false,
-                "singleRecordExecution": false
-              },
-              "status": null,
-              "top": "40",
-              "left": "34",
-              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
-              "uuid": "e21ab1d3-0507-4305-b1b8-5d8e91da13c2",
-              "id": 12576
-            }
-          ],
-          "routes": [
-            {
-              "@type": "WorkflowRoute",
-              "name": "Start -> Get all Groups Details1",
-              "targetStep": "/api/3/workflow_steps/6da467c4-98d7-4b74-8c56-7bf6ad0b1b54",
-              "sourceStep": "/api/3/workflow_steps/e21ab1d3-0507-4305-b1b8-5d8e91da13c2",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "6cd401ae-4c5b-46a1-bcb4-837144b11572"
-            },
-            {
-              "@type": "WorkflowRoute",
-              "name": "Get all Groups Details1 -> Save Groups Details",
-              "targetStep": "/api/3/workflow_steps/65d971a6-f416-4e08-be5f-9731201546a9",
-              "sourceStep": "/api/3/workflow_steps/6da467c4-98d7-4b74-8c56-7bf6ad0b1b54",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "6fe3d9bb-7164-44f0-b13b-44925ec72ccd"
-            },
-            {
-              "@type": "WorkflowRoute",
-              "name": "Save Groups Details -> Save Tabular Format",
-              "targetStep": "/api/3/workflow_steps/731964cc-a54f-4b36-aa98-718f8b6d0c7c",
-              "sourceStep": "/api/3/workflow_steps/65d971a6-f416-4e08-be5f-9731201546a9",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "c9e145ba-aaf9-4ca2-b900-ce24ed22a1f1"
-            }
-          ],
-          "priority": null,
-          "uuid": "fa81fbd4-777b-4cc3-bf1a-77284ce235cd",
-          "recordTags": [
-            "Microsoft",
-            "activedirectory"
-          ],
-          "id": 4273,
-          "createUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "createDate": 1633459997,
-          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "modifyDate": 1633459997,
-          "owners": [],
-          "isPrivate": false
-        },
-        {
-          "@type": "Workflow",
-          "triggerLimit": null,
-          "name": "Enable Computer",
-          "aliasName": null,
-          "tag": "#Active Directory",
-          "description": "Enables the computer account based on the Distinguished Names or SamAccount Name of the computer object.",
-          "isActive": false,
-          "singleRecordExecution": false,
-          "remoteExecutableFlag": false,
-          "parameters": [],
-          "synchronous": false,
-          "lastModifyDate": 1633517337,
-          "collection": "/api/3/workflow_collections/31bb7f48-3512-43a3-9d68-9ba471c140be",
-          "versions": [],
-          "triggerStep": "/api/3/workflow_steps/8ddcebc0-70e9-41dc-85d5-3cffae2d71f4",
-          "steps": [
-            {
-              "@type": "WorkflowStep",
-              "name": "Start",
-              "description": null,
-              "arguments": {
-                "route": "2f4a4a13-c9eb-4d03-bf32-602f68972d98",
-                "title": "Enable Computer",
-                "resources": [
-                  "alerts"
-                ],
-                "inputVariables": [],
-                "step_variables": {
-                  "input": {
-                    "records": "{{vars.input.records}}"
-                  }
-                },
-                "executeButtonText": "Execute",
-                "noRecordExecution": true,
-                "singleRecordExecution": false
-              },
-              "status": null,
-              "top": "40",
-              "left": "40",
-              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
-              "uuid": "8ddcebc0-70e9-41dc-85d5-3cffae2d71f4",
-              "id": 12579
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Enable Computer",
-              "description": null,
-              "arguments": {
-                "name": "Active Directory",
-                "config": "''",
-                "params": {
-                  "search_attr_name": "Distinguished Name",
-                  "search_attr_value": "CN=QA Prod,OU=cybersponse,DC=cspune,DC=com"
-                },
-                "version": "2.3.0",
-                "connector": "activedirectory",
-                "operation": "enable_computer",
-                "operationTitle": "Enable Computer",
-                "pickFromTenant": false,
-                "step_variables": []
-              },
-              "status": null,
-              "top": "120",
-              "left": "380",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "uuid": "ff266755-1722-44a8-9f17-4e125f983695",
-              "id": 12578
-            }
-          ],
-          "routes": [
-            {
-              "@type": "WorkflowRoute",
-              "name": "Start -> Enable Computer",
-              "targetStep": "/api/3/workflow_steps/ff266755-1722-44a8-9f17-4e125f983695",
-              "sourceStep": "/api/3/workflow_steps/8ddcebc0-70e9-41dc-85d5-3cffae2d71f4",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "b1ea3eee-6aed-42c3-afb0-da555c2ce7b8"
-            }
-          ],
-          "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
-          "uuid": "fe7d3935-8fe6-44bb-8fcc-6711e5e30f5e",
-          "recordTags": [
-            "Microsoft",
-            "activedirectory"
-          ],
-          "id": 4274,
-          "createUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "createDate": 1633459997,
-          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "modifyDate": 1633517336,
-          "owners": [],
-          "isPrivate": false
+          ]
         },
         {
           "@type": "Workflow",
@@ -3044,7 +2188,7 @@
           "aliasName": null,
           "tag": null,
           "description": "Retrieve the reputation of indicator of type ‘User’ using Active Directory",
-          "isActive": true,
+          "isActive": false,
           "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
@@ -3060,49 +2204,18 @@
           "steps": [
             {
               "@type": "WorkflowStep",
-              "name": "Start",
+              "name": "Configuration",
               "description": null,
               "arguments": {
-                "step_variables": {
-                  "input": {
-                    "params": []
-                  }
-                }
+                "useMockOutput": "{{globalVars.Demo_mode}}",
+                "indicator_value": "{{vars.input.params['indicator_value']}}"
               },
               "status": null,
-              "top": "30",
+              "top": "165",
               "left": "300",
-              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62",
+              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
               "group": null,
-              "uuid": "0e7bd74c-6554-4f73-a979-2baa87aec69d"
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Get User Details",
-              "description": null,
-              "arguments": {
-                "name": "Active Directory",
-                "config": "''",
-                "params": {
-                  "search_object": "User",
-                  "search_attr_value": "{{vars.input.params['indicator_value']}}"
-                },
-                "version": "2.3.0",
-                "connector": "activedirectory",
-                "operation": "get_specific_object_details",
-                "mock_result": "{\n  \"data\": {\n    \"cookie\": null,\n    \"entries\": [\n      {\n        \"dn\": \"CN={{vars.indicator_value}} lastname,CN=Users,DC=cyops-test,DC=com\",\n        \"attributes\": {\n          \"cn\": \"{{vars.indicator_value}} lastname\",\n          \"sn\": \"lastname\",\n          \"mail\": \"flastname@fortinet.com\",\n          \"name\": \"{{vars.indicator_value}} lastname\",\n          \"codePage\": 0,\n          \"memberOf\": [\n            \"CN=Admin,CN=cyops,DC=cyops-test,DC=com\"\n          ],\n          \"givenName\": \"{{vars.indicator_value}}\",\n          \"lastLogon\": null,\n          \"objectSid\": null,\n          \"adminCount\": 1,\n          \"lastLogoff\": null,\n          \"logonCount\": 0,\n          \"objectGUID\": null,\n          \"pwdLastSet\": 1656087282,\n          \"uSNChanged\": 12814,\n          \"uSNCreated\": 12794,\n          \"badPwdCount\": 0,\n          \"countryCode\": 0,\n          \"description\": [\n            \"Senior Manager\"\n          ],\n          \"displayName\": \"{{vars.indicator_value}} lastname\",\n          \"objectClass\": [\n            \"top\",\n            \"person\",\n            \"organizationalPerson\",\n            \"user\"\n          ],\n          \"whenChanged\": 1656089274,\n          \"whenCreated\": 1656087282,\n          \"instanceType\": 4,\n          \"accountExpires\": 253402300799,\n          \"objectCategory\": \"CN=Person,CN=Schema,CN=Config,DC=cyops-test,DC=com\",\n          \"primaryGroupID\": 513,\n          \"sAMAccountName\": \"{{vars.indicator_value}}\",\n          \"sAMAccountType\": \"SAM_NORMAL_USER_ACCOUNT\",\n          \"badPasswordTime\": null,\n          \"telephoneNumber\": \"567489285\",\n          \"distinguishedName\": \"CN={{vars.indicator_value}} lastname,CN=Users,DC=cyops-test,DC=com\",\n          \"userPrincipalName\": \"{{vars.indicator_value}}@fortinet-test.com\",\n          \"userAccountControl\": \"NORMAL_ACCOUNT\",\n          \"dSCorePropagationData\": [\n            1656089274,\n            null\n          ]\n        }\n      }\n    ]\n  },\n  \"status\": \"Success\",\n  \"message\": \"\",\n  \"operation\": null\n}",
-                "ignore_errors": true,
-                "operationTitle": "Get Specific Object Details",
-                "step_variables": {
-                  "foundADDetails": "{{ ( vars.result.data.entries and vars.result.data.entries | length > 0 ) | ternary(true,false) }}"
-                }
-              },
-              "status": null,
-              "top": "300",
-              "left": "300",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "group": null,
-              "uuid": "24913528-ae33-47ef-a942-e3d2f03a8545"
+              "uuid": "9cc1dcb4-c69e-44ce-9b41-58b420ef15ea"
             },
             {
               "@type": "WorkflowStep",
@@ -3131,6 +2244,34 @@
             },
             {
               "@type": "WorkflowStep",
+              "name": "Get User Details",
+              "description": null,
+              "arguments": {
+                "name": "Active Directory",
+                "config": "''",
+                "params": {
+                  "search_object": "User",
+                  "search_attr_value": "{{vars.input.params['indicator_value']}}"
+                },
+                "version": "2.4.0",
+                "connector": "activedirectory",
+                "operation": "get_specific_object_details",
+                "mock_result": "{\n  \"data\": {\n    \"cookie\": null,\n    \"entries\": [\n      {\n        \"dn\": \"CN={{vars.indicator_value}} lastname,CN=Users,DC=cyops-test,DC=com\",\n        \"attributes\": {\n          \"cn\": \"{{vars.indicator_value}} lastname\",\n          \"sn\": \"lastname\",\n          \"mail\": \"flastname@fortinet.com\",\n          \"name\": \"{{vars.indicator_value}} lastname\",\n          \"codePage\": 0,\n          \"memberOf\": [\n            \"CN=Admin,CN=cyops,DC=cyops-test,DC=com\"\n          ],\n          \"givenName\": \"{{vars.indicator_value}}\",\n          \"lastLogon\": null,\n          \"objectSid\": null,\n          \"adminCount\": 1,\n          \"lastLogoff\": null,\n          \"logonCount\": 0,\n          \"objectGUID\": null,\n          \"pwdLastSet\": 1656087282,\n          \"uSNChanged\": 12814,\n          \"uSNCreated\": 12794,\n          \"badPwdCount\": 0,\n          \"countryCode\": 0,\n          \"description\": [\n            \"Senior Manager\"\n          ],\n          \"displayName\": \"{{vars.indicator_value}} lastname\",\n          \"objectClass\": [\n            \"top\",\n            \"person\",\n            \"organizationalPerson\",\n            \"user\"\n          ],\n          \"whenChanged\": 1656089274,\n          \"whenCreated\": 1656087282,\n          \"instanceType\": 4,\n          \"accountExpires\": 253402300799,\n          \"objectCategory\": \"CN=Person,CN=Schema,CN=Config,DC=cyops-test,DC=com\",\n          \"primaryGroupID\": 513,\n          \"sAMAccountName\": \"{{vars.indicator_value}}\",\n          \"sAMAccountType\": \"SAM_NORMAL_USER_ACCOUNT\",\n          \"badPasswordTime\": null,\n          \"telephoneNumber\": \"567489285\",\n          \"distinguishedName\": \"CN={{vars.indicator_value}} lastname,CN=Users,DC=cyops-test,DC=com\",\n          \"userPrincipalName\": \"{{vars.indicator_value}}@fortinet-test.com\",\n          \"userAccountControl\": \"NORMAL_ACCOUNT\",\n          \"dSCorePropagationData\": [\n            1656089274,\n            null\n          ]\n        }\n      }\n    ]\n  },\n  \"status\": \"Success\",\n  \"message\": \"\",\n  \"operation\": null\n}",
+                "ignore_errors": true,
+                "operationTitle": "Get Specific Object Details",
+                "step_variables": {
+                  "foundADDetails": "{{ ( vars.result.data.entries and vars.result.data.entries | length > 0 ) | ternary(true,false) }}"
+                }
+              },
+              "status": null,
+              "top": "300",
+              "left": "300",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "24913528-ae33-47ef-a942-e3d2f03a8545"
+            },
+            {
+              "@type": "WorkflowStep",
               "name": "Is Reputation Found",
               "description": null,
               "arguments": {
@@ -3155,21 +2296,6 @@
               "stepType": "/api/3/workflow_step_types/12254cf5-5db7-4b1a-8cb1-3af081924b28",
               "group": null,
               "uuid": "8a6f8b32-eae3-43c5-ab20-e78268850ef3"
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Configuration",
-              "description": null,
-              "arguments": {
-                "useMockOutput": "{{globalVars.Demo_mode}}",
-                "indicator_value": "{{vars.input.params['indicator_value']}}"
-              },
-              "status": null,
-              "top": "165",
-              "left": "300",
-              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
-              "group": null,
-              "uuid": "9cc1dcb4-c69e-44ce-9b41-58b420ef15ea"
             },
             {
               "@type": "WorkflowStep",
@@ -3205,26 +2331,36 @@
               "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
               "group": null,
               "uuid": "edee2197-ed12-4bbd-99a1-68e7f97129a7"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "status": null,
+              "top": "30",
+              "left": "300",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62",
+              "group": null,
+              "uuid": "0e7bd74c-6554-4f73-a979-2baa87aec69d"
             }
           ],
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "name": "Is Reputation Found -> No Operation",
-              "targetStep": "/api/3/workflow_steps/d188a044-94c8-4620-bd00-aa3a5ef66335",
-              "sourceStep": "/api/3/workflow_steps/8a6f8b32-eae3-43c5-ab20-e78268850ef3",
-              "label": "No",
-              "isExecuted": false,
-              "uuid": "038034ef-c808-4159-bff9-9809e3b40d21"
-            },
-            {
-              "@type": "WorkflowRoute",
-              "name": "Get User Details -> Is Reputation Found",
-              "targetStep": "/api/3/workflow_steps/8a6f8b32-eae3-43c5-ab20-e78268850ef3",
-              "sourceStep": "/api/3/workflow_steps/24913528-ae33-47ef-a942-e3d2f03a8545",
+              "name": "Configuration -> Get User Details",
+              "targetStep": "/api/3/workflow_steps/24913528-ae33-47ef-a942-e3d2f03a8545",
+              "sourceStep": "/api/3/workflow_steps/9cc1dcb4-c69e-44ce-9b41-58b420ef15ea",
               "label": null,
               "isExecuted": false,
-              "uuid": "04172ae0-9a51-4a98-abe9-44ee1684267d"
+              "group": null,
+              "uuid": "50683f20-d63a-469f-9b23-3132f566ced6"
             },
             {
               "@type": "WorkflowRoute",
@@ -3233,16 +2369,18 @@
               "sourceStep": "/api/3/workflow_steps/75a54f81-a263-425b-9c75-10145ebe5060",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "0d458911-0113-4476-ae8f-8ad0815404e7"
             },
             {
               "@type": "WorkflowRoute",
-              "name": "Configuration -> Get User Details",
-              "targetStep": "/api/3/workflow_steps/24913528-ae33-47ef-a942-e3d2f03a8545",
-              "sourceStep": "/api/3/workflow_steps/9cc1dcb4-c69e-44ce-9b41-58b420ef15ea",
+              "name": "Get User Details -> Is Reputation Found",
+              "targetStep": "/api/3/workflow_steps/8a6f8b32-eae3-43c5-ab20-e78268850ef3",
+              "sourceStep": "/api/3/workflow_steps/24913528-ae33-47ef-a942-e3d2f03a8545",
               "label": null,
               "isExecuted": false,
-              "uuid": "50683f20-d63a-469f-9b23-3132f566ced6"
+              "group": null,
+              "uuid": "04172ae0-9a51-4a98-abe9-44ee1684267d"
             },
             {
               "@type": "WorkflowRoute",
@@ -3251,7 +2389,18 @@
               "sourceStep": "/api/3/workflow_steps/8a6f8b32-eae3-43c5-ab20-e78268850ef3",
               "label": "Yes",
               "isExecuted": false,
+              "group": null,
               "uuid": "56101c46-d5cf-4681-8a74-168294fb16c9"
+            },
+            {
+              "@type": "WorkflowRoute",
+              "name": "Is Reputation Found -> No Operation",
+              "targetStep": "/api/3/workflow_steps/d188a044-94c8-4620-bd00-aa3a5ef66335",
+              "sourceStep": "/api/3/workflow_steps/8a6f8b32-eae3-43c5-ab20-e78268850ef3",
+              "label": "No",
+              "isExecuted": false,
+              "group": null,
+              "uuid": "038034ef-c808-4159-bff9-9809e3b40d21"
             },
             {
               "@type": "WorkflowRoute",
@@ -3260,13 +2409,14 @@
               "sourceStep": "/api/3/workflow_steps/0e7bd74c-6554-4f73-a979-2baa87aec69d",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "83c02ecc-13b4-43e7-acb6-cf87167720eb"
             }
           ],
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
           "uuid": "96cdd34f-0124-475d-a818-92af431cd437",
-          "id": 1256,
+          "id": 537,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -3274,6 +2424,660 @@
           "recordTags": [
             "Subroutine",
             "User_Enrichment"
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "triggerLimit": null,
+          "name": "Get Specific Group Details",
+          "aliasName": null,
+          "tag": "#Active Directory",
+          "description": "Get specific groups details from Active directory based on SamAccount Name",
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "remoteExecutableFlag": false,
+          "parameters": [],
+          "synchronous": false,
+          "lastModifyDate": 1633459997,
+          "collection": "/api/3/workflow_collections/e3f43330-e495-40a1-b1f8-1c0d03334d3d",
+          "versions": [],
+          "triggerStep": "/api/3/workflow_steps/ec379d43-2a06-4fc8-90a9-7f2326cec2f8",
+          "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Get Specific Group Details",
+              "description": null,
+              "arguments": {
+                "name": "Active Directory",
+                "config": "''",
+                "params": {
+                  "search_object": "Group",
+                  "search_attr_value": "G123"
+                },
+                "version": "2.4.0",
+                "connector": "activedirectory",
+                "operation": "get_specific_object_details",
+                "operationTitle": "Get Specific Object Details",
+                "step_variables": [],
+                "operationOutput": {
+                  "entries": [
+                    {
+                      "dn": "",
+                      "attributes": {
+                        "cn": "",
+                        "sn": "",
+                        "sAMAccountName": "",
+                        "distinguishedName": "",
+                        "userPrincipalName": ""
+                      }
+                    }
+                  ]
+                }
+              },
+              "status": null,
+              "top": "100",
+              "left": "420",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "c74f7356-f9f2-44da-aea1-a05b1a84798c"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Save Resource Details",
+              "description": null,
+              "arguments": {
+                "dn": "{{vars.result.data.entries[0].dn if vars.result.data.entries | length else '' }}",
+                "attributes": "{{ vars.result.data.entries[0].attributes if vars.result.data.entries | length else '' }}",
+                "resource_info": "{{vars.result}}"
+              },
+              "status": null,
+              "top": "160",
+              "left": "792",
+              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+              "group": null,
+              "uuid": "cc6fdca4-c4e7-4e59-b239-da44d81971f1"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Save Tabular Format",
+              "description": null,
+              "arguments": {
+                "name": "Utilities",
+                "params": {
+                  "iri": "{{vars.request.data.records[0][\"@id\"]}}",
+                  "body": "{   \"description\": \"<h3>Active Directory Resource</h3><table class='table margin-bottom-sm' border='1'> <tr><td width ='30%'>dn</td><td width ='30%'>{{vars.dn}}</td> {% if vars.attributes|length > 1 %}{% for key,value in vars.attributes.items() %} \t<tr><td width = '30%'>{{ key }}</td><td width = '70%'>{{ value}}</td></tr>{% endfor %}{% endif %}</table>\"  }"
+                },
+                "version": "2.7.0",
+                "connector": "cyops_utilities",
+                "operation": "update_cyops_resource",
+                "operationTitle": "CyOPs: Update Record",
+                "step_variables": []
+              },
+              "status": null,
+              "top": "245",
+              "left": "1154",
+              "stepType": "/api/3/workflow_step_types/0109f35d-090b-4a2b-bd8a-94cbc3508562",
+              "group": null,
+              "uuid": "066db754-fa47-4325-b58c-8c2b1f1d6d9e"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "arguments": {
+                "route": "507fe873-ace5-4a5d-86dd-42add67dbb1b",
+                "title": "Active Directory: Get Specific Group Details",
+                "resources": [
+                  "alerts"
+                ],
+                "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "records": "{{vars.input.records}}"
+                  }
+                },
+                "displayConditions": {
+                  "alerts": {
+                    "sort": [],
+                    "limit": 30,
+                    "logic": "AND",
+                    "filters": []
+                  }
+                },
+                "executeButtonText": "Execute",
+                "noRecordExecution": false,
+                "singleRecordExecution": false
+              },
+              "status": null,
+              "top": "60",
+              "left": "51",
+              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
+              "group": null,
+              "uuid": "ec379d43-2a06-4fc8-90a9-7f2326cec2f8"
+            }
+          ],
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+              "name": "Get Specific Group Details -> Save Resource Details",
+              "targetStep": "/api/3/workflow_steps/cc6fdca4-c4e7-4e59-b239-da44d81971f1",
+              "sourceStep": "/api/3/workflow_steps/c74f7356-f9f2-44da-aea1-a05b1a84798c",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "2f09c7c0-d114-4409-81f8-dea828b39735"
+            },
+            {
+              "@type": "WorkflowRoute",
+              "name": "Save Resource Details -> Save Tabular Format",
+              "targetStep": "/api/3/workflow_steps/066db754-fa47-4325-b58c-8c2b1f1d6d9e",
+              "sourceStep": "/api/3/workflow_steps/cc6fdca4-c4e7-4e59-b239-da44d81971f1",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "9545a84d-cb65-403d-9f84-2b7f9e43038d"
+            },
+            {
+              "@type": "WorkflowRoute",
+              "name": "Start -> Get Specific Group Details",
+              "targetStep": "/api/3/workflow_steps/c74f7356-f9f2-44da-aea1-a05b1a84798c",
+              "sourceStep": "/api/3/workflow_steps/ec379d43-2a06-4fc8-90a9-7f2326cec2f8",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "0ca4f4f4-60c3-4ec9-87c1-fcf922c30ba1"
+            }
+          ],
+          "groups": [],
+          "priority": null,
+          "uuid": "9bfa32b2-9736-4b89-be88-be2408facaa9",
+          "id": 530,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
+          "recordTags": [
+            "Microsoft",
+            "activedirectory"
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "triggerLimit": null,
+          "name": "Computer Organization Unit (OU)",
+          "aliasName": null,
+          "tag": null,
+          "description": "Modify Computer Organization Unit (OU)",
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "remoteExecutableFlag": false,
+          "parameters": [],
+          "synchronous": false,
+          "lastModifyDate": 1695295458,
+          "collection": "/api/3/workflow_collections/e3f43330-e495-40a1-b1f8-1c0d03334d3d",
+          "versions": [],
+          "triggerStep": "/api/3/workflow_steps/63aff55a-14f4-4087-818b-391d9e8ba555",
+          "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Modify Computer Organization Unit",
+              "description": null,
+              "arguments": {
+                "name": "Active Directory",
+                "config": "53376f67-4370-4342-9b01-e0c8ce87086d",
+                "params": {
+                  "target_dn": "OU=Employee,OU=Account,DC=fsr,DC=com",
+                  "computer_dn": "CN=shxcas1,CN=Computers,DC=fsr,DC=com",
+                  "computer_name": "shxcas1"
+                },
+                "version": "2.4.0",
+                "connector": "activedirectory",
+                "operation": "modify_computer_ou",
+                "operationTitle": "Modify Computer Organization Unit (OU)",
+                "pickFromTenant": false,
+                "step_variables": []
+              },
+              "status": null,
+              "top": "182",
+              "left": "368",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "1529d88f-9191-4001-9b21-af03000a1802"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "arguments": {
+                "route": "7a4305f5-870c-4de4-bd98-240fd9ef2407",
+                "title": "Active Directory: Modify Computer Organization Unit (OU)",
+                "resources": [
+                  "alerts"
+                ],
+                "__triggerLimit": true,
+                "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "params": [],
+                    "records": "{{vars.input.records}}"
+                  }
+                },
+                "triggerOnSource": true,
+                "executeButtonText": "Execute",
+                "noRecordExecution": true,
+                "showToasterMessage": {
+                  "visible": false,
+                  "messageVisible": true
+                },
+                "triggerOnReplicate": false,
+                "singleRecordExecution": false
+              },
+              "status": null,
+              "top": "40",
+              "left": "40",
+              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
+              "group": null,
+              "uuid": "63aff55a-14f4-4087-818b-391d9e8ba555"
+            }
+          ],
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+              "name": "Start -> Modify Computer Organization Unit",
+              "targetStep": "/api/3/workflow_steps/1529d88f-9191-4001-9b21-af03000a1802",
+              "sourceStep": "/api/3/workflow_steps/63aff55a-14f4-4087-818b-391d9e8ba555",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "d6e096bc-009b-4e5b-bad8-90fa90817069"
+            }
+          ],
+          "groups": [],
+          "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+          "uuid": "aeddc37d-1b69-45e2-8f7e-aebf38bb5027",
+          "id": 539,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
+          "recordTags": [
+            "Microsoft",
+            "activedirectory"
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "triggerLimit": null,
+          "name": "Add Group Members",
+          "aliasName": null,
+          "tag": "#Active Directory",
+          "description": "Adds an Active Directory User or Computer as a member to an existing Group in Active Directory based on the Group DN and User or computer DN you have specified.",
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "remoteExecutableFlag": false,
+          "parameters": [],
+          "synchronous": false,
+          "lastModifyDate": 1633517033,
+          "collection": "/api/3/workflow_collections/e3f43330-e495-40a1-b1f8-1c0d03334d3d",
+          "versions": [],
+          "triggerStep": "/api/3/workflow_steps/6f4bd6f8-4ba0-473d-ac25-f47349db5dea",
+          "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Add Group Members",
+              "description": null,
+              "arguments": {
+                "name": "Active Directory",
+                "config": "''",
+                "params": {
+                  "group_dn": "[\"CN=Administrators,CN=Builtin,DC=cspune,DC=com\",\"CN=Remote Desktop Users,CN=Builtin,DC=cspune,DC=com\"]",
+                  "object_dn": "[\"CN=csdemouser,OU=cybersponse,DC=cspune,DC=com\"]",
+                  "object_class": "User"
+                },
+                "version": "2.4.0",
+                "connector": "activedirectory",
+                "operation": "add_group_members",
+                "operationTitle": "Add Group Members",
+                "step_variables": []
+              },
+              "status": null,
+              "top": "166",
+              "left": "248",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "caadce78-d21e-4524-b7a9-d4a0c8ac72e0"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "arguments": {
+                "route": "ce2e7dfe-3995-4c89-bfb9-0db725f4812c",
+                "title": "Active Directory: Add Group Members",
+                "resources": [
+                  "alerts"
+                ],
+                "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "records": "{{vars.input.records}}"
+                  }
+                },
+                "displayConditions": {
+                  "alerts": {
+                    "sort": [],
+                    "limit": 30,
+                    "logic": "AND",
+                    "filters": []
+                  }
+                },
+                "executeButtonText": "Execute",
+                "noRecordExecution": true,
+                "singleRecordExecution": false
+              },
+              "status": null,
+              "top": "14",
+              "left": "248",
+              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
+              "group": null,
+              "uuid": "6f4bd6f8-4ba0-473d-ac25-f47349db5dea"
+            }
+          ],
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+              "name": "Start -> Add Group Members",
+              "targetStep": "/api/3/workflow_steps/caadce78-d21e-4524-b7a9-d4a0c8ac72e0",
+              "sourceStep": "/api/3/workflow_steps/6f4bd6f8-4ba0-473d-ac25-f47349db5dea",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "86da0ed8-34a6-46ee-aab8-8d2346164bee"
+            }
+          ],
+          "groups": [],
+          "priority": null,
+          "uuid": "bcd2af6f-2606-4f48-b630-8d14d2489064",
+          "id": 531,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
+          "recordTags": [
+            "Microsoft",
+            "activedirectory"
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "triggerLimit": null,
+          "name": "Remove Group Members",
+          "aliasName": null,
+          "tag": "#Active Directory",
+          "description": "Removes Active Directory Users or Computers from a Group",
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "remoteExecutableFlag": false,
+          "parameters": [],
+          "synchronous": false,
+          "lastModifyDate": 1633459997,
+          "collection": "/api/3/workflow_collections/e3f43330-e495-40a1-b1f8-1c0d03334d3d",
+          "versions": [],
+          "triggerStep": "/api/3/workflow_steps/ddc9aa9e-7756-4890-a149-2fff600a8c5f",
+          "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Remove Group Members",
+              "description": null,
+              "arguments": {
+                "name": "Active Directory",
+                "config": "''",
+                "params": {
+                  "group_dn": "[\"CN=Remote Desktop Users,CN=Builtin,DC=cspune,DC=com\"]",
+                  "object_dn": "[\"CN=csdemouser,OU=cybersponse,DC=cspune,DC=com\"]",
+                  "object_class": "User"
+                },
+                "version": "2.4.0",
+                "connector": "activedirectory",
+                "operation": "remove_group_members",
+                "operationTitle": "Remove Group Members",
+                "step_variables": []
+              },
+              "status": null,
+              "top": "140",
+              "left": "260",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "50b60be5-f620-4d70-a14d-f64500c4b935"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "arguments": {
+                "route": "e59053d2-c918-47e9-879a-bc381f31465e",
+                "title": "Active Directory: Remove Group Members",
+                "resources": [
+                  "alerts"
+                ],
+                "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "records": "{{vars.input.records}}"
+                  }
+                },
+                "displayConditions": {
+                  "alerts": {
+                    "sort": [],
+                    "limit": 30,
+                    "logic": "AND",
+                    "filters": []
+                  }
+                },
+                "executeButtonText": "Execute",
+                "noRecordExecution": true,
+                "singleRecordExecution": false
+              },
+              "status": null,
+              "top": "28",
+              "left": "260",
+              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
+              "group": null,
+              "uuid": "ddc9aa9e-7756-4890-a149-2fff600a8c5f"
+            }
+          ],
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+              "name": "Start -> Remove Group Members",
+              "targetStep": "/api/3/workflow_steps/50b60be5-f620-4d70-a14d-f64500c4b935",
+              "sourceStep": "/api/3/workflow_steps/ddc9aa9e-7756-4890-a149-2fff600a8c5f",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "5456784c-1be0-4f1c-a1b9-1ee1356c6ae6"
+            }
+          ],
+          "groups": [],
+          "priority": null,
+          "uuid": "c0703e51-1977-45c4-980c-8296baa81e88",
+          "id": 532,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
+          "recordTags": [
+            "Microsoft",
+            "activedirectory"
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "triggerLimit": null,
+          "name": "Search by Email",
+          "aliasName": null,
+          "tag": "#Active Directory",
+          "description": "Search records or entities from Active Directory based on Email",
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "remoteExecutableFlag": false,
+          "parameters": [],
+          "synchronous": false,
+          "lastModifyDate": 1633459997,
+          "collection": "/api/3/workflow_collections/e3f43330-e495-40a1-b1f8-1c0d03334d3d",
+          "versions": [],
+          "triggerStep": "/api/3/workflow_steps/3c1fbeb2-93f3-4a22-9c63-207e570143f0",
+          "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Save Resource Details",
+              "description": null,
+              "arguments": {
+                "dn": "{{vars.result.data.entries[0].dn if vars.result.data.entries | length else '' }}",
+                "attributes": "{{ vars.result.data.entries[0].attributes if vars.result.data.entries | length else '' }}",
+                "resource_info": "{{vars.result}}"
+              },
+              "status": null,
+              "top": "160",
+              "left": "854",
+              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+              "group": null,
+              "uuid": "4bc29122-3929-4759-ad35-91cd9e21df5b"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Save Tabular Format",
+              "description": null,
+              "arguments": {
+                "params": {
+                  "iri": "{{vars.request.data.records[0][\"@id\"]}}",
+                  "body": "{   \"description\": \"<h3>Active Directory Resource</h3><table class='table margin-bottom-sm' border='1'> <tr><td width ='30%'>dn</td><td width ='30%'>{{vars.dn}}</td> {% if vars.attributes|length > 1 %}{% for key,value in vars.attributes.items() %} \t<tr><td width = '30%'>{{ key }}</td><td width = '70%'>{{ value}}</td></tr>{% endfor %}{% endif %}</table>\"  }"
+                },
+                "version": "2.7.0",
+                "connector": "cyops_utilities",
+                "operation": "update_cyops_resource",
+                "operationTitle": "CyOPs: Update Record",
+                "step_variables": []
+              },
+              "status": null,
+              "top": "281",
+              "left": "1279",
+              "stepType": "/api/3/workflow_step_types/0109f35d-090b-4a2b-bd8a-94cbc3508562",
+              "group": null,
+              "uuid": "8fc9404d-e43a-4233-96f2-02753e787359"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Search by Email",
+              "description": null,
+              "arguments": {
+                "name": "Active Directory",
+                "config": "''",
+                "params": {
+                  "cookie": "",
+                  "page_size": "",
+                  "size_limit": "",
+                  "search_object": "User",
+                  "search_attr_name": "Email",
+                  "search_attr_value": "user6@cspune.com"
+                },
+                "version": "2.4.0",
+                "connector": "activedirectory",
+                "operation": "global_search",
+                "operationTitle": "Global Search",
+                "step_variables": []
+              },
+              "status": null,
+              "top": "100",
+              "left": "440",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "4f5f5b3e-0890-4761-b3b1-b686d79d170c"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "arguments": {
+                "route": "801f494e-a6d4-47ed-8f3d-b64bf25cf4df",
+                "title": "Active Directory: Search by Email",
+                "resources": [
+                  "alerts"
+                ],
+                "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "records": "{{vars.input.records}}"
+                  }
+                },
+                "displayConditions": {
+                  "alerts": {
+                    "sort": [],
+                    "limit": 30,
+                    "logic": "AND",
+                    "filters": []
+                  }
+                },
+                "executeButtonText": "Execute",
+                "noRecordExecution": false,
+                "singleRecordExecution": false
+              },
+              "status": null,
+              "top": "40",
+              "left": "68",
+              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
+              "group": null,
+              "uuid": "3c1fbeb2-93f3-4a22-9c63-207e570143f0"
+            }
+          ],
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+              "name": "Save Resource Details -> Save Tabular Format",
+              "targetStep": "/api/3/workflow_steps/8fc9404d-e43a-4233-96f2-02753e787359",
+              "sourceStep": "/api/3/workflow_steps/4bc29122-3929-4759-ad35-91cd9e21df5b",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "3a96eb44-439e-47fe-ae02-58adc5b47831"
+            },
+            {
+              "@type": "WorkflowRoute",
+              "name": "Search by Email -> Save Resource Details",
+              "targetStep": "/api/3/workflow_steps/4bc29122-3929-4759-ad35-91cd9e21df5b",
+              "sourceStep": "/api/3/workflow_steps/4f5f5b3e-0890-4761-b3b1-b686d79d170c",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "b3033eb1-7c43-4e94-939e-922fe0eca1cb"
+            },
+            {
+              "@type": "WorkflowRoute",
+              "name": "Start -> Search by Email",
+              "targetStep": "/api/3/workflow_steps/4f5f5b3e-0890-4761-b3b1-b686d79d170c",
+              "sourceStep": "/api/3/workflow_steps/3c1fbeb2-93f3-4a22-9c63-207e570143f0",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "9b853852-2157-4ff2-a62e-def334d90f9b"
+            }
+          ],
+          "groups": [],
+          "priority": null,
+          "uuid": "c81bf59e-877a-44d1-b3bc-d855715b6a3c",
+          "id": 533,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
+          "recordTags": [
+            "Microsoft",
+            "activedirectory"
           ]
         },
         {
@@ -3294,6 +3098,31 @@
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/c3c3a452-1ea6-4928-96c9-81b442fbf69c",
           "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Force Password Reset on Next Login",
+              "description": null,
+              "arguments": {
+                "name": "Active Directory",
+                "config": "''",
+                "params": {
+                  "search_attr_name": "SamAccount Name",
+                  "search_attr_value": "jdoe"
+                },
+                "version": "2.4.0",
+                "connector": "activedirectory",
+                "operation": "force_password_reset_next_logon",
+                "operationTitle": "Force password reset on next logon",
+                "pickFromTenant": false,
+                "step_variables": []
+              },
+              "status": null,
+              "top": "165",
+              "left": "125",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "58bca98a-e0ac-4b46-bcf5-b3ffd5697948"
+            },
             {
               "@type": "WorkflowStep",
               "name": "Start",
@@ -3320,31 +3149,6 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "group": null,
               "uuid": "c3c3a452-1ea6-4928-96c9-81b442fbf69c"
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Force Password Reset on Next Login",
-              "description": null,
-              "arguments": {
-                "name": "Active Directory",
-                "config": "''",
-                "params": {
-                  "search_attr_name": "SamAccount Name",
-                  "search_attr_value": "jdoe"
-                },
-                "version": "2.3.0",
-                "connector": "activedirectory",
-                "operation": "force_password_reset_next_logon",
-                "operationTitle": "Force password reset on next logon",
-                "pickFromTenant": false,
-                "step_variables": []
-              },
-              "status": null,
-              "top": "165",
-              "left": "125",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "group": null,
-              "uuid": "58bca98a-e0ac-4b46-bcf5-b3ffd5697948"
             }
           ],
           "routes": [
@@ -3355,13 +3159,368 @@
               "sourceStep": "/api/3/workflow_steps/c3c3a452-1ea6-4928-96c9-81b442fbf69c",
               "label": null,
               "isExecuted": false,
+              "group": null,
               "uuid": "3ab9b598-41ee-4bf3-b18f-71bc9b397f2c"
             }
           ],
           "groups": [],
           "priority": null,
           "uuid": "df384c34-21a1-4e25-b2a4-19649e8e758b",
-          "id": 1276,
+          "id": 538,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
+          "recordTags": [
+            "Microsoft",
+            "activedirectory"
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "triggerLimit": null,
+          "name": "Disable Computer",
+          "aliasName": null,
+          "tag": "#Active Directory",
+          "description": "Disables the computer account based on the Distinguished Names or SamAccount Name of the computer.",
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "remoteExecutableFlag": false,
+          "parameters": [],
+          "synchronous": false,
+          "lastModifyDate": 1633517192,
+          "collection": "/api/3/workflow_collections/e3f43330-e495-40a1-b1f8-1c0d03334d3d",
+          "versions": [],
+          "triggerStep": "/api/3/workflow_steps/73e8d175-1459-42fb-baa4-6ef34b905b2d",
+          "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Disable Computer",
+              "description": null,
+              "arguments": {
+                "name": "Active Directory",
+                "config": "''",
+                "params": {
+                  "search_attr_name": "Distinguished Name",
+                  "search_attr_value": "CN=QA Prod,OU=cybersponse,DC=cspune,DC=com"
+                },
+                "version": "2.4.0",
+                "connector": "activedirectory",
+                "operation": "disable_computer",
+                "operationTitle": "Disable Computer",
+                "pickFromTenant": false,
+                "step_variables": []
+              },
+              "status": null,
+              "top": "147",
+              "left": "397",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "fd2ac09a-4ccf-40f7-8b0a-884877478a04"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "arguments": {
+                "route": "f7fae6a5-e4cb-497a-861f-6b5cf0b301de",
+                "title": "Enable Computer",
+                "resources": [
+                  "alerts"
+                ],
+                "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "records": "{{vars.input.records}}"
+                  }
+                },
+                "executeButtonText": "Execute",
+                "noRecordExecution": true,
+                "singleRecordExecution": false
+              },
+              "status": null,
+              "top": "40",
+              "left": "40",
+              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
+              "group": null,
+              "uuid": "73e8d175-1459-42fb-baa4-6ef34b905b2d"
+            }
+          ],
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+              "name": "Start -> Disable Computer",
+              "targetStep": "/api/3/workflow_steps/fd2ac09a-4ccf-40f7-8b0a-884877478a04",
+              "sourceStep": "/api/3/workflow_steps/73e8d175-1459-42fb-baa4-6ef34b905b2d",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "0d93ef04-d297-4633-9130-bc5f8ba0dd29"
+            }
+          ],
+          "groups": [],
+          "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+          "uuid": "f05ce617-6c40-45f8-84f1-8b7ef6e7a3d1",
+          "id": 534,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
+          "recordTags": [
+            "Microsoft",
+            "activedirectory"
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "triggerLimit": null,
+          "name": "Get all Groups Details",
+          "aliasName": null,
+          "tag": "#Active Directory",
+          "description": "Get list of groups details from Active Directory",
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "remoteExecutableFlag": false,
+          "parameters": [],
+          "synchronous": false,
+          "lastModifyDate": 1633459997,
+          "collection": "/api/3/workflow_collections/e3f43330-e495-40a1-b1f8-1c0d03334d3d",
+          "versions": [],
+          "triggerStep": "/api/3/workflow_steps/e21ab1d3-0507-4305-b1b8-5d8e91da13c2",
+          "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Get all Groups Details",
+              "description": null,
+              "arguments": {
+                "name": "Active Directory",
+                "config": "''",
+                "params": {
+                  "cookie": "",
+                  "page_size": "",
+                  "size_limit": "",
+                  "search_object": "Group"
+                },
+                "version": "2.4.0",
+                "connector": "activedirectory",
+                "operation": "get_all_object_details",
+                "operationTitle": "Get All Objects Details",
+                "step_variables": []
+              },
+              "status": null,
+              "top": "100",
+              "left": "391",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "6da467c4-98d7-4b74-8c56-7bf6ad0b1b54"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Save Groups Details",
+              "description": null,
+              "arguments": {
+                "entries": "{{vars.result.data.entries}}",
+                "resource_info": "{{vars.result}}"
+              },
+              "status": null,
+              "top": "160",
+              "left": "747",
+              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+              "group": null,
+              "uuid": "65d971a6-f416-4e08-be5f-9731201546a9"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Save Tabular Format",
+              "description": null,
+              "arguments": {
+                "params": {
+                  "iri": "{{vars.request.data.records[0][\"@id\"]}}",
+                  "body": "{ \"description\": \"<h3>Active Directory Resources </h3> {% if vars.entries|length > 1 %} {% for record in vars.entries %} <table class='table margin-bottom-sm' border='1'> <tr><td width ='30%'>dn</td><td width ='70%'>{{record.dn}}</td>  {% for key,value in record.attributes.items() %} <tr><td width = '30%'>{{ key }}</td><td width = '70%'> {{value| replace('\"', '') |  replace('\\n',' ')|replace('\\\\', '\\\\\\\\') if value is not none}}   </td></tr> {% endfor %}  {% endfor %}</table>{% endif%}\" }"
+                },
+                "version": "2.7.0",
+                "connector": "cyops_utilities",
+                "operation": "update_cyops_resource",
+                "operationTitle": "CyOPs: Update Record",
+                "step_variables": []
+              },
+              "status": null,
+              "top": "253",
+              "left": "1108",
+              "stepType": "/api/3/workflow_step_types/0109f35d-090b-4a2b-bd8a-94cbc3508562",
+              "group": null,
+              "uuid": "731964cc-a54f-4b36-aa98-718f8b6d0c7c"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "arguments": {
+                "route": "fb9cb431-ebb9-4206-ad85-4cc1261633d4",
+                "title": "Active Directory: Get All Groups Details",
+                "resources": [
+                  "alerts"
+                ],
+                "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "records": "{{vars.input.records}}"
+                  }
+                },
+                "displayConditions": {
+                  "alerts": {
+                    "sort": [],
+                    "limit": 30,
+                    "logic": "AND",
+                    "filters": []
+                  }
+                },
+                "executeButtonText": "Execute",
+                "noRecordExecution": false,
+                "singleRecordExecution": false
+              },
+              "status": null,
+              "top": "40",
+              "left": "34",
+              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
+              "group": null,
+              "uuid": "e21ab1d3-0507-4305-b1b8-5d8e91da13c2"
+            }
+          ],
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+              "name": "Get all Groups Details1 -> Save Groups Details",
+              "targetStep": "/api/3/workflow_steps/65d971a6-f416-4e08-be5f-9731201546a9",
+              "sourceStep": "/api/3/workflow_steps/6da467c4-98d7-4b74-8c56-7bf6ad0b1b54",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "6fe3d9bb-7164-44f0-b13b-44925ec72ccd"
+            },
+            {
+              "@type": "WorkflowRoute",
+              "name": "Save Groups Details -> Save Tabular Format",
+              "targetStep": "/api/3/workflow_steps/731964cc-a54f-4b36-aa98-718f8b6d0c7c",
+              "sourceStep": "/api/3/workflow_steps/65d971a6-f416-4e08-be5f-9731201546a9",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "c9e145ba-aaf9-4ca2-b900-ce24ed22a1f1"
+            },
+            {
+              "@type": "WorkflowRoute",
+              "name": "Start -> Get all Groups Details1",
+              "targetStep": "/api/3/workflow_steps/6da467c4-98d7-4b74-8c56-7bf6ad0b1b54",
+              "sourceStep": "/api/3/workflow_steps/e21ab1d3-0507-4305-b1b8-5d8e91da13c2",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "6cd401ae-4c5b-46a1-bcb4-837144b11572"
+            }
+          ],
+          "groups": [],
+          "priority": null,
+          "uuid": "fa81fbd4-777b-4cc3-bf1a-77284ce235cd",
+          "id": 535,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
+          "recordTags": [
+            "Microsoft",
+            "activedirectory"
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "triggerLimit": null,
+          "name": "Enable Computer",
+          "aliasName": null,
+          "tag": "#Active Directory",
+          "description": "Enables the computer account based on the Distinguished Names or SamAccount Name of the computer object.",
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "remoteExecutableFlag": false,
+          "parameters": [],
+          "synchronous": false,
+          "lastModifyDate": 1633517337,
+          "collection": "/api/3/workflow_collections/e3f43330-e495-40a1-b1f8-1c0d03334d3d",
+          "versions": [],
+          "triggerStep": "/api/3/workflow_steps/8ddcebc0-70e9-41dc-85d5-3cffae2d71f4",
+          "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Enable Computer",
+              "description": null,
+              "arguments": {
+                "name": "Active Directory",
+                "config": "''",
+                "params": {
+                  "search_attr_name": "Distinguished Name",
+                  "search_attr_value": "CN=QA Prod,OU=cybersponse,DC=cspune,DC=com"
+                },
+                "version": "2.4.0",
+                "connector": "activedirectory",
+                "operation": "enable_computer",
+                "operationTitle": "Enable Computer",
+                "pickFromTenant": false,
+                "step_variables": []
+              },
+              "status": null,
+              "top": "120",
+              "left": "380",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "ff266755-1722-44a8-9f17-4e125f983695"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "arguments": {
+                "route": "2f4a4a13-c9eb-4d03-bf32-602f68972d98",
+                "title": "Enable Computer",
+                "resources": [
+                  "alerts"
+                ],
+                "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "records": "{{vars.input.records}}"
+                  }
+                },
+                "executeButtonText": "Execute",
+                "noRecordExecution": true,
+                "singleRecordExecution": false
+              },
+              "status": null,
+              "top": "40",
+              "left": "40",
+              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
+              "group": null,
+              "uuid": "8ddcebc0-70e9-41dc-85d5-3cffae2d71f4"
+            }
+          ],
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+              "name": "Start -> Enable Computer",
+              "targetStep": "/api/3/workflow_steps/ff266755-1722-44a8-9f17-4e125f983695",
+              "sourceStep": "/api/3/workflow_steps/8ddcebc0-70e9-41dc-85d5-3cffae2d71f4",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "b1ea3eee-6aed-42c3-afb0-da555c2ce7b8"
+            }
+          ],
+          "groups": [],
+          "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+          "uuid": "fe7d3935-8fe6-44bb-8fcc-6711e5e30f5e",
+          "id": 536,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -3382,8 +3541,8 @@
     }
   ],
   "exported_tags": [
+    "Microsoft",
     "activedirectory",
-    "Activedirectory",
     "Subroutine",
     "User_Enrichment"
   ]
