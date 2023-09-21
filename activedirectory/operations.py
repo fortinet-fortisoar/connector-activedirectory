@@ -5,7 +5,6 @@
   Copyright end """
 
 import base64, ipaddress, json, ldap3, time
-from ldap3 import Server, Connection, MODIFY_REPLACE, SUBTREE, BASE, ALL
 from connectors.core.connector import get_logger, ConnectorError
 from .constant import *
 
@@ -684,11 +683,11 @@ def modify_computer_ou(config, params):
         target_dn = params.get('target_dn')
         computer_name = params.get('computer_name')
         # Search for the computer to move
-        conn.search(computer_dn, '(objectClass=computer)', search_scope=BASE)
+        conn.search(computer_dn, '(objectClass=computer)', search_scope=ldap3.BASE)
         if len(conn.entries) != 1:
             return {'status': 'failed','message': 'Computer record not found or not unique', 'count': len(conn.entries)}
         # Move the computer to the target OU
-        modification = {"distinguishedName": [(MODIFY_REPLACE, [target_dn])]}
+        modification = {"distinguishedName": [(ldap3.MODIFY_REPLACE, [target_dn])]}
         conn.modify(computer_dn, modification)
         conn.modify_dn(computer_dn, "CN={}".format(computer_name), new_superior=target_dn)
         return {'status': 'success','message': f"Successfully moved computer '{computer_dn}' to '{target_dn}'"}

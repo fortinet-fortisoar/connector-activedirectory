@@ -281,7 +281,7 @@
                 "config": "53376f67-4370-4342-9b01-e0c8ce87086d",
                 "params": {
                   "search_object": "Computer",
-                  "search_attr_value": "Devops"
+                  "search_attr_value": "shxcas1"
                 },
                 "version": "2.4.0",
                 "connector": "activedirectory",
@@ -2605,7 +2605,7 @@
         {
           "@type": "Workflow",
           "triggerLimit": null,
-          "name": "Computer Organization Unit (OU)",
+          "name": "Modify Computer Organization Unit (OU)",
           "aliasName": null,
           "tag": null,
           "description": "Modify Computer Organization Unit (OU)",
