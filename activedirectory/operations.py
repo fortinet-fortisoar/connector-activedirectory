@@ -635,7 +635,8 @@ def build_response(conn, object_class, object_dn, action=None, group_dn=None):
                     result.update({'group_dn': group_dn})
                 return result
             else:
-                raise ConnectorError("Provided User or Computer DN not exist in Active Directory")
+                result.update({'message': 'Failed to {0} object into {1}'.format(action, object_class)})
+                return result
         else:
             raise ConnectorError(
                 'Failure: {0}'.format(str(result['description'] if result['description'] else None)))
@@ -676,6 +677,26 @@ def force_password_reset_next_logon(config, params):
         raise ConnectorError('{0}'.format(str(err)))
 
 
+def modify_computer_ou(config, params):
+    try:
+        conn = server_connection(config)
+        computer_dn = params.get('computer_dn')
+        target_dn = params.get('target_dn')
+        computer_name = params.get('computer_name')
+        # Search for the computer to move
+        conn.search(computer_dn, '(objectClass=computer)', search_scope=ldap3.BASE)
+        if len(conn.entries) != 1:
+            return {'status': 'failed','message': 'Computer record not found or not unique', 'count': len(conn.entries)}
+        # Move the computer to the target OU
+        modification = {"distinguishedName": [(ldap3.MODIFY_REPLACE, [target_dn])]}
+        conn.modify(computer_dn, modification)
+        conn.modify_dn(computer_dn, "CN={}".format(computer_name), new_superior=target_dn)
+        return {'status': 'success','message': f"Successfully moved computer '{computer_dn}' to '{target_dn}'"}
+    except Exception as e:
+        logger.exception(f"Failed to modifying computer OU: {e}")
+        ConnectorError(f"Failed to modifying computer OU: {e}")
+
+
 def _check_health(config):
     try:
         conn = server_connection(config)
@@ -707,6 +728,7 @@ operations = {
     'update_object': update_object,
     'add_group_members': add_group_members,
     'remove_group_members': remove_group_members,
-    'force_password_reset_next_logon': force_password_reset_next_logon
+    'force_password_reset_next_logon': force_password_reset_next_logon,
+    'modify_computer_ou': modify_computer_ou
 
 }
