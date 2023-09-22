@@ -635,7 +635,7 @@ def build_response(conn, object_class, object_dn, action=None, group_dn=None):
                     result.update({'group_dn': group_dn})
                 return result
             else:
-                result.update({'message': 'Failed to {0} object into {1}'.format(action, object_class)})
+                result.update({'message': 'Something went wrong!'})
                 return result
         else:
             raise ConnectorError(
