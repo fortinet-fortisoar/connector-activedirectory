@@ -832,6 +832,54 @@
       "enabled": true
     },
     {
+      "title": "Modify Computer Organization Unit (OU)",
+      "operation": "modify_computer_ou",
+      "description": "Move a computer entry from one Organization Unit(OU) to another.",
+      "category": "investigation",
+      "annotation": "modify_computer_ou",
+      "output_schema": {
+        "message": "",
+        "result": ""
+      },
+      "parameters": [
+        {
+          "title": "Distinguished Name (DN)",
+          "name": "computer_dn",
+          "type": "text",
+          "description": "Specify the distinguished name (DN) of the computer object you want to modify",
+          "tooltip": "Specify the distinguished name (DN) of the computer object you want to modify",
+          "placeholder": "CN=Demo-Computer, OU=Computers-OU1, DC=example,DC=local",
+          "visible": true,
+          "required": true,
+          "editable": true
+        },
+        {
+          "title": "Common Name",
+          "name": "computer_name",
+          "type": "text",
+          "description": "Specify the Common name (CN) of the computer object",
+          "tooltip": "Specify the Common name (CN) of the computer object",
+          "placeholder": "Demo-Computer",
+          "visible": true,
+          "required": true,
+          "editable": true
+        },
+        {
+          "title": "Target Organization Unit (OU)",
+          "name": "target_dn",
+          "type": "text",
+          "description": "Specify the distinguished name (DN) of the target organizational unit (OU)",
+          "placeholder": "OU=Computers-OU2, DC=example,DC=local",
+          "tooltip": "Specify the distinguished name (DN) of the target organizational unit (OU)",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "value": ""
+        }
+      ],
+      "enabled": true
+    },
+    {
       "title": "Delete Object",
       "operation": "delete_object",
       "description": "Deletes an existing object entry of User, Group, Computer or Organization Unit (OU) type from Active Directory based on the type of object and other input parameters you have specified.",
