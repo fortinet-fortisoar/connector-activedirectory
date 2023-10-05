@@ -1464,6 +1464,59 @@
       ],
       "enabled": true
     },
+		{
+			"title": "Move User Account",
+			"operation": "move_user_account",
+			"description": "Moves the account of a specific AD user based on the SamAccount Name or the Email of the user to a new Organisational Unit",
+			"category": "containment",
+			"annotation": "move_user",
+			"output_schema": {
+				"message": "",
+				"description": "",
+				"result": "",
+				"referrals": "",
+				"type": "",
+				"dn": ""
+			},
+			"parameters": [
+				{
+					"title": "Attributes Type",
+					"type": "select",
+					"name": "search_attr_name",
+					"required": true,
+					"visible": true,
+					"editable": true,
+					"tooltip": "The value of the SamAccount Name or the Email of the user, based on which you want to move a user account in AD.",
+					"options": [
+						"SamAccount Name",
+						"Email"
+					]
+				},
+				{
+					"title": "Value",
+					"type": "text",
+					"name": "search_attr_value",
+					"required": true,
+					"visible": true,
+					"editable": true,
+					"value": "",
+					"tooltip": "The value of the SamAccount Name or the Email of the user, based on which you want to move a user account in AD."
+				},
+				{
+					"title": "Destination OU",
+					"type": "text",
+					"name": "destinationOU",
+					"required": true,
+					"visible": true,
+					"editable": true,
+					"value": "",
+          "placeholder": "OU=ou-name,DC=domain,DC=com",
+					"tooltip": "The Destination AD Organisational Unit e.g. ou=new-ou,dc=example,dc=com"
+				}
+			],
+			"enabled": true,
+			"open": false
+		},
     {
       "title": "Enable Computer",
       "operation": "enable_computer",
