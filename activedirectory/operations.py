@@ -190,6 +190,11 @@ def disable_user_account(config, params):
     return check_response(result)
 
 
+def move_user_account(config, params):
+    result = perform_action(config, params, 'move')
+    return check_response(result)
+
+
 def enable_computer(config, params):
     result = perform_action(config, params, 'enable', object_type='computer')
     return check_response(result)
@@ -215,6 +220,9 @@ def perform_action(config, params, action, object_type=None):
                 flag = userAccountControl & ~userADAccountControlFlag
             elif action.lower() == 'disable':
                 flag = userAccountControl | userADAccountControlFlag
+            elif action.lower() == 'move':
+                destinationOU = params.get('destinationOU')
+                return modify_dn(conn, dn, destinationOU=destinationOU)
             else:
                 raise ConnectorError('Invalid action {}'.format(str(action)))
             mod_dict = {'userAccountControl': [(ldap3.MODIFY_REPLACE, flag)]}
@@ -233,6 +241,20 @@ def modify(conn, dn, mod_dict):
             return conn.result
         else:
             raise ConnectorError('mod dict empty {0}'.format(mod_dict))
+    except Exception as err:
+        raise ConnectorError('{0}'.format(str(err)))
+
+
+def modify_dn(conn, dn, destinationOU="", newCN=""):
+    try:
+        if destinationOU:
+            conn.modify_dn(dn, dn.split(',', 1)[0], new_superior=destinationOU)
+            return conn.result
+        elif newCN:
+            conn.modify_dn(dn, "cn=" + newCN)
+            return conn.result
+        else:
+            raise ConnectorError('Destination OU or New common Name empty {0}'.format(destinationOU))
     except Exception as err:
         raise ConnectorError('{0}'.format(str(err)))
 
@@ -719,6 +741,7 @@ operations = {
     'get_specific_object_details': get_specific_object_details,
     'enable_user_account': enable_user_account,
     'disable_user_account': disable_user_account,
+    'move_user_account': move_user_account,
     'enable_computer': enable_computer,
     'disable_computer': disable_computer,
     'reset_password': reset_password,
