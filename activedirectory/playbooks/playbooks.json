@@ -2496,7 +2496,112 @@
         {
           "@type": "Workflow",
           "triggerLimit": null,
-          "name": "Reset Paassword",
+          "name": "Modify User Organization Unit",
+          "aliasName": null,
+          "tag": null,
+          "description": "Modify Computer Organization Unit (OU)",
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "remoteExecutableFlag": false,
+          "parameters": [],
+          "synchronous": false,
+          "lastModifyDate": 1698657278,
+          "collection": "/api/3/workflow_collections/180beaf2-806b-407b-933a-ce83727432c1",
+          "versions": [],
+          "triggerStep": "/api/3/workflow_steps/6632e3fe-6796-4f7d-bc06-36bdbbdcb09d",
+          "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Modify User Organization Unit",
+              "description": null,
+              "arguments": {
+                "name": "Active Directory",
+                "config": "53376f67-4370-4342-9b01-e0c8ce87086d",
+                "params": {
+                  "destinationOU": "CN=Users,DC=fsr,DC=com",
+                  "search_attr_name": "SamAccount Name",
+                  "search_attr_value": "demo123"
+                },
+                "version": "2.3.0",
+                "connector": "activedirectory",
+                "operation": "modify_user_ou",
+                "operationTitle": "Modify User Organization Unit (OU)",
+                "pickFromTenant": false,
+                "step_variables": []
+              },
+              "status": null,
+              "top": "165",
+              "left": "125",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "18a37f81-5be2-4eb5-9236-037df00c68b0"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "arguments": {
+                "route": "97b6ac6c-5479-415b-aba7-02c27d15e327",
+                "title": "Active Directory: Modify User Organization Unit (OU)",
+                "resources": [
+                  "alerts"
+                ],
+                "__triggerLimit": true,
+                "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "params": [],
+                    "records": "{{vars.input.records}}"
+                  }
+                },
+                "triggerOnSource": true,
+                "executeButtonText": "Execute",
+                "noRecordExecution": true,
+                "showToasterMessage": {
+                  "visible": false,
+                  "messageVisible": true
+                },
+                "triggerOnReplicate": false,
+                "singleRecordExecution": false
+              },
+              "status": null,
+              "top": "30",
+              "left": "125",
+              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
+              "group": null,
+              "uuid": "6632e3fe-6796-4f7d-bc06-36bdbbdcb09d"
+            }
+          ],
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+              "name": "Start -> Modify Computer Organization Unit",
+              "targetStep": "/api/3/workflow_steps/18a37f81-5be2-4eb5-9236-037df00c68b0",
+              "sourceStep": "/api/3/workflow_steps/6632e3fe-6796-4f7d-bc06-36bdbbdcb09d",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "b50d263f-f8f6-4164-bf6d-58abf796bc1b"
+            }
+          ],
+          "groups": [],
+          "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+          "uuid": "88dec341-2f4e-420b-bd54-9d140c964e19",
+          "id": 1308,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
+          "recordTags": [
+            "Microsoft",
+            "activedirectory"
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "triggerLimit": null,
+          "name": "Reset Password",
           "aliasName": null,
           "tag": "#Active Directory",
           "description": "Reset password for an existing Active Directory user",
