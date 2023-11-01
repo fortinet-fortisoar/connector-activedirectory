@@ -1,8 +1,9 @@
-""" Copyright start
-  Copyright (C) 2008 - 2023 Fortinet Inc.
-  All rights reserved.
-  FORTINET CONFIDENTIAL & FORTINET PROPRIETARY SOURCE CODE
-  Copyright end """
+""""
+Copyright start
+MIT License
+Copyright (c) 2023 Fortinet Inc
+Copyright end
+"""
 
 import base64, ipaddress, json, ldap3, time
 from connectors.core.connector import get_logger, ConnectorError
@@ -190,7 +191,7 @@ def disable_user_account(config, params):
     return check_response(result)
 
 
-def move_user_account(config, params):
+def modify_user_ou(config, params):
     result = perform_action(config, params, 'move')
     return check_response(result)
 
@@ -741,7 +742,7 @@ operations = {
     'get_specific_object_details': get_specific_object_details,
     'enable_user_account': enable_user_account,
     'disable_user_account': disable_user_account,
-    'move_user_account': move_user_account,
+    'modify_user_ou': modify_user_ou,
     'enable_computer': enable_computer,
     'disable_computer': disable_computer,
     'reset_password': reset_password,
