@@ -3,7 +3,7 @@
   "data": [
     {
       "@type": "WorkflowCollection",
-      "name": "Sample - Active Directory - 2.3.0",
+      "name": "Sample - Active Directory - 2.4.0",
       "description": "Sample playbooks for \"Active Directory\" connector. If you are planning to use any of the sample playbooks in your environment, ensure that you clone those playbooks and move them to a different collection, since the sample playbook collection gets deleted during connector upgrade and delete.",
       "visible": true,
       "image": null,
@@ -53,7 +53,7 @@
                   "custom_attributes": "",
                   "userPrincipalName": "ad-user1@cspune.com"
                 },
-                "version": "2.3.0",
+                "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "add_object",
                 "operationTitle": "Add Object",
@@ -156,7 +156,7 @@
                   "search_object": "Computer",
                   "search_attr_value": "Devops"
                 },
-                "version": "2.3.0",
+                "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "get_specific_object_details",
                 "operationTitle": "Get Specific Object Details",
@@ -318,7 +318,7 @@
                   "search_attr_name": "Distinguished Name",
                   "search_attr_value": "OU=QA,OU=OA,OU=cybersponse,DC=cspune,DC=com"
                 },
-                "version": "2.3.0",
+                "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "delete_object",
                 "operationTitle": "Delete Object",
@@ -465,7 +465,7 @@
                   "custom_attributes": "",
                   "userPrincipalName": ""
                 },
-                "version": "2.3.0",
+                "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "update_object",
                 "operationTitle": "Update Object",
@@ -575,7 +575,7 @@
                   "search_attr_name": "Common Name",
                   "search_attr_value": "user1"
                 },
-                "version": "2.3.0",
+                "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "global_search",
                 "operationTitle": "Global Search",
@@ -711,7 +711,7 @@
                   "search_attr_name": "Email",
                   "search_attr_value": "test@cspune.com"
                 },
-                "version": "2.3.0",
+                "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "disable_user_account",
                 "operationTitle": "Disable User Account",
@@ -881,7 +881,7 @@
                   "search_attr_name": "Distinguished Name",
                   "search_attr_value": "CN=Devops,OU=cybersponse,DC=cspune,DC=com"
                 },
-                "version": "2.3.0",
+                "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "global_search",
                 "operationTitle": "Global Search",
@@ -1005,7 +1005,7 @@
                   "sn": "",
                   "search_object": "Person"
                 },
-                "version": "2.3.0",
+                "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "get_specific_object_details",
                 "operationTitle": "Get Specific Object Details",
@@ -1208,7 +1208,7 @@
                   "search_attr_name": "SamAccount Name",
                   "search_attr_value": "QA Prod"
                 },
-                "version": "2.3.0",
+                "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "global_search",
                 "operationTitle": "Global Search",
@@ -1335,7 +1335,7 @@
                   "search_attr_name": "SamAccount Name",
                   "search_attr_value": "shravan"
                 },
-                "version": "2.3.0",
+                "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "enable_user_account",
                 "operationTitle": "Enable User Account",
@@ -1464,7 +1464,7 @@
                   "size_limit": "",
                   "search_object": "Group"
                 },
-                "version": "2.3.0",
+                "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "get_all_object_details",
                 "operationTitle": "Get All Objects Details",
@@ -1625,7 +1625,7 @@
                   "object_dn": "[\"CN=csdemouser,OU=cybersponse,DC=cspune,DC=com\"]",
                   "object_class": "User"
                 },
-                "version": "2.3.0",
+                "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "add_group_members",
                 "operationTitle": "Add Group Members",
@@ -1729,7 +1729,7 @@
                   "object_dn": "[\"CN=csdemouser,OU=cybersponse,DC=cspune,DC=com\"]",
                   "object_class": "User"
                 },
-                "version": "2.3.0",
+                "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "remove_group_members",
                 "operationTitle": "Remove Group Members",
@@ -1831,7 +1831,7 @@
                 "params": {
                   "search_object": "Computer"
                 },
-                "version": "2.3.0",
+                "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "get_all_object_details",
                 "operationTitle": "Get All Objects Details",
@@ -2048,7 +2048,7 @@
                   "search_object": "User",
                   "search_attr_value": "{{vars.input.params['indicator_value']}}"
                 },
-                "version": "2.3.0",
+                "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "get_specific_object_details",
                 "mock_result": "{\n  \"data\": {\n    \"cookie\": null,\n    \"entries\": [\n      {\n        \"dn\": \"CN={{vars.indicator_value}} lastname,CN=Users,DC=cyops-test,DC=com\",\n        \"attributes\": {\n          \"cn\": \"{{vars.indicator_value}} lastname\",\n          \"sn\": \"lastname\",\n          \"mail\": \"flastname@fortinet.com\",\n          \"name\": \"{{vars.indicator_value}} lastname\",\n          \"codePage\": 0,\n          \"memberOf\": [\n            \"CN=Admin,CN=cyops,DC=cyops-test,DC=com\"\n          ],\n          \"givenName\": \"{{vars.indicator_value}}\",\n          \"lastLogon\": null,\n          \"objectSid\": null,\n          \"adminCount\": 1,\n          \"lastLogoff\": null,\n          \"logonCount\": 0,\n          \"objectGUID\": null,\n          \"pwdLastSet\": 1656087282,\n          \"uSNChanged\": 12814,\n          \"uSNCreated\": 12794,\n          \"badPwdCount\": 0,\n          \"countryCode\": 0,\n          \"description\": [\n            \"Senior Manager\"\n          ],\n          \"displayName\": \"{{vars.indicator_value}} lastname\",\n          \"objectClass\": [\n            \"top\",\n            \"person\",\n            \"organizationalPerson\",\n            \"user\"\n          ],\n          \"whenChanged\": 1656089274,\n          \"whenCreated\": 1656087282,\n          \"instanceType\": 4,\n          \"accountExpires\": 253402300799,\n          \"objectCategory\": \"CN=Person,CN=Schema,CN=Config,DC=cyops-test,DC=com\",\n          \"primaryGroupID\": 513,\n          \"sAMAccountName\": \"{{vars.indicator_value}}\",\n          \"sAMAccountType\": \"SAM_NORMAL_USER_ACCOUNT\",\n          \"badPasswordTime\": null,\n          \"telephoneNumber\": \"567489285\",\n          \"distinguishedName\": \"CN={{vars.indicator_value}} lastname,CN=Users,DC=cyops-test,DC=com\",\n          \"userPrincipalName\": \"{{vars.indicator_value}}@fortinet-test.com\",\n          \"userAccountControl\": \"NORMAL_ACCOUNT\",\n          \"dSCorePropagationData\": [\n            1656089274,\n            null\n          ]\n        }\n      }\n    ]\n  },\n  \"status\": \"Success\",\n  \"message\": \"\",\n  \"operation\": null\n}",
@@ -2250,7 +2250,7 @@
                   "search_attr_name": "Distinguished Name",
                   "search_attr_value": "CN=QA Prod,OU=cybersponse,DC=cspune,DC=com"
                 },
-                "version": "2.3.0",
+                "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "disable_computer",
                 "operationTitle": "Disable Computer",
@@ -2346,7 +2346,7 @@
                   "search_object": "Group",
                   "search_attr_value": "G123"
                 },
-                "version": "2.3.0",
+                "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "get_specific_object_details",
                 "operationTitle": "Get Specific Object Details",
@@ -2523,7 +2523,7 @@
                   "search_attr_name": "SamAccount Name",
                   "search_attr_value": "demo123"
                 },
-                "version": "2.3.0",
+                "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "modify_user_ou",
                 "operationTitle": "Modify User Organization Unit (OU)",
@@ -2628,7 +2628,7 @@
                   "search_attr_name": "SamAccount Name",
                   "search_attr_value": "test"
                 },
-                "version": "2.3.0",
+                "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "reset_password",
                 "operationTitle": "Reset Password",
@@ -2756,7 +2756,7 @@
                   "computer_dn": "CN=cfa,CN=Computers,DC=fsr,DC=com",
                   "computer_name": "cfa"
                 },
-                "version": "2.3.0",
+                "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "modify_computer_ou",
                 "operationTitle": "Modify Computer Organization Unit (OU)",
@@ -2860,7 +2860,7 @@
                   "search_attr_name": "Distinguished Name",
                   "search_attr_value": "CN=QA Prod,OU=cybersponse,DC=cspune,DC=com"
                 },
-                "version": "2.3.0",
+                "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "enable_computer",
                 "operationTitle": "Enable Computer",
@@ -2956,7 +2956,7 @@
                   "search_attr_name": "",
                   "search_attr_value": ""
                 },
-                "version": "2.3.0",
+                "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "force_password_reset_next_logon",
                 "operationTitle": "Force password reset on next logon",
@@ -3094,7 +3094,7 @@
                   "search_attr_name": "Email",
                   "search_attr_value": "user6@cspune.com"
                 },
-                "version": "2.3.0",
+                "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "global_search",
                 "operationTitle": "Global Search",
@@ -3217,7 +3217,7 @@
                   "query": "(&(objectClass=user)(objectCategory=user)(sAMAccountName=*))",
                   "base_dn": "DC=cspune,DC=com"
                 },
-                "version": "2.3.0",
+                "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "advanced_search",
                 "operationTitle": "Advanced Search",
@@ -3343,7 +3343,7 @@
                 "params": {
                   "search_object": "User"
                 },
-                "version": "2.3.0",
+                "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "get_all_object_details",
                 "operationTitle": "Get All Objects Details",
@@ -3503,7 +3503,7 @@
                   "search_object": "User",
                   "search_attr_value": "user1"
                 },
-                "version": "2.3.0",
+                "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "get_specific_object_details",
                 "operationTitle": "Get Specific Object Details",
