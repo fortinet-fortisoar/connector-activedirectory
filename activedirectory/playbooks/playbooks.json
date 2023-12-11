@@ -2499,7 +2499,7 @@
           "name": "Modify User Organization Unit",
           "aliasName": null,
           "tag": null,
-          "description": "Modify Computer Organization Unit (OU)",
+          "description": "Move Computer Organization Unit (OU)",
           "isActive": false,
           "debug": false,
           "singleRecordExecution": false,
@@ -2525,8 +2525,8 @@
                 },
                 "version": "2.4.0",
                 "connector": "activedirectory",
-                "operation": "modify_user_ou",
-                "operationTitle": "Modify User Organization Unit (OU)",
+                "operation": "move_user_ou",
+                "operationTitle": "Move User Organization Unit (OU)",
                 "pickFromTenant": false,
                 "step_variables": []
               },
@@ -2543,7 +2543,7 @@
               "description": null,
               "arguments": {
                 "route": "97b6ac6c-5479-415b-aba7-02c27d15e327",
-                "title": "Active Directory: Modify User Organization Unit (OU)",
+                "title": "Active Directory: Move User Organization Unit (OU)",
                 "resources": [
                   "alerts"
                 ],
@@ -2732,7 +2732,7 @@
           "name": "Modify Computer Organization Unit",
           "aliasName": null,
           "tag": null,
-          "description": "Modify Computer Organization Unit (OU)",
+          "description": "Move Computer Organization Unit (OU)",
           "isActive": false,
           "debug": false,
           "singleRecordExecution": false,
@@ -2758,8 +2758,8 @@
                 },
                 "version": "2.4.0",
                 "connector": "activedirectory",
-                "operation": "modify_computer_ou",
-                "operationTitle": "Modify Computer Organization Unit (OU)",
+                "operation": "move_computer_ou",
+                "operationTitle": "Move Computer Organization Unit (OU)",
                 "pickFromTenant": false,
                 "step_variables": []
               },
@@ -2776,7 +2776,7 @@
               "description": null,
               "arguments": {
                 "route": "109d4bc0-f49d-41d1-917c-a479bff8e3c8",
-                "title": "Active Directory: Modify Computer Organization Unit (OU)",
+                "title": "Active Directory: Move Computer Organization Unit (OU)",
                 "resources": [
                   "alerts"
                 ],

@@ -191,7 +191,7 @@ def disable_user_account(config, params):
     return check_response(result)
 
 
-def modify_user_ou(config, params):
+def move_user_ou(config, params):
     result = perform_action(config, params, 'move')
     return check_response(result)
 
@@ -700,7 +700,7 @@ def force_password_reset_next_logon(config, params):
         raise ConnectorError('{0}'.format(str(err)))
 
 
-def modify_computer_ou(config, params):
+def move_computer_ou(config, params):
     try:
         conn = server_connection(config)
         computer_dn = params.get('computer_dn')
@@ -742,7 +742,7 @@ operations = {
     'get_specific_object_details': get_specific_object_details,
     'enable_user_account': enable_user_account,
     'disable_user_account': disable_user_account,
-    'modify_user_ou': modify_user_ou,
+    'move_user_ou': move_user_ou,
     'enable_computer': enable_computer,
     'disable_computer': disable_computer,
     'reset_password': reset_password,
@@ -753,6 +753,6 @@ operations = {
     'add_group_members': add_group_members,
     'remove_group_members': remove_group_members,
     'force_password_reset_next_logon': force_password_reset_next_logon,
-    'modify_computer_ou': modify_computer_ou
+    'move_computer_ou': move_computer_ou
 
 }
