@@ -1493,7 +1493,8 @@
           "required": true,
           "visible": true,
           "editable": true,
-          "tooltip": "The value of the SamAccount Name or the Email of the user, based on which you want to move a user account in AD.",
+          "description": "Select the value of the SamAccount Name or the Email of the user, based on which you want to move a user account in AD.",
+          "tooltip": "Select the value of the SamAccount Name or the Email of the user, based on which you want to move a user account in AD.",
           "options": [
             "SamAccount Name",
             "Email"
@@ -1507,8 +1508,8 @@
           "visible": true,
           "editable": true,
           "value": "",
-          "tooltip": "The value of the SamAccount Name or the Email of the user, based on which you want to move a user account in AD.",
-          "description": "The value of the SamAccount Name or the Email of the user, based on which you want to move a user account in AD."
+          "tooltip": "Specify the value of the SamAccount Name or the Email of the user, based on which you want to move a user account in a new Organisational Unit",
+          "description": "Specify the value of either the SamAccount Name or the Email of the user based on your preference to move a user account in a new Organisational Unit"
         },
         {
           "title": "Destination OU",
@@ -1519,7 +1520,8 @@
           "editable": true,
           "value": "",
           "placeholder": "OU=ou-name,DC=domain,DC=com",
-          "tooltip": "The Destination AD Organisational Unit e.g. ou=new-ou,dc=example,dc=com"
+          "description": "Specify the value of the targeted new Organizational Unit to which you want to move the user",
+          "tooltip": "Specify the value of the targeted new Organizational Unit to which you want to move the user"
         }
       ],
       "enabled": true,
