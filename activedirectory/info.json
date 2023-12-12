@@ -834,7 +834,7 @@
       "enabled": true
     },
     {
-      "title": "Move Computer Organization Unit (OU)",
+      "title": "Move Computer to Targeted Organization Unit(OU)",
       "operation": "move_computer_ou",
       "description": "Move a computer entry from one Organization Unit(OU) to another.",
       "category": "investigation",
@@ -1472,9 +1472,9 @@
       "enabled": true
     },
     {
-      "title": "Move User Organization Unit (OU)",
+      "title": "Move User to Targeted Organization Unit(OU)",
       "operation": "move_user_ou",
-      "description": "Moves the account of a specific AD user based on the SamAccount Name or the Email of the user to a new Organisational Unit",
+      "description": "Moves the account of a specific AD user based on the SamAccount Name or the Email of the user to a new Organization Unit",
       "category": "investigation",
       "annotation": "move_user_ou",
       "output_schema": {
