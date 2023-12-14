@@ -78,8 +78,8 @@
         "required": false,
         "visible": true,
         "editable": true,
-        "description": "The fully distinguished name that is used to bind to the LDAP server.",
-        "tooltip": "Specify the full DN for the user account",
+        "description": "The fully distinguished name that is used to bind to the LDAP server. Note: If the user specifies a this parameter value, in that case, Bind DN is considered as the username, and the Base DN and username parameters values are ignored for checking health.",
+        "tooltip": "The fully distinguished name that is used to bind to the LDAP server. Note: If the user specifies a this parameter value, in that case, Bind DN is considered as the username, and the Base DN and username parameters values are ignored for checking health.",
         "placeholder": "CN=UserName,OU=OU-name,DC=DomainName,DC=DomainExtension",
         "value": ""
       },
