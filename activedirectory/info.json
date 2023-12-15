@@ -354,30 +354,114 @@
       "description": "Searches and retrieves all records from AD based on a specified search object, such as user, computer, or group.",
       "category": "investigation",
       "annotation": "search_query",
-      "output_schema": {
-        "entries": [
-          {
-            "dn": "",
-            "attributes": {
-              "sAMAccountType": "",
-              "objectSid": "",
-              "lastLogoff": "",
-              "whenChanged": "",
-              "pwdLastSet": "",
-              "cn": "",
-              "userAccountControl": "",
-              "objectGUID": "",
-              "logonCount": "",
-              "sAMAccountName": "",
-              "userPrincipalName": "",
-              "distinguishedName": "",
-              "name": "",
-              "accountExpires": "",
-              "lastLogon": ""
-            }
+      "conditional_output_schema": [
+        {
+          "condition": "{{search_object === 'Group'}}",
+          "output_schema": {
+            "cookie": "",
+            "entries": [
+              {
+                "dn": "",
+                "attributes": {
+                  "cn": "",
+                  "name": "",
+                  "groupType": "",
+                  "objectSid": "",
+                  "objectGUID": "",
+                  "uSNChanged": "",
+                  "uSNCreated": "",
+                  "objectClass": [],
+                  "whenChanged": "",
+                  "whenCreated": "",
+                  "instanceType": "",
+                  "objectCategory": "",
+                  "sAMAccountName": "",
+                  "sAMAccountType": "",
+                  "distinguishedName": "",
+                  "dSCorePropagationData": [
+                  ]
+                }
+              }
+            ]
           }
-        ]
-      },
+        },
+        {
+          "condition": "{{search_object === 'Organization Unit'}}",
+          "output_schema": {
+            "cookie": "",
+            "entries": [
+              {
+                "dn": "",
+                "attributes": {
+                  "cn": "",
+                  "name": "",
+                  "groupType": "",
+                  "objectSid": "",
+                  "objectGUID": "",
+                  "uSNChanged": "",
+                  "uSNCreated": "",
+                  "objectClass": [],
+                  "whenChanged": "",
+                  "whenCreated": "",
+                  "instanceType": "",
+                  "objectCategory": "",
+                  "sAMAccountName": "",
+                  "sAMAccountType": "",
+                  "distinguishedName": "",
+                  "dSCorePropagationData": [
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "condition": "{{true}}",
+          "output_schema": {
+            "cookie": "",
+            "entries": [
+              {
+                "dn": "",
+                "attributes": {
+                  "cn": "",
+                  "name": "",
+                  "codePage": "",
+                  "memberOf": [],
+                  "lastLogon": "",
+                  "objectSid": "",
+                  "adminCount": "",
+                  "lastLogoff": "",
+                  "logonCount": "",
+                  "objectGUID": "",
+                  "pwdLastSet": "",
+                  "uSNChanged": "",
+                  "uSNCreated": "",
+                  "badPwdCount": "",
+                  "countryCode": "",
+                  "description": [],
+                  "lockoutTime": "",
+                  "objectClass": [],
+                  "whenChanged": "",
+                  "whenCreated": "",
+                  "instanceType": "",
+                  "accountExpires": "",
+                  "objectCategory": "",
+                  "primaryGroupID": "",
+                  "sAMAccountName": "",
+                  "sAMAccountType": "",
+                  "badPasswordTime": "",
+                  "distinguishedName": "",
+                  "lastLogonTimestamp": "",
+                  "userAccountControl": "",
+                  "dSCorePropagationData": [
+                  ],
+                  "isCriticalSystemObject": ""
+                }
+              }
+            ]
+          }
+        }
+      ],
       "parameters": [
         {
           "name": "search_object",
@@ -438,30 +522,84 @@
       "description": "Searches and retrieves records from AD based on a specified search object, such as user, computer, or group. However, this search is limited to the records found for the object name you have specified. For example, if you want to retrieve the records from AD for a specific user, you need to specify the name of the user.",
       "category": "investigation",
       "annotation": "search_query",
-      "output_schema": {
-        "entries": [
-          {
-            "dn": "",
-            "attributes": {
-              "sAMAccountType": "",
-              "objectSid": "",
-              "lastLogoff": "",
-              "whenChanged": "",
-              "pwdLastSet": "",
-              "cn": "",
-              "userAccountControl": "",
-              "objectGUID": "",
-              "logonCount": "",
-              "sAMAccountName": "",
-              "userPrincipalName": "",
-              "distinguishedName": "",
-              "name": "",
-              "accountExpires": "",
-              "lastLogon": ""
-            }
+      "conditional_output_schema": [
+        {
+          "condition": "{{search_object === 'Group'}}",
+          "output_schema": {
+            "cookie": "",
+            "entries": [
+              {
+                "dn": "",
+                "attributes": {
+                  "cn": "",
+                  "name": "",
+                  "groupType": "",
+                  "objectSid": "",
+                  "objectGUID": "",
+                  "uSNChanged": "",
+                  "uSNCreated": "",
+                  "objectClass": [],
+                  "whenChanged": "",
+                  "whenCreated": "",
+                  "instanceType": "",
+                  "objectCategory": "",
+                  "sAMAccountName": "",
+                  "sAMAccountType": "",
+                  "distinguishedName": "",
+                  "dSCorePropagationData": [
+                  ]
+                }
+              }
+            ]
           }
-        ]
-      },
+        },
+        {
+          "condition": "{{true}}",
+          "output_schema": {
+            "cookie": "",
+            "entries": [
+              {
+                "dn": "",
+                "attributes": {
+                  "cn": "",
+                  "name": "",
+                  "codePage": "",
+                  "memberOf": [],
+                  "lastLogon": "",
+                  "objectSid": "",
+                  "adminCount": "",
+                  "lastLogoff": "",
+                  "logonCount": "",
+                  "objectGUID": "",
+                  "pwdLastSet": "",
+                  "uSNChanged": "",
+                  "uSNCreated": "",
+                  "badPwdCount": "",
+                  "countryCode": "",
+                  "description": [],
+                  "lockoutTime": "",
+                  "objectClass": [],
+                  "whenChanged": "",
+                  "whenCreated": "",
+                  "instanceType": "",
+                  "accountExpires": "",
+                  "objectCategory": "",
+                  "primaryGroupID": "",
+                  "sAMAccountName": "",
+                  "sAMAccountType": "",
+                  "badPasswordTime": "",
+                  "distinguishedName": "",
+                  "lastLogonTimestamp": "",
+                  "userAccountControl": "",
+                  "dSCorePropagationData": [
+                  ],
+                  "isCriticalSystemObject": ""
+                }
+              }
+            ]
+          }
+        }
+      ],
       "parameters": [
         {
           "name": "search_object",
@@ -550,7 +688,7 @@
           "description": "The SamAccountName of the object based on which you want to search and retrieve records from AD.",
           "tooltip": "The SamAccountName of the object based on which you want to search and retrieve records from AD.",
           "visible": true,
-          "required": false,
+          "required": true,
           "editable": true,
           "visible_onchange": false,
           "value": ""
@@ -1043,7 +1181,7 @@
         "description": "",
         "dn": [],
         "message": "",
-        "referrals": null,
+        "referrals": "",
         "type": "",
         "group_dn": []
       },
@@ -1122,7 +1260,7 @@
         "description": "",
         "dn": [],
         "message": "",
-        "referrals": null,
+        "referrals": "",
         "type": "",
         "group_dn": []
       },
@@ -1198,29 +1336,48 @@
       "category": "investigation",
       "annotation": "advanced_search",
       "output_schema": {
-        "entries": [
-          {
-            "dn": "",
-            "attributes": {
-              "sAMAccountType": "",
-              "objectSid": "",
-              "lastLogoff": "",
-              "whenChanged": "",
-              "pwdLastSet": "",
-              "cn": "",
-              "userAccountControl": "",
-              "objectGUID": "",
-              "logonCount": "",
-              "sAMAccountName": "",
-              "userPrincipalName": "",
-              "distinguishedName": "",
-              "name": "",
-              "accountExpires": "",
-              "lastLogon": ""
-            }
-          }
-        ]
-      },
+            "cookie": "",
+            "entries": [
+              {
+                "dn": "",
+                "attributes": {
+                  "cn": "",
+                  "name": "",
+                  "codePage": "",
+                  "memberOf": [],
+                  "lastLogon": "",
+                  "objectSid": "",
+                  "adminCount": "",
+                  "lastLogoff": "",
+                  "logonCount": "",
+                  "objectGUID": "",
+                  "pwdLastSet": "",
+                  "uSNChanged": "",
+                  "uSNCreated": "",
+                  "badPwdCount": "",
+                  "countryCode": "",
+                  "description": [],
+                  "lockoutTime": "",
+                  "objectClass": [],
+                  "whenChanged": "",
+                  "whenCreated": "",
+                  "instanceType": "",
+                  "accountExpires": "",
+                  "objectCategory": "",
+                  "primaryGroupID": "",
+                  "sAMAccountName": "",
+                  "sAMAccountType": "",
+                  "badPasswordTime": "",
+                  "distinguishedName": "",
+                  "lastLogonTimestamp": "",
+                  "userAccountControl": "",
+                  "dSCorePropagationData": [
+                  ],
+                  "isCriticalSystemObject": ""
+                }
+              }
+            ]
+          },
       "parameters": [
         {
           "title": "LDAP Query",
@@ -1276,31 +1433,84 @@
       "description": "Searches and retrieves records from AD using global search, based on the specified search object, such as user, computer, group, search attribute, or a search attribute value, such as SamAccount Name, Distinguished Name, Common Name, Display Name, or Email. When you search a record based on a search attribute value, the record from AD is retrieved based on the specified attribute value.",
       "category": "investigation",
       "annotation": "search_query",
-      "output_schema": {
-        "entries": [
-          {
-            "dn": "",
-            "attributes": {
-              "sAMAccountType": "",
-              "objectSid": "",
-              "lastLogoff": "",
-              "whenChanged": "",
-              "pwdLastSet": "",
-              "cn": "",
-              "userAccountControl": "",
-              "objectGUID": "",
-              "logonCount": "",
-              "sAMAccountName": "",
-              "userPrincipalName": "",
-              "distinguishedName": "",
-              "name": "",
-              "accountExpires": "",
-              "lastLogon": ""
-            }
+      "conditional_output_schema": [
+        {
+          "condition": "{{search_object === 'Group'}}",
+          "output_schema": {
+            "cookie": "",
+            "entries": [
+              {
+                "dn": "",
+                "attributes": {
+                  "cn": "",
+                  "name": "",
+                  "groupType": "",
+                  "objectSid": "",
+                  "objectGUID": "",
+                  "uSNChanged": "",
+                  "uSNCreated": "",
+                  "objectClass": [],
+                  "whenChanged": "",
+                  "whenCreated": "",
+                  "instanceType": "",
+                  "objectCategory": "",
+                  "sAMAccountName": "",
+                  "sAMAccountType": "",
+                  "distinguishedName": "",
+                  "dSCorePropagationData": [
+                  ]
+                }
+              }
+            ]
           }
-        ],
-        "cookie": ""
-      },
+        },
+        {
+          "condition": "{{true}}",
+          "output_schema": {
+            "cookie": "",
+            "entries": [
+              {
+                "dn": "",
+                "attributes": {
+                  "cn": "",
+                  "name": "",
+                  "codePage": "",
+                  "memberOf": [],
+                  "lastLogon": "",
+                  "objectSid": "",
+                  "adminCount": "",
+                  "lastLogoff": "",
+                  "logonCount": "",
+                  "objectGUID": "",
+                  "pwdLastSet": "",
+                  "uSNChanged": "",
+                  "uSNCreated": "",
+                  "badPwdCount": "",
+                  "countryCode": "",
+                  "description": [],
+                  "lockoutTime": "",
+                  "objectClass": [],
+                  "whenChanged": "",
+                  "whenCreated": "",
+                  "instanceType": "",
+                  "accountExpires": "",
+                  "objectCategory": "",
+                  "primaryGroupID": "",
+                  "sAMAccountName": "",
+                  "sAMAccountType": "",
+                  "badPasswordTime": "",
+                  "distinguishedName": "",
+                  "lastLogonTimestamp": "",
+                  "userAccountControl": "",
+                  "dSCorePropagationData": [
+                  ],
+                  "isCriticalSystemObject": ""
+                }
+              }
+            ]
+          }
+        }
+      ],
       "parameters": [
         {
           "title": "Object Type",

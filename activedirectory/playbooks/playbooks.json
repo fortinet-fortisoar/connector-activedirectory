@@ -8,7 +8,7 @@
       "visible": true,
       "image": "",
       "uuid": "180beaf2-806b-407b-933a-ce83727432c1",
-      "id": 170,
+      "id": 176,
       "deletedAt": null,
       "importedBy": [],
       "recordTags": [
@@ -117,7 +117,7 @@
           "groups": [],
           "priority": null,
           "uuid": "11ece84b-95dd-4f41-bb6d-00b4dc56b99b",
-          "id": 2149,
+          "id": 2299,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -278,7 +278,7 @@
           "groups": [],
           "priority": null,
           "uuid": "1dfcf0d5-07eb-4eb5-aca6-f376f5d64bb9",
-          "id": 2150,
+          "id": 2300,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -382,7 +382,7 @@
           "groups": [],
           "priority": null,
           "uuid": "22cdd311-a93d-4f16-bb41-62d9127a51c6",
-          "id": 2151,
+          "id": 2301,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -494,7 +494,7 @@
           "groups": [],
           "priority": null,
           "uuid": "2655cb0e-1149-4459-9a3f-cd9afcab8c3d",
-          "id": 2152,
+          "id": 2302,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -673,7 +673,7 @@
           "groups": [],
           "priority": null,
           "uuid": "2a91bdd0-b7f6-4b6b-82e7-ab1a8e16d836",
-          "id": 2153,
+          "id": 2303,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -799,7 +799,7 @@
           "groups": [],
           "priority": null,
           "uuid": "2ab15f28-e847-4ae4-92d6-6ae5c8781665",
-          "id": 2154,
+          "id": 2304,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -965,7 +965,7 @@
           "groups": [],
           "priority": null,
           "uuid": "339f4d59-6ef6-4078-95ff-84aaa0717302",
-          "id": 2155,
+          "id": 2305,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -1127,7 +1127,7 @@
           "groups": [],
           "priority": null,
           "uuid": "3e76749a-8891-4b1b-8d88-d2c6d6375d36",
-          "id": 2156,
+          "id": 2306,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -1306,7 +1306,7 @@
           "groups": [],
           "priority": null,
           "uuid": "4437013d-9704-40f3-9cea-3ca0a7fe3c00",
-          "id": 2157,
+          "id": 2307,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -1433,7 +1433,7 @@
           "groups": [],
           "priority": null,
           "uuid": "467acfc9-f756-4ec4-a85d-b0b988d7eab9",
-          "id": 2158,
+          "id": 2308,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -1595,7 +1595,7 @@
           "groups": [],
           "priority": null,
           "uuid": "4e2a9474-a474-4ead-8166-9df8d3f0773c",
-          "id": 2159,
+          "id": 2309,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -1699,7 +1699,7 @@
           "groups": [],
           "priority": null,
           "uuid": "5a66baad-b0df-465b-aa7b-1e238a3e5f3d",
-          "id": 2160,
+          "id": 2310,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -1803,7 +1803,7 @@
           "groups": [],
           "priority": null,
           "uuid": "63ba32d1-a2e5-465b-8707-9e0922ce3f43",
-          "id": 2161,
+          "id": 2311,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -1826,7 +1826,7 @@
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
-          "lastModifyDate": 1695375933,
+          "lastModifyDate": 1702562789,
           "collection": "/api/3/workflow_collections/180beaf2-806b-407b-933a-ce83727432c1",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/ce0d59e8-2ccb-4cf8-a6b6-29638da7c35c",
@@ -1837,36 +1837,26 @@
               "description": null,
               "arguments": {
                 "name": "Active Directory",
-                "config": "''",
+                "config": "65262d44-9202-4501-bc06-9e5b3ef5c9c5",
                 "params": {
+                  "cookie": "",
+                  "page_size": "",
+                  "size_limit": "",
                   "search_object": "Computer"
                 },
                 "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "get_all_object_details",
                 "operationTitle": "Get All Objects Details",
-                "step_variables": [],
-                "operationOutput": {
-                  "entries": [
-                    {
-                      "dn": "",
-                      "attributes": {
-                        "cn": "",
-                        "sn": "",
-                        "sAMAccountName": "",
-                        "distinguishedName": "",
-                        "userPrincipalName": ""
-                      }
-                    }
-                  ]
-                }
+                "pickFromTenant": false,
+                "step_variables": []
               },
               "status": null,
-              "top": "66",
-              "left": "367",
+              "top": "100",
+              "left": "340",
               "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
               "group": null,
-              "uuid": "ce522252-24c0-4574-9f3b-db89f6e45e86"
+              "uuid": "25ee6fb2-e1ae-4aae-a844-1a48bfcd3c39"
             },
             {
               "@type": "WorkflowStep",
@@ -1877,8 +1867,8 @@
                 "resource_info": "{{vars.result}}"
               },
               "status": null,
-              "top": "120",
-              "left": "700",
+              "top": "140",
+              "left": "720",
               "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
               "group": null,
               "uuid": "62c56040-5d41-47de-9cae-95d0ed3ce078"
@@ -1899,8 +1889,8 @@
                 "step_variables": []
               },
               "status": null,
-              "top": "240",
-              "left": "891",
+              "top": "220",
+              "left": "1040",
               "stepType": "/api/3/workflow_step_types/0109f35d-090b-4a2b-bd8a-94cbc3508562",
               "group": null,
               "uuid": "48e5040c-6e7d-41c3-9e42-3fa000ce3d63"
@@ -1946,11 +1936,11 @@
               "@type": "WorkflowRoute",
               "name": "Get All Computers Details -> Save Computes Details",
               "targetStep": "/api/3/workflow_steps/62c56040-5d41-47de-9cae-95d0ed3ce078",
-              "sourceStep": "/api/3/workflow_steps/ce522252-24c0-4574-9f3b-db89f6e45e86",
+              "sourceStep": "/api/3/workflow_steps/25ee6fb2-e1ae-4aae-a844-1a48bfcd3c39",
               "label": null,
               "isExecuted": false,
               "group": null,
-              "uuid": "37383bdf-4959-4e18-8b82-87a120088aa9"
+              "uuid": "76cd2dd8-02a9-48f6-a974-763a706071f4"
             },
             {
               "@type": "WorkflowRoute",
@@ -1965,18 +1955,18 @@
             {
               "@type": "WorkflowRoute",
               "name": "Start -> Get All Computers Details",
-              "targetStep": "/api/3/workflow_steps/ce522252-24c0-4574-9f3b-db89f6e45e86",
+              "targetStep": "/api/3/workflow_steps/25ee6fb2-e1ae-4aae-a844-1a48bfcd3c39",
               "sourceStep": "/api/3/workflow_steps/ce0d59e8-2ccb-4cf8-a6b6-29638da7c35c",
               "label": null,
               "isExecuted": false,
               "group": null,
-              "uuid": "6793dce1-897a-4947-aa87-7e538e39e2d3"
+              "uuid": "100ad8f4-540a-415d-9b7c-dce41ae4b2b4"
             }
           ],
           "groups": [],
           "priority": null,
           "uuid": "65c3204a-fa70-425a-a214-2901de766934",
-          "id": 2162,
+          "id": 2312,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -2221,7 +2211,7 @@
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
           "uuid": "78fa8519-a12b-4748-885f-37b531c1e964",
-          "id": 2163,
+          "id": 2313,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -2317,7 +2307,7 @@
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
           "uuid": "7d2f7010-273c-4354-b8b8-7538df133d9c",
-          "id": 2164,
+          "id": 2314,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -2340,7 +2330,7 @@
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
-          "lastModifyDate": 1695375933,
+          "lastModifyDate": 1702562576,
           "collection": "/api/3/workflow_collections/180beaf2-806b-407b-933a-ce83727432c1",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/c5f3f819-488a-4912-a1f3-82bbc3121ecb",
@@ -2351,10 +2341,10 @@
               "description": null,
               "arguments": {
                 "name": "Active Directory",
-                "config": "''",
+                "config": "65262d44-9202-4501-bc06-9e5b3ef5c9c5",
                 "params": {
-                  "search_object": "Group",
-                  "search_attr_value": "G123"
+                  "search_object": "User",
+                  "search_attr_value": ""
                 },
                 "version": "2.4.0",
                 "connector": "activedirectory",
@@ -2394,7 +2384,7 @@
               },
               "status": null,
               "top": "160",
-              "left": "792",
+              "left": "800",
               "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
               "group": null,
               "uuid": "b3f44c56-ed2f-42f3-a3de-3cd411ac4b2f"
@@ -2493,7 +2483,7 @@
           "groups": [],
           "priority": null,
           "uuid": "85bd74f4-bc6e-4ff6-92c6-d26b76233426",
-          "id": 2165,
+          "id": 2315,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -2598,7 +2588,7 @@
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
           "uuid": "88dec341-2f4e-420b-bd54-9d140c964e19",
-          "id": 2166,
+          "id": 2316,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -2726,7 +2716,7 @@
           "groups": [],
           "priority": null,
           "uuid": "9944095b-b1e4-4956-9fb7-4d9d71a035f2",
-          "id": 2167,
+          "id": 2317,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -2831,7 +2821,7 @@
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
           "uuid": "a0a81dcd-187a-454c-8264-64e041b04e8c",
-          "id": 2168,
+          "id": 2318,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -2927,7 +2917,7 @@
           "groups": [],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
           "uuid": "cc1e70b8-9f9e-4ec6-8269-e2ff72c95180",
-          "id": 2169,
+          "id": 2319,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -3023,7 +3013,7 @@
           "groups": [],
           "priority": null,
           "uuid": "ce872f0e-aecf-4b5b-b28f-a98c9893041b",
-          "id": 2170,
+          "id": 2320,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -3046,7 +3036,7 @@
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
-          "lastModifyDate": 1695375933,
+          "lastModifyDate": 1702562453,
           "collection": "/api/3/workflow_collections/180beaf2-806b-407b-933a-ce83727432c1",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/a1aef681-7c88-4238-84c1-645bc9a74a87",
@@ -3062,7 +3052,7 @@
               },
               "status": null,
               "top": "160",
-              "left": "854",
+              "left": "820",
               "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
               "group": null,
               "uuid": "ea895eff-fe07-4a9c-82e5-7de2f8216b82"
@@ -3083,8 +3073,8 @@
                 "step_variables": []
               },
               "status": null,
-              "top": "281",
-              "left": "1279",
+              "top": "280",
+              "left": "1240",
               "stepType": "/api/3/workflow_step_types/0109f35d-090b-4a2b-bd8a-94cbc3508562",
               "group": null,
               "uuid": "357a1b74-eb0d-44a5-b7ad-2f2ad3c2f8e5"
@@ -3095,27 +3085,28 @@
               "description": null,
               "arguments": {
                 "name": "Active Directory",
-                "config": "''",
+                "config": "65262d44-9202-4501-bc06-9e5b3ef5c9c5",
                 "params": {
                   "cookie": "",
                   "page_size": "",
                   "size_limit": "",
                   "search_object": "User",
-                  "search_attr_name": "Email",
+                  "search_attr_name": "Display Name",
                   "search_attr_value": "user6@cspune.com"
                 },
                 "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "global_search",
                 "operationTitle": "Global Search",
+                "pickFromTenant": false,
                 "step_variables": []
               },
               "status": null,
               "top": "100",
-              "left": "440",
+              "left": "400",
               "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
               "group": null,
-              "uuid": "10025e68-6726-40de-b8af-8c4a614d6c24"
+              "uuid": "e35f920b-b2c6-43d9-b34a-dacb5c83a6bc"
             },
             {
               "@type": "WorkflowStep",
@@ -3166,29 +3157,29 @@
             },
             {
               "@type": "WorkflowRoute",
-              "name": "Search by Email -> Save Resource Details",
+              "name": "Search by Email1 -> Save Resource Details",
               "targetStep": "/api/3/workflow_steps/ea895eff-fe07-4a9c-82e5-7de2f8216b82",
-              "sourceStep": "/api/3/workflow_steps/10025e68-6726-40de-b8af-8c4a614d6c24",
+              "sourceStep": "/api/3/workflow_steps/e35f920b-b2c6-43d9-b34a-dacb5c83a6bc",
               "label": null,
               "isExecuted": false,
               "group": null,
-              "uuid": "5d5cf10e-5bdb-4264-a3f3-f6f8965d8157"
+              "uuid": "422f285d-549e-436d-860e-771394763f34"
             },
             {
               "@type": "WorkflowRoute",
-              "name": "Start -> Search by Email",
-              "targetStep": "/api/3/workflow_steps/10025e68-6726-40de-b8af-8c4a614d6c24",
+              "name": "Start -> sdd",
+              "targetStep": "/api/3/workflow_steps/e35f920b-b2c6-43d9-b34a-dacb5c83a6bc",
               "sourceStep": "/api/3/workflow_steps/a1aef681-7c88-4238-84c1-645bc9a74a87",
               "label": null,
               "isExecuted": false,
               "group": null,
-              "uuid": "bafbf505-147a-42e4-8a64-91e48941acc4"
+              "uuid": "d98056a9-b69f-4ef4-921d-0f345febde70"
             }
           ],
           "groups": [],
           "priority": null,
           "uuid": "cf709953-6900-46b6-a51b-8357cb866e87",
-          "id": 2171,
+          "id": 2321,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -3211,7 +3202,7 @@
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
-          "lastModifyDate": 1695375933,
+          "lastModifyDate": 1702562201,
           "collection": "/api/3/workflow_collections/180beaf2-806b-407b-933a-ce83727432c1",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/88e4ab10-30fc-40f7-9e2c-f3e84e964738",
@@ -3222,23 +3213,26 @@
               "description": null,
               "arguments": {
                 "name": "Active Directory",
-                "config": "''",
+                "config": "65262d44-9202-4501-bc06-9e5b3ef5c9c5",
                 "params": {
                   "query": "(&(objectClass=user)(objectCategory=user)(sAMAccountName=*))",
-                  "base_dn": "DC=cspune,DC=com"
+                  "cookie": "",
+                  "page_size": "",
+                  "size_limit": ""
                 },
                 "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "advanced_search",
                 "operationTitle": "Advanced Search",
+                "pickFromTenant": false,
                 "step_variables": []
               },
               "status": null,
-              "top": "133",
-              "left": "371",
+              "top": "160",
+              "left": "120",
               "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
               "group": null,
-              "uuid": "d4c078c4-658a-4029-b238-5af4104a4ad5"
+              "uuid": "fa4c656d-ef96-478c-a509-5552846b241c"
             },
             {
               "@type": "WorkflowStep",
@@ -3248,8 +3242,8 @@
                 "ad_search": "{{vars.result}}"
               },
               "status": null,
-              "top": "254",
-              "left": "371",
+              "top": "300",
+              "left": "125",
               "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
               "group": null,
               "uuid": "ff9efd5e-a900-47df-a2fc-76b005381c6c"
@@ -3283,8 +3277,8 @@
                 "singleRecordExecution": false
               },
               "status": null,
-              "top": "20",
-              "left": "371",
+              "top": "30",
+              "left": "125",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "group": null,
               "uuid": "88e4ab10-30fc-40f7-9e2c-f3e84e964738"
@@ -3293,29 +3287,29 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "name": "Advanced Search -> Save Result",
+              "name": "Advanced Search1 -> Save Result",
               "targetStep": "/api/3/workflow_steps/ff9efd5e-a900-47df-a2fc-76b005381c6c",
-              "sourceStep": "/api/3/workflow_steps/d4c078c4-658a-4029-b238-5af4104a4ad5",
+              "sourceStep": "/api/3/workflow_steps/fa4c656d-ef96-478c-a509-5552846b241c",
               "label": null,
               "isExecuted": false,
               "group": null,
-              "uuid": "799bd6f4-1105-4aed-8806-5c1de49ed282"
+              "uuid": "594c1903-dbdf-4c40-8725-96c7d39f026d"
             },
             {
               "@type": "WorkflowRoute",
-              "name": "Start -> Advanced Search",
-              "targetStep": "/api/3/workflow_steps/d4c078c4-658a-4029-b238-5af4104a4ad5",
+              "name": "Start -> Advance Search1",
+              "targetStep": "/api/3/workflow_steps/fa4c656d-ef96-478c-a509-5552846b241c",
               "sourceStep": "/api/3/workflow_steps/88e4ab10-30fc-40f7-9e2c-f3e84e964738",
               "label": null,
               "isExecuted": false,
               "group": null,
-              "uuid": "08ae15d8-d681-4c5f-bbf0-bfd92b885190"
+              "uuid": "ed9efda5-a266-4180-8dbc-d06336c38478"
             }
           ],
           "groups": [],
           "priority": null,
           "uuid": "e04ec2f8-c542-40d1-84b3-2cab0a21b8ff",
-          "id": 2172,
+          "id": 2322,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -3338,33 +3332,37 @@
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
-          "lastModifyDate": 1695375933,
+          "lastModifyDate": 1702562103,
           "collection": "/api/3/workflow_collections/180beaf2-806b-407b-933a-ce83727432c1",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/13b534fe-cab2-47c0-909b-02f680046d76",
           "steps": [
             {
               "@type": "WorkflowStep",
-              "name": "Get all User Details",
+              "name": "Get All User Details",
               "description": null,
               "arguments": {
                 "name": "Active Directory",
-                "config": "''",
+                "config": "65262d44-9202-4501-bc06-9e5b3ef5c9c5",
                 "params": {
+                  "cookie": "",
+                  "page_size": "",
+                  "size_limit": "",
                   "search_object": "User"
                 },
                 "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "get_all_object_details",
                 "operationTitle": "Get All Objects Details",
+                "pickFromTenant": false,
                 "step_variables": []
               },
               "status": null,
-              "top": "100",
-              "left": "387",
+              "top": "125",
+              "left": "329",
               "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
               "group": null,
-              "uuid": "c54ec968-c639-4e12-ab88-672fccf0215b"
+              "uuid": "f2a0efe5-7a02-4ab4-85aa-eb334efacea0"
             },
             {
               "@type": "WorkflowStep",
@@ -3442,13 +3440,13 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "name": "Get all User Details1 -> Save Users Details",
+              "name": "Get All User Detailss -> Save Users Details",
               "targetStep": "/api/3/workflow_steps/2f8130be-0157-4eab-936c-223f7fc00bd4",
-              "sourceStep": "/api/3/workflow_steps/c54ec968-c639-4e12-ab88-672fccf0215b",
+              "sourceStep": "/api/3/workflow_steps/f2a0efe5-7a02-4ab4-85aa-eb334efacea0",
               "label": null,
               "isExecuted": false,
               "group": null,
-              "uuid": "66d89446-a044-43fc-aaad-406fcd6c62f4"
+              "uuid": "26760271-4165-49ad-add5-310a9b0b3b6a"
             },
             {
               "@type": "WorkflowRoute",
@@ -3462,19 +3460,19 @@
             },
             {
               "@type": "WorkflowRoute",
-              "name": "Start -> Get all User Details1",
-              "targetStep": "/api/3/workflow_steps/c54ec968-c639-4e12-ab88-672fccf0215b",
+              "name": "Start -> Get All User Detailss",
+              "targetStep": "/api/3/workflow_steps/f2a0efe5-7a02-4ab4-85aa-eb334efacea0",
               "sourceStep": "/api/3/workflow_steps/13b534fe-cab2-47c0-909b-02f680046d76",
               "label": null,
               "isExecuted": false,
               "group": null,
-              "uuid": "5ad36c36-9270-498b-ba7c-47c01d1eb745"
+              "uuid": "c76dd5e4-b1e2-44fc-847a-c63a41195a66"
             }
           ],
           "groups": [],
           "priority": null,
           "uuid": "f4766dd9-c442-4cb5-b1d6-b114e4b5fa53",
-          "id": 2173,
+          "id": 2323,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
@@ -3497,7 +3495,7 @@
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
-          "lastModifyDate": 1695375933,
+          "lastModifyDate": 1702562014,
           "collection": "/api/3/workflow_collections/180beaf2-806b-407b-933a-ce83727432c1",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/1df980f0-bd8f-4944-8326-eeb6abec91a4",
@@ -3508,23 +3506,24 @@
               "description": null,
               "arguments": {
                 "name": "Active Directory",
-                "config": "''",
+                "config": "65262d44-9202-4501-bc06-9e5b3ef5c9c5",
                 "params": {
                   "search_object": "User",
-                  "search_attr_value": "user1"
+                  "search_attr_value": "user-1"
                 },
                 "version": "2.4.0",
                 "connector": "activedirectory",
                 "operation": "get_specific_object_details",
                 "operationTitle": "Get Specific Object Details",
+                "pickFromTenant": false,
                 "step_variables": []
               },
               "status": null,
-              "top": "93",
-              "left": "413",
+              "top": "120",
+              "left": "420",
               "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
               "group": null,
-              "uuid": "f4713e45-6edc-4153-92e7-ccdf61f7703c"
+              "uuid": "d2cf00e7-ab2c-4d3c-84f2-80f91e4f994a"
             },
             {
               "@type": "WorkflowStep",
@@ -3603,13 +3602,13 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "name": "Get Specific User Details -> Save Resource Details",
+              "name": "Get Specific User Detailss -> Save Resource Details",
               "targetStep": "/api/3/workflow_steps/a025e85e-d51b-4cd7-a872-36bdb6bbffb1",
-              "sourceStep": "/api/3/workflow_steps/f4713e45-6edc-4153-92e7-ccdf61f7703c",
+              "sourceStep": "/api/3/workflow_steps/d2cf00e7-ab2c-4d3c-84f2-80f91e4f994a",
               "label": null,
               "isExecuted": false,
               "group": null,
-              "uuid": "5804322f-74fc-4baf-a9a6-199444de9d19"
+              "uuid": "1f8c8d8d-2c11-49e8-b279-96fc42d146b5"
             },
             {
               "@type": "WorkflowRoute",
@@ -3623,19 +3622,19 @@
             },
             {
               "@type": "WorkflowRoute",
-              "name": "Start -> Get Specific User Details",
-              "targetStep": "/api/3/workflow_steps/f4713e45-6edc-4153-92e7-ccdf61f7703c",
+              "name": "Start -> Get Specific User Detailss",
+              "targetStep": "/api/3/workflow_steps/d2cf00e7-ab2c-4d3c-84f2-80f91e4f994a",
               "sourceStep": "/api/3/workflow_steps/1df980f0-bd8f-4944-8326-eeb6abec91a4",
               "label": null,
               "isExecuted": false,
               "group": null,
-              "uuid": "aee80eda-f9c0-47be-8e2a-d3435113d855"
+              "uuid": "9897d272-8ac2-40f3-987c-e0ad3c946b40"
             }
           ],
           "groups": [],
           "priority": null,
           "uuid": "fcdc2f7c-0b33-4e71-a5a5-229e9c295b21",
-          "id": 2174,
+          "id": 2324,
           "owners": [],
           "isPrivate": false,
           "deletedAt": null,
