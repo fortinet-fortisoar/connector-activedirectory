@@ -966,7 +966,7 @@
           "name": "custom_attributes",
           "type": "json",
           "description": "(Optional) Additional fields, in the JSON format, to add or change in the object that you want to update Active Directory.",
-          "tooltip": "PAdditional fields, in the JSON format, to add or change in the object that you want to update Active Directory.",
+          "tooltip": "Additional fields, in the JSON format, to add or change in the object that you want to update Active Directory.",
           "visible": true,
           "required": false,
           "editable": true
