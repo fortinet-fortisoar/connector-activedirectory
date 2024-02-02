@@ -1,3 +1,9 @@
 #### What's Improved
-- Added new Action and playbook "Move Computer to Targeted Organization Unit (OU)"
-- Added new Action "Move User to Targeted Organization Unit (OU)"
+- Added following new actions:  
+  - Move Computer to Targeted Organization Unit (OU)
+  - Move User to Targeted Organization Unit (OU)
+- Updated output schemas for following actions:
+  - Get All Objects Details 
+  - Get Specific Object Details 
+  - Global Search
+  - Advanced Search
