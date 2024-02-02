@@ -13,7 +13,7 @@
     "Enrichment",
     "User_Enrichment"
   ],
-  "help_online": "",
+  "help_online": "https://docs.fortinet.com/document/fortisoar/2.4.0/azure-active-directory/777/active-directory-v2-4-0",
   "configuration": {
     "fields": [
       {
@@ -117,6 +117,7 @@
           "name": "object_class",
           "type": "select",
           "description": "Type of object whose entry you want to add in Active Directory. You can choose from the following options: User, Group, Computer or Organization Unit (OU). If you choose User, then you must specify the following parameters:User DN: Distinguished name of the user that you want to add in Active Directory. SamAccount Name: sAMAccountName of the user object that you want to add in Active Directory. Display Name: (Optional) Display name of the user object that you want to add in Active Directory. Email Address: (Optional) Email address of the user object that you want to add in Active Directory. Enable User: Select this checkbox, if you want to enable the user object in Active Directory. Clear this checkbox (default) if you want to disable the user object in Active directory. User Principal Name: (Optional) Principal name of the user object that you want to add in Active Directory. Title: (Optional) Title of the user object that you want to add in Active Directory. Description: (Optional) Short description of the user object that you want to add in Active Directory. If you choose Group, then you must specify the following parameters:Group DN: Distinguished name of the group object that you want to add in Active Directory. SamAccount Name: sAMAccountName of the group object that you want to add in Active Directory. Group Type: (Optional) Type of group object you want to add in Active Directory. You can choose from the following options: Global Distribution Group, Domain Local Distribution Group, Universal Distribution Group, Global Security Group, Domain Local Security Group, or Universal Security Group.If you choose Organization Unit, then you must specify the following parameters:Organization DN: Distinguished name of the OU object that you want to add in Active Directory. Description: (Optional) Short description of the OU object who you want to add in Active Directory. If you choose Computer, then you must specify the following parameters:Computer DN: Distinguished name of the computer object that you want to add in Active Directory. SamAccount Name: sAMAccountName of the Compute object that you want to add in Active Directory. Enable Computer: Select this checkbox, if you want to enable the computer object in Active Directory. Clear this checkbox (default) if you want to disable the computer object in Active directory. Display Name: (Optional) Display name of the computer object that you want to add in Active Directory. Description: (Optional) Short description of the computer object that you want to add in Active Directory.",
+          "tooltip": "Type of object whose entry you want to add in Active Directory. You can choose from the following options: User, Group, Computer or Organization Unit (OU).",
           "visible": true,
           "editable": true,
           "required": true,
@@ -608,6 +609,7 @@
           "required": true,
           "type": "select",
           "description": "The object type, such as User, Computer, Group, or Person, based on which you want to search and retrieve records from AD. If you select the Object Type as Person then you must also add the inputs for the CN and SN parameters.",
+          "tooltip": "Select the object type, such as User, Computer, Group, or Person, based on which you want to search and retrieve records from AD.",
           "editable": true,
           "options": [
             "User",
@@ -964,7 +966,7 @@
           "name": "custom_attributes",
           "type": "json",
           "description": "(Optional) Additional fields, in the JSON format, to add or change in the object that you want to update Active Directory.",
-          "tooltip": "PAdditional fields, in the JSON format, to add or change in the object that you want to update Active Directory.",
+          "tooltip": "Additional fields, in the JSON format, to add or change in the object that you want to update Active Directory.",
           "visible": true,
           "required": false,
           "editable": true
