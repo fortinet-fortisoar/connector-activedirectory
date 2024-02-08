@@ -13,7 +13,7 @@
     "Enrichment",
     "User_Enrichment"
   ],
-  "help_online": "https://docs.fortinet.com/document/fortisoar/2.4.0/azure-active-directory/777/active-directory-v2-4-0",
+  "help_online": "https://docs.fortinet.com/document/fortisoar/2.4.0/active-directory/777/active-directory-v2-4-0",
   "configuration": {
     "fields": [
       {
@@ -243,7 +243,7 @@
                 "type": "select",
                 "description": "Type of group object you want to add to Active Directory. You can choose from the following options: Global Distribution Group, Domain Local Distribution Group, Universal Distribution Group, Global Security Group, Domain Local Security Group, or Universal Security Group.",
                 "tooltip": "Type of group object you want to add to Active Directory. You can choose from the following options",
-                "visible": false,
+                "visible": true,
                 "required": false,
                 "editable": true,
                 "options": [
@@ -354,7 +354,7 @@
       "operation": "get_all_object_details",
       "description": "Searches and retrieves all records from AD based on a specified search object, such as user, computer, or group.",
       "category": "investigation",
-      "annotation": "search_query",
+      "annotation": "get_all_object_details",
       "conditional_output_schema": [
         {
           "condition": "{{search_object === 'Group'}}",
@@ -522,7 +522,7 @@
       "operation": "get_specific_object_details",
       "description": "Searches and retrieves records from AD based on a specified search object, such as user, computer, or group. However, this search is limited to the records found for the object name you have specified. For example, if you want to retrieve the records from AD for a specific user, you need to specify the name of the user.",
       "category": "investigation",
-      "annotation": "search_query",
+      "annotation": "get_specific_object_details",
       "conditional_output_schema": [
         {
           "condition": "{{search_object === 'Group'}}",
@@ -682,42 +682,6 @@
               }
             ]
           }
-        },
-        {
-          "title": "SamAccount Name",
-          "name": "search_attr_value",
-          "type": "text",
-          "description": "The SamAccountName of the object based on which you want to search and retrieve records from AD.",
-          "tooltip": "The SamAccountName of the object based on which you want to search and retrieve records from AD.",
-          "visible": true,
-          "required": true,
-          "editable": true,
-          "visible_onchange": false,
-          "value": ""
-        },
-        {
-          "title": "CN",
-          "name": "cn",
-          "type": "text",
-          "description": "Common name of the Person you want to search and retrieve records from AD.",
-          "tooltip": "Common name of the Person you want to search and retrieve records from AD.",
-          "visible": true,
-          "required": false,
-          "editable": true,
-          "visible_onchange": false,
-          "value": ""
-        },
-        {
-          "title": "SN",
-          "name": "sn",
-          "type": "text",
-          "description": "Surname of the Person you want to search and retrieve records from AD.",
-          "tooltip": "Surname of the Person you want to search and retrieve records from AD.",
-          "visible": true,
-          "required": false,
-          "visible_onchange": false,
-          "editable": true,
-          "value": ""
         }
       ],
       "enabled": true
@@ -727,7 +691,7 @@
       "operation": "update_object",
       "description": "Updates an existing object entry of User, Group, Computer or Organization Unit (OU) type in Active Directory based on the type of object and other input parameters you have specified.",
       "category": "investigation",
-      "annotation": "update_update",
+      "annotation": "update_object",
       "output_schema": {
         "description": "",
         "dn": "",
@@ -1434,7 +1398,7 @@
       "operation": "global_search",
       "description": "Searches and retrieves records from AD using global search, based on the specified search object, such as user, computer, group, search attribute, or a search attribute value, such as SamAccount Name, Distinguished Name, Common Name, Display Name, or Email. When you search a record based on a search attribute value, the record from AD is retrieved based on the specified attribute value.",
       "category": "investigation",
-      "annotation": "search_query",
+      "annotation": "global_search",
       "conditional_output_schema": [
         {
           "condition": "{{search_object === 'Group'}}",
@@ -1603,7 +1567,7 @@
       "operation": "enable_user_account",
       "description": "Enables the account of a specific AD user based on the SamAccount Name or the Email of the user.",
       "category": "remediation",
-      "annotation": "enable_user",
+      "annotation": "enable_user_account",
       "output_schema": {
         "message": "",
         "description": "",
@@ -1646,7 +1610,7 @@
       "operation": "disable_user_account",
       "description": "Disables the account of a specific AD user based on the SamAccount Name or the Email of the user.",
       "category": "containment",
-      "annotation": "disable_user",
+      "annotation": "disable_user_account",
       "output_schema": {
         "message": "",
         "description": "",
