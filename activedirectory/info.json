@@ -243,7 +243,7 @@
                 "type": "select",
                 "description": "Type of group object you want to add to Active Directory. You can choose from the following options: Global Distribution Group, Domain Local Distribution Group, Universal Distribution Group, Global Security Group, Domain Local Security Group, or Universal Security Group.",
                 "tooltip": "Type of group object you want to add to Active Directory. You can choose from the following options",
-                "visible": false,
+                "visible": true,
                 "required": false,
                 "editable": true,
                 "options": [
