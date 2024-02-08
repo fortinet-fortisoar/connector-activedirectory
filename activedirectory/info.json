@@ -682,42 +682,6 @@
               }
             ]
           }
-        },
-        {
-          "title": "SamAccount Name",
-          "name": "search_attr_value",
-          "type": "text",
-          "description": "The SamAccountName of the object based on which you want to search and retrieve records from AD.",
-          "tooltip": "The SamAccountName of the object based on which you want to search and retrieve records from AD.",
-          "visible": true,
-          "required": true,
-          "editable": true,
-          "visible_onchange": false,
-          "value": ""
-        },
-        {
-          "title": "CN",
-          "name": "cn",
-          "type": "text",
-          "description": "Common name of the Person you want to search and retrieve records from AD.",
-          "tooltip": "Common name of the Person you want to search and retrieve records from AD.",
-          "visible": true,
-          "required": false,
-          "editable": true,
-          "visible_onchange": false,
-          "value": ""
-        },
-        {
-          "title": "SN",
-          "name": "sn",
-          "type": "text",
-          "description": "Surname of the Person you want to search and retrieve records from AD.",
-          "tooltip": "Surname of the Person you want to search and retrieve records from AD.",
-          "visible": true,
-          "required": false,
-          "visible_onchange": false,
-          "editable": true,
-          "value": ""
         }
       ],
       "enabled": true
