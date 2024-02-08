@@ -354,7 +354,7 @@
       "operation": "get_all_object_details",
       "description": "Searches and retrieves all records from AD based on a specified search object, such as user, computer, or group.",
       "category": "investigation",
-      "annotation": "search_query",
+      "annotation": "get_all_object_details",
       "conditional_output_schema": [
         {
           "condition": "{{search_object === 'Group'}}",
@@ -522,7 +522,7 @@
       "operation": "get_specific_object_details",
       "description": "Searches and retrieves records from AD based on a specified search object, such as user, computer, or group. However, this search is limited to the records found for the object name you have specified. For example, if you want to retrieve the records from AD for a specific user, you need to specify the name of the user.",
       "category": "investigation",
-      "annotation": "search_query",
+      "annotation": "get_specific_object_details",
       "conditional_output_schema": [
         {
           "condition": "{{search_object === 'Group'}}",
@@ -727,7 +727,7 @@
       "operation": "update_object",
       "description": "Updates an existing object entry of User, Group, Computer or Organization Unit (OU) type in Active Directory based on the type of object and other input parameters you have specified.",
       "category": "investigation",
-      "annotation": "update_update",
+      "annotation": "update_object",
       "output_schema": {
         "description": "",
         "dn": "",
@@ -1434,7 +1434,7 @@
       "operation": "global_search",
       "description": "Searches and retrieves records from AD using global search, based on the specified search object, such as user, computer, group, search attribute, or a search attribute value, such as SamAccount Name, Distinguished Name, Common Name, Display Name, or Email. When you search a record based on a search attribute value, the record from AD is retrieved based on the specified attribute value.",
       "category": "investigation",
-      "annotation": "search_query",
+      "annotation": "global_search",
       "conditional_output_schema": [
         {
           "condition": "{{search_object === 'Group'}}",
@@ -1603,7 +1603,7 @@
       "operation": "enable_user_account",
       "description": "Enables the account of a specific AD user based on the SamAccount Name or the Email of the user.",
       "category": "remediation",
-      "annotation": "enable_user",
+      "annotation": "enable_user_account",
       "output_schema": {
         "message": "",
         "description": "",
@@ -1646,7 +1646,7 @@
       "operation": "disable_user_account",
       "description": "Disables the account of a specific AD user based on the SamAccount Name or the Email of the user.",
       "category": "containment",
-      "annotation": "disable_user",
+      "annotation": "disable_user_account",
       "output_schema": {
         "message": "",
         "description": "",
