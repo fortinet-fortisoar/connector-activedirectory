@@ -13,7 +13,7 @@
     "Enrichment",
     "User_Enrichment"
   ],
-  "help_online": "https://docs.fortinet.com/document/fortisoar/2.4.0/azure-active-directory/777/active-directory-v2-4-0",
+  "help_online": "https://docs.fortinet.com/document/fortisoar/2.4.0/active-directory/777/active-directory-v2-4-0",
   "configuration": {
     "fields": [
       {
